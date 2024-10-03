@@ -1,10 +1,11 @@
 import Link from "next/link";
+import ThemeTogglerButton from "./ThemeTogglerButton";
 
 export default function Navbar() {
   const navLinks = ["about me", "projects", "experience", "skills", "contact"];
 
   return (
-    <nav className="flex h-[4.5rem] items-center justify-center border-b bg-muted/40">
+    <nav className="relative flex h-[4.5rem] items-center justify-center border-b bg-muted/40">
       <div className="flex w-[40%] cursor-pointer justify-between">
         {navLinks.map((link) => (
           <Link
@@ -17,6 +18,8 @@ export default function Navbar() {
           </Link>
         ))}
       </div>
+
+      <ThemeTogglerButton className="absolute right-10" />
     </nav>
   );
 }
