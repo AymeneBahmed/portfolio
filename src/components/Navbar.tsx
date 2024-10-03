@@ -16,7 +16,7 @@ export default function Navbar() {
 
   // ! 830px
   return (
-    <nav className="relative flex h-[4.5rem] items-center justify-center border-b bg-muted/40">
+    <nav className="fixed z-[9998] flex h-[4.5rem] w-full items-center justify-center border-b bg-muted/40 backdrop-blur">
       <button
         className="invisible absolute left-10 space-y-1.5 max-[830px]:visible"
         onClick={() => setShouldShowVerticalNavbar(true)}
