@@ -14,7 +14,6 @@ export default function Navbar() {
   const [shouldShowVerticalNavbar, setShouldShowVerticalNavbar] =
     useState(false);
 
-  // ! 830px
   return (
     <nav className="fixed z-[9998] flex h-[4.5rem] w-full items-center justify-center border-b bg-muted/40 backdrop-blur">
       <button
