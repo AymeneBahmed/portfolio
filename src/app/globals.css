@@ -59,7 +59,7 @@ body {
   }
 
   * {
-    @apply border-border;
+    @apply scroll-smooth border-border;
   }
   body {
     @apply bg-background text-foreground;
