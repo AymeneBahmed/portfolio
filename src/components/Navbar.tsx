@@ -8,7 +8,7 @@ import { createPortal } from "react-dom";
 import { X } from "lucide-react";
 import { useState } from "react";
 
-const navLinks = ["about me", "projects", "experience", "skills", "contact"];
+const navLinks = ["about me", "skills", "projects", "contact"];
 
 export default function Navbar() {
   const [shouldShowVerticalNavbar, setShouldShowVerticalNavbar] =
@@ -30,7 +30,7 @@ export default function Navbar() {
         setShouldShowVerticalNavbar={setShouldShowVerticalNavbar}
       />
 
-      <div className="flex w-[max(40%,480px)] cursor-pointer flex-nowrap justify-between max-[830px]:hidden">
+      <div className="flex w-[30%] cursor-pointer flex-nowrap justify-between max-[830px]:hidden">
         {navLinks.map((link) => (
           <NavLink key={link} href={"/"} text={link} />
         ))}
