@@ -64,4 +64,12 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  ::-webkit-scrollbar {
+    background: theme(backgroundColor.secondary.DEFAULT);
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: theme(colors.primary.DEFAULT);
+    border-radius: theme(borderRadius.full);
+  }
 }
