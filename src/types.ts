@@ -8,3 +8,9 @@ export type Technology =
   | "Next.js"
   | "Prisma ORM"
   | "Git";
+
+export interface Project {
+  gitLink: string | null;
+  preview: string;
+  technologies: Exclude<Technology, "Git">[];
+}
