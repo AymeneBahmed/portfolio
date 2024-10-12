@@ -7,52 +7,70 @@ import prismaLogo from "@/assets/logos/prisma.svg";
 import reactLogo from "@/assets/logos/react.svg";
 import tailwindLogo from "@/assets/logos/tailwind.svg";
 import tsLogo from "@/assets/logos/ts.svg";
+import calculatorImg from "@/assets/projects imgs/calculator.png";
+import etchASketchImg from "@/assets/projects imgs/etch a sketch.png";
+import formPageImg from "@/assets/projects imgs/form page.png";
+import gitLearnImg from "@/assets/projects imgs/git learn.png";
+import libraryImg from "@/assets/projects imgs/library.png";
+import rockPaperScissorsImg from "@/assets/projects imgs/rock paper scissors.png";
+import ticTacToeImg from "@/assets/projects imgs/tic tac toe.png";
+import todoImg from "@/assets/projects imgs/todo.png";
+import tributePageImg from "@/assets/projects imgs/tribute page.png";
 import { Project, Technology } from "@/types";
 
 export const projects: Project[] = [
   {
     gitLink: "https://github.com/CoolNewsGuy/Tribute-page",
     preview: "https://coolnewsguy.github.io/Tribute-page/",
+    img: tributePageImg,
     technologies: ["HTML", "CSS"],
   },
   {
     gitLink: "https://github.com/CoolNewsGuy/rock-paper-scissors-game",
     preview: "https://coolnewsguy.github.io/rock-paper-scissors-game/",
+    img: rockPaperScissorsImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
     gitLink: "https://github.com/CoolNewsGuy/calculator",
     preview: "https://coolnewsguy.github.io/calculator/",
+    img: calculatorImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
     gitLink: "https://github.com/CoolNewsGuy/form-page",
     preview: "https://coolnewsguy.github.io/form-page/",
+    img: formPageImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
     gitLink: "https://github.com/CoolNewsGuy/tic-tac-toe",
     preview: "https://coolnewsguy.github.io/tic-tac-toe/",
+    img: ticTacToeImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
     gitLink: "https://github.com/CoolNewsGuy/library",
     preview: "https://coolnewsguy.github.io/library/",
+    img: libraryImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
     gitLink: "https://github.com/CoolNewsGuy/etch-a-sketch",
     preview: "https://coolnewsguy.github.io/etch-a-sketch/",
+    img: etchASketchImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
     gitLink: null,
     preview: "https://coolnewsguy.github.io/GitForSchool/",
+    img: gitLearnImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
     gitLink: "https://github.com/CoolNewsGuy/next-todo",
     preview: "https://next-todo-fawn-xi.vercel.app/",
+    img: todoImg,
     technologies: [
       "HTML",
       "CSS",
