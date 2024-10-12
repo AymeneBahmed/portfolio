@@ -20,5 +20,6 @@ export interface Technology {
 export interface Project {
   gitLink: string | null;
   preview: string;
+  img: StaticImport | string;
   technologies: Exclude<TechnologyName, "Git">[];
 }
