@@ -20,54 +20,63 @@ import { Project, Technology } from "@/types";
 
 export const projects: Project[] = [
   {
+    title: "tribute page",
     gitLink: "https://github.com/CoolNewsGuy/Tribute-page",
     preview: "https://coolnewsguy.github.io/Tribute-page/",
     img: tributePageImg,
     technologies: ["HTML", "CSS"],
   },
   {
+    title: "rock paper scissors",
     gitLink: "https://github.com/CoolNewsGuy/rock-paper-scissors-game",
     preview: "https://coolnewsguy.github.io/rock-paper-scissors-game/",
     img: rockPaperScissorsImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
+    title: "calculator",
     gitLink: "https://github.com/CoolNewsGuy/calculator",
     preview: "https://coolnewsguy.github.io/calculator/",
     img: calculatorImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
+    title: "form page",
     gitLink: "https://github.com/CoolNewsGuy/form-page",
     preview: "https://coolnewsguy.github.io/form-page/",
     img: formPageImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
+    title: "tic tac toe",
     gitLink: "https://github.com/CoolNewsGuy/tic-tac-toe",
     preview: "https://coolnewsguy.github.io/tic-tac-toe/",
     img: ticTacToeImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
+    title: "library",
     gitLink: "https://github.com/CoolNewsGuy/library",
     preview: "https://coolnewsguy.github.io/library/",
     img: libraryImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
+    title: "etch a sketch",
     gitLink: "https://github.com/CoolNewsGuy/etch-a-sketch",
     preview: "https://coolnewsguy.github.io/etch-a-sketch/",
     img: etchASketchImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
+    title: "git tutorial",
     gitLink: null,
     preview: "https://coolnewsguy.github.io/GitForSchool/",
     img: gitLearnImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
+    title: "todo app",
     gitLink: "https://github.com/CoolNewsGuy/next-todo",
     preview: "https://next-todo-fawn-xi.vercel.app/",
     img: todoImg,
