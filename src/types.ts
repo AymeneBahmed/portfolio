@@ -18,6 +18,7 @@ export interface Technology {
 }
 
 export interface Project {
+  title: string;
   gitLink: string | null;
   preview: string;
   img: StaticImport | string;
