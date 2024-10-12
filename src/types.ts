@@ -1,4 +1,4 @@
-export type Technology =
+export type TechnologyName =
   | "HTML"
   | "CSS"
   | "JavaScript"
@@ -12,5 +12,5 @@ export type Technology =
 export interface Project {
   gitLink: string | null;
   preview: string;
-  technologies: Exclude<Technology, "Git">[];
+  technologies: Exclude<TechnologyName, "Git">[];
 }
