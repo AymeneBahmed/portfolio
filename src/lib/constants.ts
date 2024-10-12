@@ -1,4 +1,13 @@
-import { Project } from "@/types";
+import cssLogo from "@/assets/logos/css.svg";
+import gitLogo from "@/assets/logos/git.svg";
+import htmlLogo from "@/assets/logos/html.svg";
+import jsLogo from "@/assets/logos/js.svg";
+import nextjsLogo from "@/assets/logos/nextjs.svg";
+import prismaLogo from "@/assets/logos/prisma.svg";
+import reactLogo from "@/assets/logos/react.svg";
+import tailwindLogo from "@/assets/logos/tailwind.svg";
+import tsLogo from "@/assets/logos/ts.svg";
+import { Project, Technology } from "@/types";
 
 export const projects: Project[] = [
   {
@@ -52,5 +61,61 @@ export const projects: Project[] = [
       "Next.js",
       "Prisma ORM",
     ],
+  },
+];
+
+export const technologies: Technology[] = [
+  {
+    logo: htmlLogo,
+    name: "HTML",
+    description:
+      "A markup language used to define content and structure of a web page.",
+  },
+  {
+    logo: cssLogo,
+    name: "CSS",
+    description: "A language used to style websites and make them beautiful.",
+  },
+  {
+    logo: jsLogo,
+    name: "JavaScript",
+    description:
+      "A scripting language used to add interactivity to a website improving the user experience.",
+  },
+  {
+    logo: tsLogo,
+    name: "TypeScript",
+    description:
+      "A subset language of JavaScript that adds type safety to the language which improves developer experience.",
+  },
+  {
+    logo: tailwindLogo,
+    name: "TailwindCSS",
+    description:
+      "A CSS utility-first framework for building websites without ever leaving HTML.",
+  },
+  {
+    logo: reactLogo,
+    name: "React.js",
+    description:
+      "A JavaScript library used to create complex user interfaces by combining small components.",
+  },
+  {
+    logo: nextjsLogo,
+    name: "Next.js",
+    description:
+      "A powerful React framework that adds SEO and SSR to websites made with React.js.",
+  },
+  {
+    logo: prismaLogo,
+    name: "Prisma ORM",
+    description:
+      "A high-level tool used to communicate with databases using JavaScript/TypeScript with a great developer experience in mind.",
+  },
+  {
+    logo: gitLogo,
+    name: "Git",
+    description:
+      "A version control system used to track the progress of a project making it easy to collaborate between teams.",
   },
 ];
