@@ -23,6 +23,8 @@ export const projects: Project[] = [
     title: "tribute page",
     gitLink: "https://github.com/CoolNewsGuy/Tribute-page",
     preview: "https://coolnewsguy.github.io/Tribute-page/",
+    description:
+      "A simple page giving a brief about Dr. Norman Borlaug, the man who saved a billion lives!",
     img: tributePageImg,
     technologies: ["HTML", "CSS"],
   },
@@ -30,6 +32,7 @@ export const projects: Project[] = [
     title: "rock paper scissors",
     gitLink: "https://github.com/CoolNewsGuy/rock-paper-scissors-game",
     preview: "https://coolnewsguy.github.io/rock-paper-scissors-game/",
+    description: "A simple rock paper scissors game.",
     img: rockPaperScissorsImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
@@ -37,6 +40,7 @@ export const projects: Project[] = [
     title: "calculator",
     gitLink: "https://github.com/CoolNewsGuy/calculator",
     preview: "https://coolnewsguy.github.io/calculator/",
+    description: "A calculator with basic functionalities.",
     img: calculatorImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
@@ -44,6 +48,7 @@ export const projects: Project[] = [
     title: "form page",
     gitLink: "https://github.com/CoolNewsGuy/form-page",
     preview: "https://coolnewsguy.github.io/form-page/",
+    description: "A beautiful form page with client-side validation.",
     img: formPageImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
@@ -51,6 +56,8 @@ export const projects: Project[] = [
     title: "tic tac toe",
     gitLink: "https://github.com/CoolNewsGuy/tic-tac-toe",
     preview: "https://coolnewsguy.github.io/tic-tac-toe/",
+    description:
+      "A tic tac toe game where you can play against AI or a human player.",
     img: ticTacToeImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
@@ -58,6 +65,7 @@ export const projects: Project[] = [
     title: "library",
     gitLink: "https://github.com/CoolNewsGuy/library",
     preview: "https://coolnewsguy.github.io/library/",
+    description: "A library where you can save your favorite books.",
     img: libraryImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
@@ -65,6 +73,8 @@ export const projects: Project[] = [
     title: "etch a sketch",
     gitLink: "https://github.com/CoolNewsGuy/etch-a-sketch",
     preview: "https://coolnewsguy.github.io/etch-a-sketch/",
+    description:
+      "Draw and let your imagination comes to life with this beautiful app!",
     img: etchASketchImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
@@ -72,6 +82,8 @@ export const projects: Project[] = [
     title: "git tutorial",
     gitLink: null,
     preview: "https://coolnewsguy.github.io/GitForSchool/",
+    description:
+      "A webpage that teaches Git with a beginner-friendly approach.",
     img: gitLearnImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
@@ -79,6 +91,8 @@ export const projects: Project[] = [
     title: "todo app",
     gitLink: "https://github.com/CoolNewsGuy/next-todo",
     preview: "https://next-todo-fawn-xi.vercel.app/",
+    description:
+      "A simple todo app made with login functionality that stores your todos in a postgreSQL database.",
     img: todoImg,
     technologies: [
       "HTML",
