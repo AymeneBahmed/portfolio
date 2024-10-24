@@ -7,8 +7,11 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <div className="border-b border-primary"></div>
       <AboutMeSection />
+      <div className="border-b border-primary"></div>
       <SkillsSection />
+      <div className="border-b border-primary"></div>
       <ProjectsSection />
     </>
   );
