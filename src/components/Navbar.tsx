@@ -32,7 +32,11 @@ export default function Navbar() {
 
       <div className="flex w-[30%] cursor-pointer flex-nowrap justify-between max-[830px]:hidden">
         {navLinks.map((link) => (
-          <NavLink key={link} href={"/"} text={link} />
+          <NavLink
+            key={link}
+            href={`#${link.length > 1 ? link.split(" ").join("-") : link}`}
+            text={link}
+          />
         ))}
       </div>
 
@@ -70,7 +74,10 @@ function VerticalNavbar({
             className="block w-fit text-4xl"
             onClick={() => setShouldShowVerticalNavbar(false)}
           >
-            <NavLink href="/" text={link} />
+            <NavLink
+              href={`#${link.length > 1 ? link.split(" ").join("-") : link}`}
+              text={link}
+            />
           </button>
         ))}
       </div>
