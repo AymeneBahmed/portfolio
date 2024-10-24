@@ -29,9 +29,31 @@ export default function ProjectsSection() {
             <div className="p-3">
               <div>
                 <div>
-                  <h2 className="text-xl font-semibold capitalize">
-                    {project.title}
-                  </h2>
+                  <div className="flex justify-between">
+                    <h2 className="text-xl font-semibold capitalize">
+                      {project.title}
+                    </h2>
+
+                    <div className="flex gap-2 text-primary *:transition-transform hover:*:scale-125">
+                      <Link
+                        href={project.preview}
+                        target="_blank"
+                        title="Preview"
+                      >
+                        <FiExternalLink size={22} />
+                      </Link>
+
+                      {project.gitLink && (
+                        <Link
+                          href={project.gitLink}
+                          target="_blank"
+                          title="Github repo"
+                        >
+                          <FaGithub size={22} />
+                        </Link>
+                      )}
+                    </div>
+                  </div>
 
                   {/* Technologies */}
                   <div className="flex gap-1">
@@ -72,22 +94,6 @@ export default function ProjectsSection() {
                 <p className="mt-4 text-muted-foreground">
                   {project.description}
                 </p>
-              </div>
-
-              <div className="mt-7 flex gap-3 text-primary *:transition-transform hover:*:scale-125">
-                <Link href={project.preview} target="_blank" title="Preview">
-                  <FiExternalLink size={22} />
-                </Link>
-
-                {project.gitLink && (
-                  <Link
-                    href={project.gitLink}
-                    target="_blank"
-                    title="Github repo"
-                  >
-                    <FaGithub size={22} />
-                  </Link>
-                )}
               </div>
             </div>
           </div>
