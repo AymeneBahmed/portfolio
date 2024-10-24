@@ -19,7 +19,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <div className="flex min-h-dvh flex-col items-center justify-center gap-8">
+    <section className="flex min-h-dvh flex-col items-center justify-center gap-8">
       <ProfilePicture />
 
       <div className="w-[40rem]">
@@ -51,6 +51,6 @@ export default function HeroSection() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
