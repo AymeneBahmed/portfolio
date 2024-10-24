@@ -1,28 +1,64 @@
+"use client";
+
 import { projects, technologies } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 
+gsap.registerPlugin(useGSAP);
+
 export default function ProjectsSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useGSAP(
+    () => {
+      gsap.from(".projects-heading", {
+        opacity: 0,
+        duration: 0.7,
+        scrollTrigger: {
+          trigger: ".project-cards-container",
+          start: "top 90%",
+        },
+      });
+
+      gsap.from(".project-card", {
+        stagger: 0.3,
+        opacity: 0,
+        scale: 0,
+        duration: 0.5,
+        ease: "back.out",
+        scrollTrigger: {
+          trigger: ".project-cards-container",
+          start: "top 80%",
+        },
+      });
+    },
+    { scope: sectionRef },
+  );
+
   return (
     <section
       className="relative flex min-h-dvh flex-col items-center justify-evenly gap-24 bg-muted/40 py-16"
       id="projects"
+      ref={sectionRef}
     >
       <h1
-        className="text-6xl font-bold tracking-wide text-primary"
+        className="projects-heading text-6xl font-bold tracking-wide text-primary"
         style={{ textShadow: "0 0 5px" }}
       >
         Projects
       </h1>
 
-      <div className="grid w-[90%] grid-cols-1 justify-items-center gap-x-10 gap-y-20 sm:w-[90%] sm:grid-cols-2 md:grid-cols-3">
+      <div className="project-cards-container grid w-[90%] grid-cols-1 justify-items-center gap-x-10 gap-y-20 sm:w-[90%] sm:grid-cols-2 md:grid-cols-3">
         {projects.map((project) => (
           <div
             key={project.preview}
-            className="max-w-[23.5rem] overflow-hidden rounded-md border"
+            className="project-card max-w-[23.5rem] overflow-hidden rounded-md border"
           >
             <Image src={project.img} alt={project.title} />
 

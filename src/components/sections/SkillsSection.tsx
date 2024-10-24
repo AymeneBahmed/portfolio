@@ -1,26 +1,63 @@
+"use client";
+
 import nextjsLogo from "@/assets/logos/nextjs.svg";
 import TechnologyCard from "../TechnologyCard";
 import { cn } from "@/lib/utils";
 import { technologies } from "@/lib/constants";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function SkillsSection() {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useGSAP(
+    () => {
+      gsap.from(".skills-heading", {
+        opacity: 0,
+        duration: 0.7,
+        scrollTrigger: {
+          trigger: ".skill-cards-container",
+          start: "top 90%",
+        },
+      });
+
+      gsap.from(".skill-card", {
+        stagger: 0.3,
+        opacity: 0,
+        y: 150,
+        duration: 0.5,
+        ease: "back.out",
+        scrollTrigger: {
+          trigger: ".skill-cards-container",
+          start: "top 80%",
+        },
+      });
+    },
+    { scope: sectionRef },
+  );
+
   return (
     <section
       className="relative flex min-h-dvh flex-col items-center justify-evenly gap-24 py-16"
       id="skills"
+      ref={sectionRef}
     >
       <h1
-        className="text-6xl font-bold tracking-wide text-primary"
+        className="skills-heading text-6xl font-bold tracking-wide text-primary"
         style={{ textShadow: "0 0 5px" }}
       >
         Skills
       </h1>
 
-      <div className="grid w-[90%] grid-cols-1 justify-items-center gap-x-10 gap-y-20 sm:w-[90%] sm:grid-cols-2 md:grid-cols-3">
+      <div className="skill-cards-container grid w-[90%] grid-cols-1 justify-items-center gap-x-10 gap-y-20 sm:w-[90%] sm:grid-cols-2 md:grid-cols-3">
         {technologies.map((technology) => (
           <TechnologyCard
             key={technology.name}
-            className="max-w-[23.5rem] text-pretty border-none p-0"
+            className="skill-card max-w-[23.5rem] text-pretty border-none p-0"
           >
             <TechnologyCard.Figure className="space-y-3">
               {technology.name === "Next.js" ? (
