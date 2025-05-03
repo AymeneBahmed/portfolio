@@ -8,7 +8,7 @@ import { createPortal } from "react-dom";
 import { X } from "lucide-react";
 import { useState } from "react";
 
-const navLinks = ["about me", "skills", "projects", "contact"];
+const navLinks = ["about me", "skills", "projects"];
 
 export default function Navbar() {
   const [shouldShowVerticalNavbar, setShouldShowVerticalNavbar] =
