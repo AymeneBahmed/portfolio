@@ -7,10 +7,13 @@ import { cn } from "@/lib/utils";
 import { createPortal } from "react-dom";
 import { X } from "lucide-react";
 import { useState } from "react";
+import dynamic from "next/dynamic";
 
 const navLinks = ["about me", "skills", "projects"];
 
-export default function Navbar() {
+export default dynamic(() => Promise.resolve(Navbar), { ssr: false });
+
+function Navbar() {
   const [shouldShowVerticalNavbar, setShouldShowVerticalNavbar] =
     useState(false);
 
