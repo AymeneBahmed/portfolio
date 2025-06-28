@@ -33,8 +33,8 @@ function Navbar() {
         setShouldShowVerticalNavbar={setShouldShowVerticalNavbar}
       />
 
-      <div className="absolute left-8 text-nowrap text-[clamp(1.5rem,2vw,1.875rem)] font-bold text-primary max-[830px]:left-1/2 max-[830px]:-translate-x-1/2">
-        {"{"} Aymen Bahmed {"}"}
+      <div className="absolute left-8 text-nowrap text-[clamp(1.5rem,2vw,1.775rem)] font-bold text-primary underline underline-offset-8 max-[830px]:left-1/2 max-[830px]:-translate-x-1/2">
+        Aymen Bahmed
       </div>
 
       <div className="flex w-[30%] cursor-pointer flex-nowrap justify-between max-[830px]:hidden">
