@@ -81,6 +81,20 @@ export default function HeroSection() {
       ref={sectionRef}
       className="relative flex min-h-dvh flex-col items-center justify-center gap-8"
     >
+      <div
+        className="absolute inset-0 -z-10 opacity-20 dark:opacity-[0.15]"
+        style={{
+          backgroundImage: `
+          radial-gradient(circle at 10px 10px, currentColor 1px, transparent 0),
+          radial-gradient(circle at 30px 30px, currentColor 1px, transparent 0)
+        `,
+          backgroundSize: "40px 40px",
+          backgroundPosition: "0 0, 20px 20px",
+          maskImage:
+            "radial-gradient(ellipse at center, black 40%, transparent 70%)",
+        }}
+      />
+
       <div ref={profilePictureContainerRef}>
         <ProfilePicture />
       </div>
