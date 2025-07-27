@@ -7,6 +7,8 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { cn } from "@/lib/utils";
+import { Button } from "../ui/button";
+import { ChevronDownIcon } from "lucide-react";
 
 gsap.registerPlugin(useGSAP);
 
@@ -27,6 +29,7 @@ export default function HeroSection() {
   ];
   const profilePictureContainerRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
+  const scrollDownBtnRef = useRef<HTMLButtonElement>(null);
 
   useGSAP(
     () => {
@@ -53,6 +56,22 @@ export default function HeroSection() {
         opacity: 0,
         duration: 0.7,
       });
+      gsap.fromTo(
+        scrollDownBtnRef.current,
+        {
+          y: 0,
+          opacity: 0.9,
+        },
+        {
+          y: 15,
+          opacity: 1,
+          duration: 1,
+          repeat: -1,
+          yoyo: true,
+          repeatRefresh: true,
+          ease: "sine.inOut",
+        },
+      );
     },
     { scope: sectionRef },
   );
@@ -60,7 +79,7 @@ export default function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="flex min-h-dvh flex-col items-center justify-center gap-8"
+      className="relative flex min-h-dvh flex-col items-center justify-center gap-8"
     >
       <div ref={profilePictureContainerRef}>
         <ProfilePicture />
@@ -104,6 +123,18 @@ export default function HeroSection() {
           ))}
         </div>
       </div>
+
+      <Button
+        ref={scrollDownBtnRef}
+        size="icon"
+        variant="secondary"
+        className="scroll-down-btn absolute bottom-10 cursor-pointer rounded-full"
+        asChild
+      >
+        <Link href="#about-me">
+          <ChevronDownIcon />
+        </Link>
+      </Button>
     </section>
   );
 }
