@@ -1,4 +1,4 @@
-import profilePicture from "@/assets/profile picture.jpeg";
+import profilePicture from "@/assets/profile picture.jpg";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -8,14 +8,17 @@ interface ProfilePictureProps {
 
 export default function ProfilePicture({ className }: ProfilePictureProps) {
   return (
-    <div className={cn("relative size-[18rem] rounded-full", className)}>
-      <div className="absolute left-0 top-0 size-full scale-[1.03] rounded-full bg-primary shadow-[0_0_15px_0px] shadow-primary"></div>
-
+    <div
+      className={cn(
+        "relative size-[25rem] overflow-hidden rounded-full border-[6px] border-primary shadow-[0_0_15px_0px] shadow-primary",
+        className,
+      )}
+    >
       <Image
         src={profilePicture}
         alt="profile picture"
         fill
-        className="rounded-full object-cover"
+        className="scale-[1.2] rounded-full object-cover object-[110%_-30px]"
       />
     </div>
   );
