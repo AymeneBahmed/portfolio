@@ -2,25 +2,25 @@
 
 import Link from "next/link";
 import ProfilePicture from "../ProfilePicture";
-import { FaFacebookF, FaGithub, FaInstagram } from "react-icons/fa6";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
-import { ChevronDownIcon } from "lucide-react";
+import { ChevronDownIcon, MailIcon } from "lucide-react";
 
 gsap.registerPlugin(useGSAP);
 
 export default function HeroSection() {
   const socials = [
     {
-      Icon: FaFacebookF,
-      href: "https://www.facebook.com/dahmani.anes",
+      Icon: MailIcon,
+      href: "mailto:aymendd3131@gmail.com",
     },
     {
-      Icon: FaInstagram,
-      href: "https://www.instagram.com/randomguyfromthisworld",
+      Icon: FaLinkedin,
+      href: "https://www.linkedin.com/in/aymene-abderrahmene-bahmed-87154635a",
     },
     {
       Icon: FaGithub,
