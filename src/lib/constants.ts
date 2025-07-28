@@ -7,6 +7,8 @@ import prismaLogo from "@/assets/logos/prisma.svg";
 import reactLogo from "@/assets/logos/react.svg";
 import tailwindLogo from "@/assets/logos/tailwind.svg";
 import tsLogo from "@/assets/logos/ts.svg";
+import phpLogo from "@/assets/logos/php.svg";
+import laravelLogo from "@/assets/logos/laravel.svg";
 import calculatorImg from "@/assets/projects imgs/calculator.png";
 import etchASketchImg from "@/assets/projects imgs/etch a sketch.png";
 import formPageImg from "@/assets/projects imgs/form page.png";
@@ -146,6 +148,18 @@ export const technologies: Technology[] = [
     name: "Next.js",
     description:
       "A powerful React framework that adds SEO and SSR to websites made with React.js.",
+  },
+  {
+    logo: phpLogo,
+    name: "PHP",
+    description:
+      "A high-level scripting language used to create server-side applications.",
+  },
+  {
+    logo: laravelLogo,
+    name: "Laravel",
+    description:
+      "A PHP framework with elegant and expressive syntax that facilitates backend development.",
   },
   {
     logo: prismaLogo,

@@ -75,6 +75,7 @@ export default function SkillsSection() {
                   alt={technology.name}
                   className={cn(
                     "size-[5rem]",
+                    technology.name === "PHP" && "scale-125",
                     technology.name === "Prisma ORM" && "brightness-[3]",
                   )}
                 />

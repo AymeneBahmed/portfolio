@@ -9,6 +9,8 @@ export type TechnologyName =
   | "React.js"
   | "Next.js"
   | "Prisma ORM"
+  | "PHP"
+  | "Laravel"
   | "Git";
 
 export interface Technology {
