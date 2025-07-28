@@ -162,9 +162,11 @@ export default function HeroSection() {
               </a>
             </Button>
 
-            <Button className="gap-2" variant="secondary">
-              <FolderCodeIcon size={20} />
-              <span>View projects</span>
+            <Button className="gap-2" variant="secondary" asChild>
+              <a href="#projects">
+                <FolderCodeIcon size={20} />
+                <span>View projects</span>
+              </a>
             </Button>
           </div>
         </div>
