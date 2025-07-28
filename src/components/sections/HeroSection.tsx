@@ -29,7 +29,7 @@ export default function HeroSection() {
     },
     {
       Icon: FaGithub,
-      href: "https://github.com/CoolNewsGuy",
+      href: "https://github.com/AymeneBahmed",
     },
   ];
   const profilePictureContainerRef = useRef<HTMLDivElement>(null);
