@@ -14,7 +14,6 @@ import {
   FolderCodeIcon,
   MailIcon,
 } from "lucide-react";
-import { Separator } from "../ui/separator";
 
 gsap.registerPlugin(useGSAP);
 
@@ -156,9 +155,11 @@ export default function HeroSection() {
           </div>
 
           <div className="mt-5 flex flex-wrap gap-4">
-            <Button className="gap-2 shadow-[0_0_10px] shadow-primary">
-              <DownloadIcon size={20} />
-              <span>Download CV</span>
+            <Button className="gap-2 shadow-[0_0_10px] shadow-primary" asChild>
+              <a href="/Aymene_Bahmed_CV.pdf" download>
+                <DownloadIcon size={20} />
+                <span>Download CV</span>
+              </a>
             </Button>
 
             <Button className="gap-2" variant="secondary">
