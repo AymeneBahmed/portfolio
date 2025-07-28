@@ -156,7 +156,7 @@ export default function HeroSection() {
 
           <div className="mt-5 flex flex-wrap gap-4">
             <Button className="gap-2 shadow-[0_0_10px] shadow-primary" asChild>
-              <a href="/Aymene_Bahmed_CV.pdf" download>
+              <a href="/Aymene_Bahmed_CV.pdf" target="_blank">
                 <DownloadIcon size={20} />
                 <span>Download CV</span>
               </a>
