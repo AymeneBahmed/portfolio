@@ -87,29 +87,29 @@ export default function HeroSection() {
       ref={sectionRef}
       className="relative flex min-h-dvh items-center justify-center gap-8"
     >
-      <div className="mx-auto flex w-[70%] items-center justify-between">
-        <div
-          className="absolute inset-0 -z-10 opacity-20 dark:opacity-[0.15]"
-          style={{
-            backgroundImage: `
+      <div
+        className="absolute inset-0 -z-10 opacity-20 dark:opacity-[0.15]"
+        style={{
+          backgroundImage: `
           radial-gradient(circle at 10px 10px, currentColor 1px, transparent 0),
           radial-gradient(circle at 30px 30px, currentColor 1px, transparent 0)
         `,
-            backgroundSize: "40px 40px",
-            backgroundPosition: "0 0, 20px 20px",
-            maskImage:
-              "radial-gradient(ellipse at center, black 40%, transparent 70%)",
-          }}
-        />
+          backgroundSize: "40px 40px",
+          backgroundPosition: "0 0, 20px 20px",
+          maskImage:
+            "radial-gradient(ellipse at center, black 40%, transparent 70%)",
+        }}
+      />
 
-        <div>
+      <div className="mx-auto flex w-[90%] flex-col-reverse items-center justify-center gap-8 py-12 sm:px-8 md:py-0 lg:w-[70%] lg:flex-row min-[1550px]:justify-between">
+        <div className="mt-0 md:mt-2">
           <div className="flex w-fit items-center gap-2 rounded-full border border-green-200 bg-green-100 px-4 py-1 font-semibold text-green-700 dark:border-green-800 dark:bg-green-900/30 dark:text-green-300">
             <div className="h-2 w-2 animate-pulse rounded-full bg-green-500 font-[100]"></div>
             <span>Available for work</span>
           </div>
 
-          <div className="mt-2 w-[40rem]">
-            <h1 className="text-pretty text-5xl font-bold leading-[4rem] tracking-wide">
+          <div className="mt-2 w-full md:w-[40rem]">
+            <h1 className="text-pretty text-3xl font-bold leading-[3rem] tracking-wide sm:text-4xl sm:leading-[3.5rem] md:text-5xl md:leading-[4rem]">
               I am{" "}
               <span className="text-primary">
                 {"Aymen Bahmed".split("").map((char, i) => (
@@ -124,19 +124,19 @@ export default function HeroSection() {
             </h1>
 
             <div className="mb-3">
-              <span className="text-2xl font-semibold text-primary underline underline-offset-[6px]">
+              <span className="text-xl font-semibold text-primary underline underline-offset-[6px] sm:text-2xl">
                 Full-Stack Web Developer
               </span>
             </div>
 
-            <div className="text-lg text-muted-foreground">
+            <div className="text-wrap text-base text-muted-foreground sm:text-lg">
               I create modern, responsive web applications using React, Next.js,
               and Node.js. Passionate about clean code, user experience, and
               bringing ideas to life through technology.
             </div>
           </div>
 
-          <div className="mt-4 flex items-center gap-4">
+          <div className="mt-6 flex gap-3 sm:flex-row sm:items-center sm:gap-4">
             <span className="get-in-touch-text text-lg tracking-wide underline decoration-dashed underline-offset-[6px]">
               Get in touch:{" "}
             </span>
@@ -155,7 +155,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="mt-5 space-x-4">
+          <div className="mt-5 flex flex-wrap gap-4">
             <Button className="gap-2 shadow-[0_0_10px] shadow-primary">
               <DownloadIcon size={20} />
               <span>Download CV</span>
@@ -169,7 +169,7 @@ export default function HeroSection() {
         </div>
 
         <div ref={profilePictureContainerRef}>
-          <ProfilePicture className="size-[28rem]" />
+          <ProfilePicture className="size-80 md:size-[22rem] lg:size-[clamp(310px,24vw,28rem)]" />
         </div>
       </div>
 
