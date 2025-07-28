@@ -18,6 +18,8 @@ import rockPaperScissorsImg from "@/assets/projects imgs/rock paper scissors.png
 import ticTacToeImg from "@/assets/projects imgs/tic tac toe.png";
 import todoImg from "@/assets/projects imgs/todo.png";
 import tributePageImg from "@/assets/projects imgs/tribute page.png";
+import studyScheduleImg from "@/assets/projects imgs/study schedule.png";
+import researchLaboratoriesImg from "@/assets/projects imgs/research laboratories.png";
 import { Project, Technology } from "@/types";
 
 export const projects: Project[] = [
@@ -103,6 +105,38 @@ export const projects: Project[] = [
       "TailwindCSS",
       "Next.js",
       "Prisma ORM",
+    ],
+  },
+  {
+    title: "study schedule",
+    gitLink: "https://github.com/AymeneBahmed/study-schedule",
+    preview: "https://study-schedule-tau.vercel.app/",
+    description:
+      "A tasking app made with login functionality that supports both users with and without accounts using IndexedDB and Dexie.js.",
+    img: studyScheduleImg,
+    technologies: [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "TailwindCSS",
+      "Next.js",
+      "Prisma ORM",
+    ],
+  },
+  {
+    title: "research laboratories",
+    gitLink: null,
+    preview: "https://univ-oran1.dz/univ_labos1/public/",
+    description:
+      "A official website made for Oran 1 University Ahmed Ben Bella Research Laboratories.",
+    img: researchLaboratoriesImg,
+    technologies: [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "TailwindCSS",
+      "React.js",
+      "Laravel",
     ],
   },
 ];
