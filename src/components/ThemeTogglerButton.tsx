@@ -6,11 +6,7 @@ import { MoonStar, Sun } from "lucide-react";
 import { cn } from "@/lib/utils";
 import dynamic from "next/dynamic";
 
-interface ThemeTogglerButtonProps {
-  className?: string;
-}
-
-function ThemeTogglerButton({ className }: ThemeTogglerButtonProps) {
+function ThemeTogglerButton(props: React.ComponentProps<typeof Button>) {
   const { theme, setTheme } = useTheme();
 
   function toggleTheme() {
@@ -18,7 +14,12 @@ function ThemeTogglerButton({ className }: ThemeTogglerButtonProps) {
   }
 
   return (
-    <Button className={cn(className)} onClick={toggleTheme} size="icon">
+    <Button
+      {...props}
+      className={cn(props.className)}
+      onClick={toggleTheme}
+      size="icon"
+    >
       {theme === "dark" ? <MoonStar /> : <Sun />}
     </Button>
   );

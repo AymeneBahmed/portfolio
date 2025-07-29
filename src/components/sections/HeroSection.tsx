@@ -142,14 +142,14 @@ export default function HeroSection() {
 
             <div className="flex gap-5">
               {socials.map(({ Icon, href }, i) => (
-                <Link
+                <a
                   key={i}
                   href={href}
                   target="_blank"
                   className="social-link-btn rounded-full border border-black p-1.5 transition-colors hover:border-black hover:bg-black *:hover:fill-white dark:border-white dark:hover:border-black dark:hover:bg-white *:hover:dark:fill-black"
                 >
                   <Icon className="size-5 transition-colors" />
-                </Link>
+                </a>
               ))}
             </div>
           </div>

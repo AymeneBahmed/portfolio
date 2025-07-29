@@ -8,6 +8,8 @@ import { createPortal } from "react-dom";
 import { X } from "lucide-react";
 import { useState } from "react";
 import dynamic from "next/dynamic";
+import { Button } from "./ui/button";
+import { FaGithub } from "react-icons/fa6";
 
 const navLinks = ["about me", "skills", "projects"];
 
@@ -47,7 +49,20 @@ function Navbar() {
         ))}
       </div>
 
-      <ThemeTogglerButton className="absolute right-10" />
+      <div className="absolute right-10 flex items-center gap-2">
+        <ThemeTogglerButton variant="ghost" className="rounded-full" />
+
+        <Button
+          size="icon"
+          variant="ghost"
+          className="flex rounded-full"
+          asChild
+        >
+          <a href="https://github.com/AymeneBahmed" target="_blank">
+            <FaGithub size={25} />
+          </a>
+        </Button>
+      </div>
     </nav>
   );
 }
