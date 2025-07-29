@@ -1,13 +1,13 @@
 export default function AboutMeSection() {
   return (
     <section
-      className="relative flex min-h-dvh items-center justify-center bg-muted/40"
+      className="bg-muted/40 relative flex min-h-dvh items-center justify-center"
       id="about-me"
     >
-      <div className="w-[min(41rem,90vw)] rounded-md border border-primary p-14 shadow-[0_0_15px_0px] shadow-primary">
+      <div className="border-primary shadow-primary w-[min(41rem,90vw)] rounded-md border p-14 shadow-[0_0_15px_0px]">
         <h2 className="text-center text-5xl font-extrabold">About me</h2>
 
-        <div className="mt-9 space-y-5 text-lg tracking-wider text-muted-foreground">
+        <div className="text-muted-foreground mt-9 space-y-5 text-lg tracking-wider">
           <p>
             I am Aymen Bahmed,{" "}
             <strong className="text-primary">a computer nerd</strong> who&apos;s
@@ -28,14 +28,15 @@ export default function AboutMeSection() {
           </p>
 
           <p>
-            I am currently a{" "}
+            I am a{" "}
             <strong className="text-primary">
-              3rd year computer science student
+              graduate Computer Science student
             </strong>
-            . My favorite topics are AI especially robotics, embedded
-            programming, and web development. I am planning to take an AI degree
-            and focus on robotics in the future since I love creating real world
-            stuff!
+            , looking forward to specializing in Data Science for my
+            master&apos;s degree. My favorite topics are AI especially robotics,
+            embedded programming, and web development. I am planning to take an
+            AI degree and focus on robotics in the future since I love creating
+            real world stuff!
           </p>
 
           <p>
