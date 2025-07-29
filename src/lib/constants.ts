@@ -128,7 +128,7 @@ export const projects: Project[] = [
     gitLink: null,
     preview: "https://univ-oran1.dz/univ_labos1/public/",
     description:
-      "A official website made for Oran 1 University Ahmed Ben Bella Research Laboratories.",
+      "An official website made for Oran 1 University Ahmed Ben Bella Research Laboratories.",
     img: researchLaboratoriesImg,
     technologies: [
       "HTML",
