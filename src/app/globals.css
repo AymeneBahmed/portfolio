@@ -54,7 +54,7 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
 
-  --animate-spin-gradient: spin-gradient linear 5s infinite;
+  --animate-spin-gradient: spin-gradient linear 8s infinite;
 }
 
 /*
