@@ -9,7 +9,7 @@ import { SnowfallBackground } from "@/components/SnowfallBackground";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Aymen Bahmed | Full-Stack Web Developer",
   description: "Aymen Bahmed's portfolio",
 };
 
