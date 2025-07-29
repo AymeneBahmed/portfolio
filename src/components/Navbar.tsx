@@ -20,7 +20,7 @@ function Navbar() {
     useState(false);
 
   return (
-    <nav className="fixed z-[9998] flex h-[4.5rem] w-full items-center justify-center border-b border-primary bg-muted/40 shadow-[0_0_15px_0px] shadow-primary backdrop-blur-lg">
+    <nav className="fixed z-9998 flex h-18 w-full items-center justify-center border-b border-primary bg-muted/40 shadow-[0_0_15px_0px] shadow-primary backdrop-blur-lg">
       <button
         className="invisible absolute left-10 space-y-1.5 max-[830px]:visible"
         onClick={() => setShouldShowVerticalNavbar(true)}
@@ -77,7 +77,7 @@ function VerticalNavbar({
   return createPortal(
     <div
       className={cn(
-        "fixed left-0 top-0 z-[9999] grid size-full place-content-center bg-white/50 opacity-0 backdrop-blur-sm transition-all duration-500 dark:bg-black/50 min-[830px]:hidden",
+        "fixed left-0 top-0 z-9999 grid size-full place-content-center bg-white/50 opacity-0 backdrop-blur-sm transition-all duration-500 dark:bg-black/50 min-[830px]:hidden",
         !shouldShowVerticalNavbar && "pointer-events-none",
         shouldShowVerticalNavbar && "opacity-100",
       )}

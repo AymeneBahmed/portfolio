@@ -58,7 +58,7 @@ export default function ProjectsSection() {
         {projects.map((project) => (
           <div
             key={project.preview}
-            className="project-card max-w-[23.5rem] overflow-hidden rounded-md border"
+            className="project-card max-w-94 overflow-hidden rounded-md border"
           >
             <Image src={project.img} alt={project.title} />
 

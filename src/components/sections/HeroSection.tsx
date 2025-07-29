@@ -103,12 +103,12 @@ export default function HeroSection() {
       <div className="mx-auto flex w-[90%] flex-col-reverse items-center justify-center gap-8 py-12 sm:px-8 md:py-0 lg:w-[70%] lg:flex-row min-[1550px]:justify-between">
         <div className="mt-0 md:mt-2">
           <div className="flex w-fit items-center gap-2 rounded-full border border-green-200 bg-green-100 px-4 py-1 font-semibold text-green-700 dark:border-green-800 dark:bg-green-900/30 dark:text-green-300">
-            <div className="h-2 w-2 animate-pulse rounded-full bg-green-500 font-[100]"></div>
+            <div className="h-2 w-2 animate-pulse rounded-full bg-green-500 font-thin"></div>
             <span>Available for work</span>
           </div>
 
-          <div className="mt-2 w-full md:w-[40rem]">
-            <h1 className="text-pretty text-3xl font-bold leading-[3rem] tracking-wide sm:text-4xl sm:leading-[3.5rem] md:text-5xl md:leading-[4rem]">
+          <div className="mt-2 w-full md:w-160">
+            <h1 className="text-pretty text-3xl font-bold leading-12 tracking-wide sm:text-4xl sm:leading-14 md:text-5xl md:leading-16">
               I am{" "}
               <span className="text-primary">
                 {"Aymen Bahmed".split("").map((char, i) => (
@@ -172,7 +172,7 @@ export default function HeroSection() {
         </div>
 
         <div ref={profilePictureContainerRef}>
-          <ProfilePicture className="size-80 md:size-[22rem] lg:size-[clamp(310px,24vw,28rem)]" />
+          <ProfilePicture className="size-80 md:size-88 lg:size-[clamp(310px,24vw,28rem)]" />
         </div>
       </div>
 

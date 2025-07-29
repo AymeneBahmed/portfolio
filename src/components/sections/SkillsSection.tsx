@@ -57,7 +57,7 @@ export default function SkillsSection() {
         {technologies.map((technology) => (
           <TechnologyCard
             key={technology.name}
-            className="skill-card max-w-[23.5rem] text-pretty border-none p-0"
+            className="skill-card max-w-94 text-pretty border-none p-0"
           >
             <TechnologyCard.Figure className="space-y-3">
               {technology.name === "Next.js" ? (
@@ -66,7 +66,7 @@ export default function SkillsSection() {
                   <TechnologyCard.Image
                     src={nextjsLogo}
                     alt="next js"
-                    className="relative size-[5rem]"
+                    className="relative size-20"
                   />
                 </div>
               ) : (
@@ -74,7 +74,7 @@ export default function SkillsSection() {
                   src={technology.logo}
                   alt={technology.name}
                   className={cn(
-                    "size-[5rem]",
+                    "size-20",
                     technology.name === "PHP" && "scale-125",
                     technology.name === "Prisma ORM" && "brightness-[3]",
                   )}

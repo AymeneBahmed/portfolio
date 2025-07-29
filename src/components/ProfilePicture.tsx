@@ -10,7 +10,7 @@ export default function ProfilePicture({ className }: ProfilePictureProps) {
   return (
     <div
       className={cn(
-        "relative size-[25rem] overflow-hidden rounded-full border-[6px] border-primary shadow-[0_0_15px_0px] shadow-primary",
+        "relative size-100 overflow-hidden rounded-full border-[6px] border-primary shadow-[0_0_15px_0px] shadow-primary",
         className,
       )}
     >
