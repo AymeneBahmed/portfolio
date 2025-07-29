@@ -1,7 +1,20 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
+@property --conic-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
 
+@keyframes spin-gradient {
+  0% {
+    --conic-angle: 0deg;
+  }
+  100% {
+    --conic-angle: 360deg;
+  }
+}
 @theme {
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -40,6 +53,8 @@
   --radius-lg: var(--radius);
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
+
+  --animate-spin-gradient: spin-gradient linear 5s infinite;
 }
 
 /*
@@ -117,7 +132,7 @@
   }
 
   * {
-    @apply scroll-smooth border-border;
+    @apply border-border scroll-smooth;
   }
   body {
     @apply bg-background text-foreground;

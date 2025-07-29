@@ -25,7 +25,7 @@ export default function SkillsSection() {
         },
       });
 
-      gsap.from(".skill-card", {
+      gsap.from(".skill-card-wrapper", {
         stagger: 0.3,
         opacity: 0,
         y: 150,
@@ -47,7 +47,7 @@ export default function SkillsSection() {
       ref={sectionRef}
     >
       <h1
-        className="skills-heading text-6xl font-bold tracking-wide text-primary"
+        className="skills-heading text-primary text-6xl font-bold tracking-wide"
         style={{ textShadow: "0 0 5px" }}
       >
         Skills
@@ -55,39 +55,40 @@ export default function SkillsSection() {
 
       <div className="skill-cards-container grid w-[90%] grid-cols-1 justify-items-center gap-x-10 gap-y-20 sm:w-[90%] sm:grid-cols-2 md:grid-cols-3">
         {technologies.map((technology) => (
-          <TechnologyCard
-            key={technology.name}
-            className="skill-card max-w-94 text-pretty border-none p-0"
-          >
-            <TechnologyCard.Figure className="space-y-3">
-              {technology.name === "Next.js" ? (
-                <div className="relative">
-                  <div className="absolute left-0 top-0 size-full scale-90 rounded-full bg-white"></div>
+          <div className="skill-card-wrapper max-w-94" key={technology.name}>
+            <TechnologyCard className="h-full w-full text-pretty">
+              <TechnologyCard.Figure className="space-y-3">
+                {technology.name === "Next.js" ? (
+                  <div className="relative">
+                    <div className="absolute top-0 left-0 size-full scale-90 rounded-full bg-white"></div>
+                    <TechnologyCard.Image
+                      src={nextjsLogo}
+                      alt="next js"
+                      className="relative size-20"
+                    />
+                  </div>
+                ) : (
                   <TechnologyCard.Image
-                    src={nextjsLogo}
-                    alt="next js"
-                    className="relative size-20"
+                    src={technology.logo}
+                    alt={technology.name}
+                    className={cn(
+                      "size-20",
+                      technology.name === "PHP" && "scale-125",
+                      technology.name === "Prisma ORM" && "brightness-[3]",
+                    )}
                   />
-                </div>
-              ) : (
-                <TechnologyCard.Image
-                  src={technology.logo}
-                  alt={technology.name}
-                  className={cn(
-                    "size-20",
-                    technology.name === "PHP" && "scale-125",
-                    technology.name === "Prisma ORM" && "brightness-[3]",
-                  )}
-                />
-              )}
+                )}
 
-              <TechnologyCard.Caption>{technology.name}</TechnologyCard.Caption>
-            </TechnologyCard.Figure>
+                <TechnologyCard.Caption>
+                  {technology.name}
+                </TechnologyCard.Caption>
+              </TechnologyCard.Figure>
 
-            <TechnologyCard.Description>
-              {technology.description}
-            </TechnologyCard.Description>
-          </TechnologyCard>
+              <TechnologyCard.Description className="mt-5">
+                {technology.description}
+              </TechnologyCard.Description>
+            </TechnologyCard>
+          </div>
         ))}
       </div>
     </section>
