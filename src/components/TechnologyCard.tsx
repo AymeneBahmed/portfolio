@@ -17,6 +17,7 @@ export default function TechnologyCard({
     >
       <div className="animate-spin-gradient absolute top-1/2 left-1/2 -z-1 size-[102%] -translate-1/2 rounded-lg bg-conic-[from_var(--conic-angle)_in_oklab,hsl(180,100%,50%)_0deg_10deg,var(--color-blue-500)_30deg_40deg,var(--color-purple-300)_50deg_60deg,transparent_70deg_180deg,hsl(180,100%,50%)_180deg_190deg,var(--color-blue-500)_210deg_220deg,var(--color-purple-300)_230deg_240deg,transparent_250deg]"></div>
 
+      {/* Blurred gradient */}
       <div className="animate-spin-gradient absolute top-1/2 left-1/2 -z-1 size-[102%] -translate-1/2 rounded-lg bg-conic-[from_var(--conic-angle)_in_oklab,hsl(180,100%,50%)_0deg_10deg,var(--color-blue-500)_30deg_40deg,var(--color-purple-300)_50deg_60deg,transparent_70deg_180deg,hsl(180,100%,50%)_180deg_190deg,var(--color-blue-500)_210deg_220deg,var(--color-purple-300)_230deg_240deg,transparent_250deg] blur-lg"></div>
 
       <div>{children}</div>
