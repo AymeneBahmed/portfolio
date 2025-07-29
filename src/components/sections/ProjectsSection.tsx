@@ -71,7 +71,7 @@ export default function ProjectsSection() {
                       <h2 className="text-xl font-semibold capitalize">
                         {project.title}
                       </h2>
-                      <div className="text-primary flex gap-2 *:transition-transform hover:*:scale-125">
+                      <div className="text-primary flex gap-2 *:transition-transform *:hover:scale-125">
                         <Link
                           href={project.preview}
                           target="_blank"
