@@ -25,8 +25,8 @@ import { Project, Technology } from "@/types";
 export const projects: Project[] = [
   {
     title: "tribute page",
-    gitLink: "https://github.com/CoolNewsGuy/Tribute-page",
-    preview: "https://coolnewsguy.github.io/Tribute-page/",
+    gitLink: "https://github.com/AymeneBahmed/Tribute-page",
+    preview: "https://aymenebahmed.github.io/Tribute-page/",
     description:
       "A simple page giving a brief about Dr. Norman Borlaug, the man who saved a billion lives!",
     img: tributePageImg,
@@ -34,32 +34,32 @@ export const projects: Project[] = [
   },
   {
     title: "rock paper scissors",
-    gitLink: "https://github.com/CoolNewsGuy/rock-paper-scissors-game",
-    preview: "https://coolnewsguy.github.io/rock-paper-scissors-game/",
+    gitLink: "https://github.com/AymeneBahmed/rock-paper-scissors-game",
+    preview: "https://aymenebahmed.github.io/rock-paper-scissors-game/",
     description: "A simple rock paper scissors game.",
     img: rockPaperScissorsImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
     title: "calculator",
-    gitLink: "https://github.com/CoolNewsGuy/calculator",
-    preview: "https://coolnewsguy.github.io/calculator/",
+    gitLink: "https://github.com/AymeneBahmed/calculator",
+    preview: "https://aymenebahmed.github.io/calculator/",
     description: "A calculator with basic functionalities.",
     img: calculatorImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
     title: "form page",
-    gitLink: "https://github.com/CoolNewsGuy/form-page",
-    preview: "https://coolnewsguy.github.io/form-page/",
+    gitLink: "https://github.com/AymeneBahmed/form-page",
+    preview: "https://aymenebahmed.github.io/form-page/",
     description: "A beautiful form page with client-side validation.",
     img: formPageImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
     title: "tic tac toe",
-    gitLink: "https://github.com/CoolNewsGuy/tic-tac-toe",
-    preview: "https://coolnewsguy.github.io/tic-tac-toe/",
+    gitLink: "https://github.com/AymeneBahmed/tic-tac-toe",
+    preview: "https://aymenebahmed.github.io/tic-tac-toe/",
     description:
       "A tic tac toe game where you can play against AI or a human player.",
     img: ticTacToeImg,
@@ -67,16 +67,16 @@ export const projects: Project[] = [
   },
   {
     title: "library",
-    gitLink: "https://github.com/CoolNewsGuy/library",
-    preview: "https://coolnewsguy.github.io/library/",
+    gitLink: "https://github.com/AymeneBahmed/library",
+    preview: "https://aymenebahmed.github.io/library/",
     description: "A library where you can save your favorite books.",
     img: libraryImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
     title: "etch a sketch",
-    gitLink: "https://github.com/CoolNewsGuy/etch-a-sketch",
-    preview: "https://coolnewsguy.github.io/etch-a-sketch/",
+    gitLink: "https://github.com/AymeneBahmed/etch-a-sketch",
+    preview: "https://aymenebahmed.github.io/etch-a-sketch/",
     description:
       "Draw and let your imagination comes to life with this beautiful app!",
     img: etchASketchImg,
@@ -85,7 +85,7 @@ export const projects: Project[] = [
   {
     title: "git tutorial",
     gitLink: null,
-    preview: "https://coolnewsguy.github.io/GitForSchool/",
+    preview: "https://aymenebahmed.github.io/GitForSchool/",
     description:
       "A webpage that teaches Git with a beginner-friendly approach.",
     img: gitLearnImg,
@@ -93,7 +93,7 @@ export const projects: Project[] = [
   },
   {
     title: "todo app",
-    gitLink: "https://github.com/CoolNewsGuy/next-todo",
+    gitLink: "https://github.com/AymeneBahmed/next-todo",
     preview: "https://next-todo-fawn-xi.vercel.app/",
     description:
       "A simple todo app made with login functionality that stores your todos in a postgreSQL database.",
