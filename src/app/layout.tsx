@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import { SnowfallBackground } from "@/components/SnowfallBackground";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
           defaultTheme="dark"
           disableTransitionOnChange
         >
+          <SnowfallBackground />
           <Navbar />
           {children}
           <Footer />

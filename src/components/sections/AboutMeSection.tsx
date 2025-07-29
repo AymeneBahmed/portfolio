@@ -4,7 +4,7 @@ export default function AboutMeSection() {
       className="bg-muted/40 relative flex min-h-dvh items-center justify-center"
       id="about-me"
     >
-      <div className="border-primary shadow-primary w-[min(41rem,90vw)] rounded-md border p-14 shadow-[0_0_15px_0px]">
+      <div className="border-primary shadow-primary bg-muted w-[min(41rem,90vw)] rounded-md border p-14 shadow-[0_0_15px_0px]">
         <h2 className="text-center text-5xl font-extrabold">About me</h2>
 
         <div className="text-muted-foreground mt-9 space-y-5 text-lg tracking-wider">

@@ -95,12 +95,10 @@ export default function HeroSection() {
         `,
           backgroundSize: "40px 40px",
           backgroundPosition: "0 0, 20px 20px",
-          maskImage:
-            "radial-gradient(ellipse at center, black 40%, transparent 70%)",
         }}
       />
 
-      <div className="mx-auto flex w-[90%] flex-col-reverse items-center justify-center gap-8 py-12 sm:px-8 md:py-0 lg:w-[70%] lg:flex-row min-[1550px]:justify-between">
+      <div className="mx-auto flex w-[90%] flex-col-reverse items-center justify-center gap-8 py-12 min-[1550px]:justify-between sm:px-8 md:py-0 lg:w-[70%] lg:flex-row">
         <div className="mt-0 md:mt-2">
           <div className="flex w-fit items-center gap-2 rounded-full border border-green-200 bg-green-100 px-4 py-1 font-semibold text-green-700 dark:border-green-800 dark:bg-green-900/30 dark:text-green-300">
             <div className="h-2 w-2 animate-pulse rounded-full bg-green-500 font-thin"></div>
@@ -108,7 +106,7 @@ export default function HeroSection() {
           </div>
 
           <div className="mt-2 w-full md:w-160">
-            <h1 className="text-pretty text-3xl font-bold leading-12 tracking-wide sm:text-4xl sm:leading-14 md:text-5xl md:leading-16">
+            <h1 className="text-3xl leading-12 font-bold tracking-wide text-pretty sm:text-4xl sm:leading-14 md:text-5xl md:leading-16">
               I am{" "}
               <span className="text-primary">
                 {"Aymen Bahmed".split("").map((char, i) => (
@@ -123,12 +121,12 @@ export default function HeroSection() {
             </h1>
 
             <div className="mb-3">
-              <span className="text-xl font-semibold text-primary underline underline-offset-[6px] sm:text-2xl">
+              <span className="text-primary text-xl font-semibold underline underline-offset-[6px] sm:text-2xl">
                 Full-Stack Web Developer
               </span>
             </div>
 
-            <div className="text-wrap text-base text-muted-foreground sm:text-lg">
+            <div className="text-muted-foreground text-base text-wrap sm:text-lg">
               I create modern, responsive web applications using React, Next.js,
               and Node.js. Passionate about clean code, user experience, and
               bringing ideas to life through technology.
@@ -155,7 +153,7 @@ export default function HeroSection() {
           </div>
 
           <div className="mt-5 flex flex-wrap gap-4">
-            <Button className="gap-2 shadow-[0_0_10px] shadow-primary" asChild>
+            <Button className="shadow-primary gap-2 shadow-[0_0_10px]" asChild>
               <a href="/Aymene_Bahmed_CV.pdf" target="_blank">
                 <DownloadIcon size={20} />
                 <span>Download CV</span>
