@@ -9,8 +9,8 @@ import { SnowfallBackground } from "@/components/SnowfallBackground";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Aymen Bahmed | Full-Stack Web Developer",
-  description: "Aymen Bahmed's portfolio",
+  title: "Aymene Bahmed | Full-Stack Web Developer",
+  description: "Aymene Bahmed's portfolio",
 };
 
 export default function RootLayout({

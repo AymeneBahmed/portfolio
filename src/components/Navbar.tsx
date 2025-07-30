@@ -20,13 +20,13 @@ function Navbar() {
     useState(false);
 
   return (
-    <nav className="fixed z-9998 flex h-18 w-full items-center justify-center border-b border-primary bg-muted/40 shadow-[0_0_15px_0px] shadow-primary backdrop-blur-lg">
+    <nav className="border-primary bg-muted/40 shadow-primary fixed z-9998 flex h-18 w-full items-center justify-center border-b shadow-[0_0_15px_0px] backdrop-blur-lg">
       <button
         className="invisible absolute left-10 space-y-1.5 max-[830px]:visible"
         onClick={() => setShouldShowVerticalNavbar(true)}
       >
         {[...Array(3)].map((_, i) => (
-          <div key={i} className="h-1 w-8 rounded-full bg-primary"></div>
+          <div key={i} className="bg-primary h-1 w-8 rounded-full"></div>
         ))}
       </button>
 
@@ -35,8 +35,8 @@ function Navbar() {
         setShouldShowVerticalNavbar={setShouldShowVerticalNavbar}
       />
 
-      <div className="absolute left-8 text-nowrap text-[clamp(1.5rem,2vw,1.775rem)] font-bold text-primary underline underline-offset-8 max-[830px]:left-1/2 max-[830px]:-translate-x-1/2">
-        Aymen Bahmed
+      <div className="text-primary absolute left-8 text-[clamp(1.5rem,2vw,1.775rem)] font-bold text-nowrap underline underline-offset-8 max-[830px]:left-1/2 max-[830px]:-translate-x-1/2">
+        Aymene Bahmed
       </div>
 
       <div className="flex w-[30%] cursor-pointer flex-nowrap justify-between max-[830px]:hidden">
@@ -77,13 +77,13 @@ function VerticalNavbar({
   return createPortal(
     <div
       className={cn(
-        "fixed left-0 top-0 z-9999 grid size-full place-content-center bg-white/50 opacity-0 backdrop-blur-sm transition-all duration-500 dark:bg-black/50 min-[830px]:hidden",
+        "fixed top-0 left-0 z-9999 grid size-full place-content-center bg-white/50 opacity-0 backdrop-blur-sm transition-all duration-500 min-[830px]:hidden dark:bg-black/50",
         !shouldShowVerticalNavbar && "pointer-events-none",
         shouldShowVerticalNavbar && "opacity-100",
       )}
     >
       <button
-        className="absolute right-4 top-4 transition-colors duration-300 hover:text-primary"
+        className="hover:text-primary absolute top-4 right-4 transition-colors duration-300"
         onClick={() => setShouldShowVerticalNavbar(false)}
       >
         <X size={50} />
@@ -120,12 +120,12 @@ function NavLink({
   return (
     <Link
       className={cn(
-        "group relative font-semibold capitalize underline-offset-8 transition-colors duration-300 hover:text-primary",
+        "group hover:text-primary relative font-semibold capitalize underline-offset-8 transition-colors duration-300",
         className,
       )}
       href={href}
     >
-      <div className="absolute bottom-[-3px] left-0 h-0.5 w-0 rounded-full bg-primary transition-[width] group-hover:w-full"></div>
+      <div className="bg-primary absolute bottom-[-3px] left-0 h-0.5 w-0 rounded-full transition-[width] group-hover:w-full"></div>
       {text}
     </Link>
   );

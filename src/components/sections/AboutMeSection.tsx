@@ -9,7 +9,7 @@ export default function AboutMeSection() {
 
         <div className="text-muted-foreground mt-9 space-y-5 text-lg tracking-wider">
           <p>
-            I am Aymen Bahmed,{" "}
+            I am Aymene Bahmed,{" "}
             <strong className="text-primary">a computer nerd</strong> who&apos;s
             passionate and always{" "}
             <strong className="text-primary">ready to learn anything</strong>{" "}

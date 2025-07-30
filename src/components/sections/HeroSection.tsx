@@ -109,7 +109,7 @@ export default function HeroSection() {
             <h1 className="text-3xl leading-12 font-bold tracking-wide text-pretty sm:text-4xl sm:leading-14 md:text-5xl md:leading-16">
               I am{" "}
               <span className="text-primary">
-                {"Aymen Bahmed".split("").map((char, i) => (
+                {"Aymene Bahmed".split("").map((char, i) => (
                   <span
                     key={i}
                     className={cn("name-char", char !== " " && "inline-block")}
