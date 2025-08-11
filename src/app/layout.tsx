@@ -6,7 +6,10 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { SnowfallBackground } from "@/components/SnowfallBackground";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  fallback: ["Arial"],
+});
 
 export const metadata: Metadata = {
   title: "Aymene Bahmed | Full-Stack Web Developer",
