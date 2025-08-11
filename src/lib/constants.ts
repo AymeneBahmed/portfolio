@@ -184,6 +184,12 @@ export const technologies: Technology[] = [
       "A powerful React framework that adds SEO and SSR to websites made with React.js.",
   },
   {
+    logo: prismaLogo,
+    name: "Prisma ORM",
+    description:
+      "A high-level tool used to communicate with databases using JavaScript/TypeScript with a great developer experience in mind.",
+  },
+  {
     logo: phpLogo,
     name: "PHP",
     description:
@@ -194,12 +200,6 @@ export const technologies: Technology[] = [
     name: "Laravel",
     description:
       "A PHP framework with elegant and expressive syntax that facilitates backend development.",
-  },
-  {
-    logo: prismaLogo,
-    name: "Prisma ORM",
-    description:
-      "A high-level tool used to communicate with databases using JavaScript/TypeScript with a great developer experience in mind.",
   },
   {
     logo: gitLogo,
