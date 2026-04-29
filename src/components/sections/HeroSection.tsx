@@ -128,8 +128,7 @@ export default function HeroSection() {
 
             <div className="text-muted-foreground text-base text-wrap sm:text-lg">
               I create modern, responsive web applications using React, Next.js,
-              and Node.js. Passionate about clean code, user experience, and
-              bringing ideas to life through technology.
+              and Node.js. Interested in learning how things work in depth.
             </div>
           </div>
 
