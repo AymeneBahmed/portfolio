@@ -7,11 +7,11 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <div className="border-b border-primary"></div>
+      <div className="border-primary border-b"></div>
       <AboutMeSection />
-      <div className="border-b border-primary"></div>
+      <div className="border-primary border-b"></div>
       <SkillsSection />
-      <div className="border-b border-primary"></div>
+      <div className="border-primary border-b"></div>
       <ProjectsSection />
     </>
   );
