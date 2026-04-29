@@ -32,11 +32,15 @@ export default function AboutMeSection() {
             <strong className="text-primary">
               graduate Computer Science student
             </strong>
-            , looking forward to specializing in Data Science for my
-            master&apos;s degree. My favorite topics are AI especially robotics,
-            embedded programming, and web development. I am planning to take an
-            AI degree and focus on robotics in the future since I love creating
-            real world stuff!
+            , pursuing a master&apos;s degree in Data Science where I&apos;m
+            taking courses in{" "}
+            <strong className="text-primary">
+              Data Science and Data Engineering
+            </strong>
+            . My favorite topics are AI especially robotics, embedded
+            programming, and web development. I am planning to take an AI degree
+            and focus on robotics in the future since I love creating real world
+            stuff!
           </p>
 
           <p>
