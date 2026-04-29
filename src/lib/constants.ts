@@ -19,7 +19,6 @@ import ticTacToeImg from "@/assets/projects imgs/tic tac toe.png";
 import todoImg from "@/assets/projects imgs/todo.png";
 import tributePageImg from "@/assets/projects imgs/tribute page.png";
 import studyScheduleImg from "@/assets/projects imgs/study schedule.png";
-import researchLaboratoriesImg from "@/assets/projects imgs/research laboratories.png";
 import { Project, Technology } from "@/types";
 
 export const projects: Project[] = [
