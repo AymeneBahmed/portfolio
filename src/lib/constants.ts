@@ -123,22 +123,6 @@ export const projects: Project[] = [
       "Prisma ORM",
     ],
   },
-  {
-    title: "research laboratories",
-    gitLink: null,
-    preview: "https://univ-oran1.dz/univ_labos1/public/",
-    description:
-      "An official website made for Oran 1 University Ahmed Ben Bella Research Laboratories.",
-    img: researchLaboratoriesImg,
-    technologies: [
-      "HTML",
-      "CSS",
-      "TypeScript",
-      "TailwindCSS",
-      "React.js",
-      "Laravel",
-    ],
-  },
 ];
 
 export const technologies: Technology[] = [
