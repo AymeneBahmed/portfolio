@@ -21,7 +21,7 @@ export default function HeroSection() {
   const socials = [
     {
       Icon: MailIcon,
-      href: "mailto:aymendd3131@gmail.com",
+      href: "mailto:aymene.bahmed.dz@gmail.com",
     },
     {
       Icon: FaLinkedin,
