@@ -153,9 +153,9 @@ export default function HeroSection() {
 
           <div className="mt-5 flex flex-wrap gap-4">
             <Button className="shadow-primary gap-2 shadow-[0_0_10px]" asChild>
-              <a href="/Aymene_Bahmed_CV.pdf" target="_blank">
+              <a href="/Aymene_Bahmed_Resume.pdf" target="_blank">
                 <DownloadIcon size={20} />
-                <span>Download CV</span>
+                <span>Download Resume</span>
               </a>
             </Button>
 
