@@ -143,9 +143,16 @@ export default function HeroSection() {
                   key={i}
                   href={href}
                   target="_blank"
-                  className="social-link-btn rounded-full border border-white p-1.5 transition-colors hover:border-black hover:bg-white *:hover:fill-black"
+                  className="social-link-btn hover:bg-primary group rounded-full border border-white p-1.5 transition-colors hover:border-black"
                 >
-                  <Icon className="size-5 transition-colors" />
+                  <Icon
+                    className={cn(
+                      "size-5 transition-colors",
+                      socials[0].Icon === Icon
+                        ? "group-hover:stroke-primary-foreground"
+                        : "group-hover:fill-primary-foreground",
+                    )}
+                  />
                 </a>
               ))}
             </div>
