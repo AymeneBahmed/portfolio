@@ -106,7 +106,7 @@ export function SnowfallBackground() {
   }, []);
 
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden bg-gradient-to-b from-blue-50 to-blue-100 dark:from-gray-900 dark:to-black">
+    <div className="fixed inset-0 -z-10 overflow-hidden">
       <canvas ref={canvasRef} className="inset-0 h-full w-full" />
     </div>
   );
