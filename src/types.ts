@@ -11,7 +11,8 @@ export type TechnologyName =
   | "Prisma ORM"
   | "PHP"
   | "Laravel"
-  | "Git";
+  | "Git"
+  | "Playwright";
 
 export interface Technology {
   logo: StaticImport | string;

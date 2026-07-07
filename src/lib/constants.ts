@@ -9,6 +9,7 @@ import tailwindLogo from "@/assets/logos/tailwind.svg";
 import tsLogo from "@/assets/logos/ts.svg";
 import phpLogo from "@/assets/logos/php.svg";
 import laravelLogo from "@/assets/logos/laravel.svg";
+import playwrightLogo from "@/assets/logos/playwright.svg";
 import calculatorImg from "@/assets/projects imgs/calculator.png";
 import etchASketchImg from "@/assets/projects imgs/etch a sketch.png";
 import formPageImg from "@/assets/projects imgs/form page.png";
@@ -19,6 +20,80 @@ import ticTacToeImg from "@/assets/projects imgs/tic tac toe.png";
 import todoImg from "@/assets/projects imgs/todo.png";
 import studyScheduleImg from "@/assets/projects imgs/study schedule.png";
 import { Project, Technology } from "@/types";
+
+export const technologies: Technology[] = [
+  {
+    logo: htmlLogo,
+    name: "HTML",
+    description:
+      "A markup language used to define content and structure of a web page.",
+  },
+  {
+    logo: cssLogo,
+    name: "CSS",
+    description: "A language used to style websites and make them beautiful.",
+  },
+  {
+    logo: jsLogo,
+    name: "JavaScript",
+    description:
+      "A scripting language used to add interactivity to a website improving the user experience.",
+  },
+  {
+    logo: tsLogo,
+    name: "TypeScript",
+    description:
+      "A subset language of JavaScript that adds type safety to the language which improves developer experience.",
+  },
+  {
+    logo: tailwindLogo,
+    name: "TailwindCSS",
+    description:
+      "A CSS utility-first framework for building websites without ever leaving HTML.",
+  },
+  {
+    logo: reactLogo,
+    name: "React.js",
+    description:
+      "A JavaScript library used to create complex user interfaces by combining small components.",
+  },
+  {
+    logo: nextjsLogo,
+    name: "Next.js",
+    description:
+      "A powerful React framework that adds SEO and SSR to websites made with React.js.",
+  },
+  {
+    logo: prismaLogo,
+    name: "Prisma ORM",
+    description:
+      "A high-level tool used to communicate with databases using JavaScript/TypeScript with a great developer experience in mind.",
+  },
+  {
+    logo: phpLogo,
+    name: "PHP",
+    description:
+      "A high-level scripting language used to create server-side applications.",
+  },
+  {
+    logo: laravelLogo,
+    name: "Laravel",
+    description:
+      "A PHP framework with elegant and expressive syntax that facilitates backend development.",
+  },
+  {
+    logo: gitLogo,
+    name: "Git",
+    description:
+      "A version control system used to track the progress of a project making it easy to collaborate between teams.",
+  },
+  {
+    logo: playwrightLogo,
+    name: "Playwright",
+    description:
+      "An end-to-end (E2E) testing framework with a simple and powerful API to write complex application tests.",
+  },
+];
 
 export const projects: Project[] = [
   {
@@ -111,73 +186,5 @@ export const projects: Project[] = [
       "A webpage that teaches Git with a beginner-friendly approach.",
     img: gitLearnImg,
     technologies: ["HTML", "CSS", "JavaScript"],
-  },
-];
-
-export const technologies: Technology[] = [
-  {
-    logo: htmlLogo,
-    name: "HTML",
-    description:
-      "A markup language used to define content and structure of a web page.",
-  },
-  {
-    logo: cssLogo,
-    name: "CSS",
-    description: "A language used to style websites and make them beautiful.",
-  },
-  {
-    logo: jsLogo,
-    name: "JavaScript",
-    description:
-      "A scripting language used to add interactivity to a website improving the user experience.",
-  },
-  {
-    logo: tsLogo,
-    name: "TypeScript",
-    description:
-      "A subset language of JavaScript that adds type safety to the language which improves developer experience.",
-  },
-  {
-    logo: tailwindLogo,
-    name: "TailwindCSS",
-    description:
-      "A CSS utility-first framework for building websites without ever leaving HTML.",
-  },
-  {
-    logo: reactLogo,
-    name: "React.js",
-    description:
-      "A JavaScript library used to create complex user interfaces by combining small components.",
-  },
-  {
-    logo: nextjsLogo,
-    name: "Next.js",
-    description:
-      "A powerful React framework that adds SEO and SSR to websites made with React.js.",
-  },
-  {
-    logo: prismaLogo,
-    name: "Prisma ORM",
-    description:
-      "A high-level tool used to communicate with databases using JavaScript/TypeScript with a great developer experience in mind.",
-  },
-  {
-    logo: phpLogo,
-    name: "PHP",
-    description:
-      "A high-level scripting language used to create server-side applications.",
-  },
-  {
-    logo: laravelLogo,
-    name: "Laravel",
-    description:
-      "A PHP framework with elegant and expressive syntax that facilitates backend development.",
-  },
-  {
-    logo: gitLogo,
-    name: "Git",
-    description:
-      "A version control system used to track the progress of a project making it easy to collaborate between teams.",
   },
 ];
