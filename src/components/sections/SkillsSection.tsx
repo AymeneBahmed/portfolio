@@ -47,7 +47,7 @@ export default function SkillsSection() {
       ref={sectionRef}
     >
       <div
-        className="absolute inset-0 -z-10 opacity-20 dark:opacity-[0.15]"
+        className="absolute inset-0 -z-10 opacity-[0.15]"
         style={{
           backgroundImage: `
           radial-gradient(circle at 10px 10px, currentColor 1px, transparent 0),

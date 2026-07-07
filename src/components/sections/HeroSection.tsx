@@ -87,7 +87,7 @@ export default function HeroSection() {
       className="relative flex min-h-dvh items-center justify-center gap-8"
     >
       <div
-        className="absolute inset-0 -z-10 opacity-20 dark:opacity-[0.15]"
+        className="absolute inset-0 -z-10 opacity-[0.15]"
         style={{
           backgroundImage: `
           radial-gradient(circle at 10px 10px, currentColor 1px, transparent 0),
@@ -100,7 +100,7 @@ export default function HeroSection() {
 
       <div className="mx-auto flex w-[90%] flex-col-reverse items-center justify-center gap-8 py-12 min-[1550px]:justify-between sm:px-8 md:py-0 lg:w-[70%] lg:flex-row">
         <div className="mt-0 md:mt-2">
-          <div className="flex w-fit items-center gap-2 rounded-full border border-green-200 bg-green-100 px-4 py-1 font-semibold text-green-700 dark:border-green-800 dark:bg-green-900/30 dark:text-green-300">
+          <div className="flex w-fit items-center gap-2 rounded-full border border-green-800 bg-green-900/30 px-4 py-1 font-semibold text-green-300">
             <div className="h-2 w-2 animate-pulse rounded-full bg-green-500 font-thin"></div>
             <span>Available for work</span>
           </div>
@@ -143,7 +143,7 @@ export default function HeroSection() {
                   key={i}
                   href={href}
                   target="_blank"
-                  className="social-link-btn rounded-full border border-black p-1.5 transition-colors hover:border-black hover:bg-black *:hover:fill-white dark:border-white dark:hover:border-black dark:hover:bg-white *:hover:dark:fill-black"
+                  className="social-link-btn rounded-full border border-white p-1.5 transition-colors hover:border-black hover:bg-white *:hover:fill-black"
                 >
                   <Icon className="size-5 transition-colors" />
                 </a>
