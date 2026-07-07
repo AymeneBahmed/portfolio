@@ -63,14 +63,14 @@
 }
 
 :root,
-.cyan {
+.neon-green {
   --background: oklch(0.084 0.012 255.894);
   --foreground: oklch(0.984 0.004 248.165);
   --card: oklch(0.084 0.012 255.894);
   --card-foreground: oklch(0.984 0.004 248.165);
   --popover: oklch(0.084 0.012 255.894);
   --popover-foreground: oklch(0.984 0.004 248.165);
-  --primary: oklch(78.9% 0.154 211.53);
+  --primary: oklch(88.342% 0.23899 142.491);
   --primary-foreground: oklch(0.208 0.04 265.731);
   --secondary: oklch(0.28 0.037 259.98);
   --secondary-foreground: oklch(0.984 0.004 248.165);
@@ -86,6 +86,11 @@
   --technology-card-background: var(--color-slate-950);
 }
 
+.cyan {
+  --primary: oklch(78.9% 0.154 211.53);
+  --primary-foreground: oklch(0.208 0.04 265.731);
+}
+
 .sky {
   --primary: oklch(76.807% 0.14923 229.39);
   --primary-foreground: oklch(0.208 0.04 265.731);
@@ -98,11 +103,6 @@
 
 .purple {
   --primary: oklch(70.254% 0.17479 301.269);
-  --primary-foreground: oklch(0.208 0.04 265.731);
-}
-
-.neon-green {
-  --primary: oklch(88.342% 0.23899 142.491);
   --primary-foreground: oklch(0.208 0.04 265.731);
 }
 
