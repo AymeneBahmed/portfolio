@@ -10,6 +10,7 @@ import tsLogo from "@/assets/logos/ts.svg";
 import phpLogo from "@/assets/logos/php.svg";
 import laravelLogo from "@/assets/logos/laravel.svg";
 import playwrightLogo from "@/assets/logos/playwright.svg";
+import vitestLogo from "@/assets/logos/vitest.svg";
 import calculatorImg from "@/assets/projects imgs/calculator.png";
 import etchASketchImg from "@/assets/projects imgs/etch a sketch.png";
 import formPageImg from "@/assets/projects imgs/form page.png";
@@ -92,6 +93,12 @@ export const technologies: Technology[] = [
     name: "Playwright",
     description:
       "An end-to-end (E2E) testing framework with a simple and powerful API to write complex application tests.",
+  },
+  {
+    logo: vitestLogo,
+    name: "Vitest",
+    description:
+      "A blazingly fast testing framework that makes it easy to write unit and integration tests with a straightforward API.",
   },
 ];
 

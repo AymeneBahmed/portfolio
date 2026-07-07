@@ -12,7 +12,8 @@ export type TechnologyName =
   | "PHP"
   | "Laravel"
   | "Git"
-  | "Playwright";
+  | "Playwright"
+  | "Vitest";
 
 export interface Technology {
   logo: StaticImport | string;

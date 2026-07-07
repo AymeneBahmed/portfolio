@@ -58,6 +58,7 @@ export default function SkillsSection() {
           <div className="skill-card-wrapper max-w-94" key={technology.name}>
             <TechnologyCard className="h-full w-full text-pretty">
               <TechnologyCard.Figure className="space-y-3">
+                {/* This condition was added because the "N" in is transparent in the original svg */}
                 {technology.name === "Next.js" ? (
                   <div className="relative">
                     <div className="absolute top-0 left-0 size-full scale-90 rounded-full bg-white"></div>
@@ -75,6 +76,7 @@ export default function SkillsSection() {
                       "size-20",
                       technology.name === "PHP" && "scale-125",
                       technology.name === "Prisma ORM" && "brightness-[3]",
+                      technology.name === "Vitest" && "h-28 scale-175",
                     )}
                   />
                 )}
