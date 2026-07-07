@@ -3,19 +3,15 @@
 import Link from "next/link";
 import ProfilePicture from "../ProfilePicture";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
+import { motion } from "framer-motion"; // or "motion/react"
 import {
   ChevronDownIcon,
   DownloadIcon,
   FolderCodeIcon,
   MailIcon,
 } from "lucide-react";
-
-gsap.registerPlugin(useGSAP);
 
 export default function HeroSection() {
   const socials = [
@@ -32,60 +28,10 @@ export default function HeroSection() {
       href: "https://github.com/AymeneBahmed",
     },
   ];
-  const profilePictureContainerRef = useRef<HTMLDivElement>(null);
-  const sectionRef = useRef<HTMLElement>(null);
-  const scrollDownBtnRef = useRef<HTMLButtonElement>(null);
-
-  useGSAP(
-    () => {
-      gsap.from(profilePictureContainerRef.current, {
-        x: -1000,
-        rotate: -360,
-        scale: 0,
-        duration: 1.7,
-        ease: "back.out",
-      });
-      gsap.from(".name-char", {
-        stagger: 0.1,
-        y: () => Math.random() * 400 - 200,
-        opacity: 0,
-        duration: 0.7,
-      });
-      gsap.from(".get-in-touch-text", {
-        opacity: 0,
-        duration: 1,
-      });
-      gsap.from(".social-link-btn", {
-        stagger: 0.2,
-        y: 150,
-        opacity: 0,
-        duration: 0.7,
-      });
-      gsap.fromTo(
-        scrollDownBtnRef.current,
-        {
-          y: 0,
-          opacity: 0.9,
-        },
-        {
-          y: 15,
-          opacity: 1,
-          duration: 1,
-          repeat: -1,
-          yoyo: true,
-          repeatRefresh: true,
-          ease: "sine.inOut",
-        },
-      );
-    },
-    { scope: sectionRef },
-  );
 
   return (
-    <section
-      ref={sectionRef}
-      className="relative flex min-h-dvh items-center justify-center gap-8"
-    >
+    <section className="relative flex min-h-dvh items-center justify-center gap-8">
+      {/* Background grid pattern */}
       <div
         className="absolute inset-0 -z-10 opacity-[0.15]"
         style={{
@@ -110,12 +56,15 @@ export default function HeroSection() {
               I am{" "}
               <span className="text-primary">
                 {"Aymene Bahmed".split("").map((char, i) => (
-                  <span
+                  <motion.span
                     key={i}
-                    className={cn("name-char", char !== " " && "inline-block")}
+                    className={cn(char !== " " && "inline-block")}
+                    initial={{ y: Math.random() * 400 - 200, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: i * 0.05, duration: 0.7 }}
                   >
                     {char}
-                  </span>
+                  </motion.span>
                 ))}
               </span>
             </h1>
@@ -132,18 +81,31 @@ export default function HeroSection() {
             </div>
           </div>
 
+          {/* Get In Touch & Socials section */}
           <div className="mt-6 flex gap-3 sm:flex-row sm:items-center sm:gap-4">
-            <span className="get-in-touch-text text-lg tracking-wide underline decoration-dashed underline-offset-[6px]">
+            <motion.span
+              className="text-lg tracking-wide underline decoration-dashed underline-offset-[6px]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
               Get in touch:{" "}
-            </span>
+            </motion.span>
 
             <div className="flex gap-5">
               {socials.map(({ Icon, href }, i) => (
-                <a
+                <motion.a
                   key={i}
                   href={href}
                   target="_blank"
-                  className="social-link-btn hover:bg-primary group rounded-full border border-white p-1.5 transition-colors hover:border-black"
+                  className="hover:bg-primary group rounded-full border border-white p-1.5 transition-colors hover:border-black"
+                  initial={{ y: 150, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{
+                    delay: i * 0.15,
+                    duration: 0.7,
+                    ease: "easeOut",
+                  }}
                 >
                   <Icon
                     className={cn(
@@ -153,7 +115,7 @@ export default function HeroSection() {
                         : "group-hover:fill-primary-foreground",
                     )}
                   />
-                </a>
+                </motion.a>
               ))}
             </div>
           </div>
@@ -175,22 +137,39 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div ref={profilePictureContainerRef}>
+        {/* Profile Picture Container */}
+        <motion.div
+          initial={{ x: 1000, rotate: -360, scale: 0, opacity: 0 }}
+          animate={{ x: 0, rotate: 0, scale: 1, opacity: 1 }}
+          transition={{ duration: 1.7, ease: "backOut" }}
+        >
           <ProfilePicture className="size-80 md:size-88 lg:size-[clamp(310px,24vw,28rem)]" />
-        </div>
+        </motion.div>
       </div>
 
-      <Button
-        ref={scrollDownBtnRef}
-        size="icon"
-        variant="secondary"
-        className="scroll-down-btn absolute bottom-10 cursor-pointer rounded-full"
-        asChild
+      {/* Floating Scroll Down Button */}
+      <motion.div
+        className="absolute bottom-10"
+        initial={{ y: 0, opacity: 0.9 }}
+        animate={{ y: 15, opacity: 1 }}
+        transition={{
+          duration: 1,
+          repeat: Infinity,
+          repeatType: "reverse",
+          ease: "easeInOut",
+        }}
       >
-        <Link href="#about-me">
-          <ChevronDownIcon />
-        </Link>
-      </Button>
+        <Button
+          size="icon"
+          variant="secondary"
+          className="cursor-pointer rounded-full"
+          asChild
+        >
+          <Link href="#about-me">
+            <ChevronDownIcon />
+          </Link>
+        </Button>
+      </motion.div>
     </section>
   );
 }
