@@ -6,16 +6,13 @@ import { Url } from "next/dist/shared/lib/router/router";
 import { cn } from "@/lib/utils";
 import { createPortal } from "react-dom";
 import { X } from "lucide-react";
-import { useState } from "react";
-import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 import { FaGithub } from "react-icons/fa6";
 
 const navLinks = ["about me", "skills", "projects"];
 
-export default dynamic(() => Promise.resolve(Navbar), { ssr: false });
-
-function Navbar() {
+export default function Navbar() {
   const [shouldShowVerticalNavbar, setShouldShowVerticalNavbar] =
     useState(false);
 
@@ -74,6 +71,17 @@ function VerticalNavbar({
   shouldShowVerticalNavbar: boolean;
   setShouldShowVerticalNavbar: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // prevent document is undefined error
+  if (!isMounted) {
+    return null;
+  }
+
   return createPortal(
     <div
       className={cn(
