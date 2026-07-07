@@ -6,8 +6,7 @@ import { cn } from "@/lib/utils";
 import { createPortal } from "react-dom";
 import { X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Button } from "./ui/button";
-import { FaGithub } from "react-icons/fa6";
+import CustomizationButton from "./ColorCustomizationButton";
 
 const navLinks = ["about me", "skills", "projects"];
 
@@ -46,16 +45,7 @@ export default function Navbar() {
       </div>
 
       <div className="absolute right-10 flex items-center gap-2">
-        <Button
-          size="icon"
-          variant="ghost"
-          className="flex rounded-full"
-          asChild
-        >
-          <a href="https://github.com/AymeneBahmed" target="_blank">
-            <FaGithub size={25} />
-          </a>
-        </Button>
+        <CustomizationButton />
       </div>
     </nav>
   );
@@ -82,7 +72,7 @@ function VerticalNavbar({
   return createPortal(
     <div
       className={cn(
-        "fixed top-0 left-0 z-9999 grid size-full place-content-center bg-white/50 opacity-0 backdrop-blur-sm transition-all duration-500 min-[830px]:hidden dark:bg-black/50",
+        "fixed top-0 left-0 z-9999 grid size-full place-content-center opacity-0 backdrop-blur-sm transition-all duration-500 min-[830px]:hidden bg-black/50",
         !shouldShowVerticalNavbar && "pointer-events-none",
         shouldShowVerticalNavbar && "opacity-100",
       )}
