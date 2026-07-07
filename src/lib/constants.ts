@@ -17,19 +17,59 @@ import libraryImg from "@/assets/projects imgs/library.png";
 import rockPaperScissorsImg from "@/assets/projects imgs/rock paper scissors.png";
 import ticTacToeImg from "@/assets/projects imgs/tic tac toe.png";
 import todoImg from "@/assets/projects imgs/todo.png";
-import tributePageImg from "@/assets/projects imgs/tribute page.png";
 import studyScheduleImg from "@/assets/projects imgs/study schedule.png";
 import { Project, Technology } from "@/types";
 
 export const projects: Project[] = [
   {
-    title: "tribute page",
-    gitLink: "https://github.com/AymeneBahmed/Tribute-page",
-    preview: "https://aymenebahmed.github.io/Tribute-page/",
+    title: "study schedule",
+    gitLink: "https://github.com/AymeneBahmed/study-schedule",
+    preview: "https://study-schedule-tau.vercel.app/",
     description:
-      "A simple page giving a brief about Dr. Norman Borlaug, the man who saved a billion lives!",
-    img: tributePageImg,
-    technologies: ["HTML", "CSS"],
+      "A tasking app made with login functionality that supports both users with and without accounts using IndexedDB and Dexie.js.",
+    img: studyScheduleImg,
+    technologies: [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "TailwindCSS",
+      "Next.js",
+      "Prisma ORM",
+    ],
+  },
+  {
+    title: "todo app",
+    gitLink: "https://github.com/AymeneBahmed/next-todo",
+    preview: "https://next-todo-fawn-xi.vercel.app/",
+    description:
+      "A simple todo app made with login functionality that stores your todos in a postgreSQL database.",
+    img: todoImg,
+    technologies: [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "TailwindCSS",
+      "Next.js",
+      "Prisma ORM",
+    ],
+  },
+  {
+    title: "etch a sketch",
+    gitLink: "https://github.com/AymeneBahmed/etch-a-sketch",
+    preview: "https://aymenebahmed.github.io/etch-a-sketch/",
+    description:
+      "Draw and let your imagination comes to life with this beautiful app!",
+    img: etchASketchImg,
+    technologies: ["HTML", "CSS", "JavaScript"],
+  },
+  {
+    title: "tic tac toe",
+    gitLink: "https://github.com/AymeneBahmed/tic-tac-toe",
+    preview: "https://aymenebahmed.github.io/tic-tac-toe/",
+    description:
+      "A tic tac toe game where you can play against AI or a human player.",
+    img: ticTacToeImg,
+    technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
     title: "rock paper scissors",
@@ -56,29 +96,11 @@ export const projects: Project[] = [
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
-    title: "tic tac toe",
-    gitLink: "https://github.com/AymeneBahmed/tic-tac-toe",
-    preview: "https://aymenebahmed.github.io/tic-tac-toe/",
-    description:
-      "A tic tac toe game where you can play against AI or a human player.",
-    img: ticTacToeImg,
-    technologies: ["HTML", "CSS", "JavaScript"],
-  },
-  {
     title: "library",
     gitLink: "https://github.com/AymeneBahmed/library",
     preview: "https://aymenebahmed.github.io/library/",
     description: "A library where you can save your favorite books.",
     img: libraryImg,
-    technologies: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    title: "etch a sketch",
-    gitLink: "https://github.com/AymeneBahmed/etch-a-sketch",
-    preview: "https://aymenebahmed.github.io/etch-a-sketch/",
-    description:
-      "Draw and let your imagination comes to life with this beautiful app!",
-    img: etchASketchImg,
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
@@ -89,38 +111,6 @@ export const projects: Project[] = [
       "A webpage that teaches Git with a beginner-friendly approach.",
     img: gitLearnImg,
     technologies: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    title: "todo app",
-    gitLink: "https://github.com/AymeneBahmed/next-todo",
-    preview: "https://next-todo-fawn-xi.vercel.app/",
-    description:
-      "A simple todo app made with login functionality that stores your todos in a postgreSQL database.",
-    img: todoImg,
-    technologies: [
-      "HTML",
-      "CSS",
-      "TypeScript",
-      "TailwindCSS",
-      "Next.js",
-      "Prisma ORM",
-    ],
-  },
-  {
-    title: "study schedule",
-    gitLink: "https://github.com/AymeneBahmed/study-schedule",
-    preview: "https://study-schedule-tau.vercel.app/",
-    description:
-      "A tasking app made with login functionality that supports both users with and without accounts using IndexedDB and Dexie.js.",
-    img: studyScheduleImg,
-    technologies: [
-      "HTML",
-      "CSS",
-      "TypeScript",
-      "TailwindCSS",
-      "Next.js",
-      "Prisma ORM",
-    ],
   },
 ];
 
