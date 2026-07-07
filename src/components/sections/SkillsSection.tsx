@@ -4,47 +4,38 @@ import nextjsLogo from "@/assets/logos/nextjs.svg";
 import TechnologyCard from "../TechnologyCard";
 import { cn } from "@/lib/utils";
 import { technologies } from "@/lib/constants";
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+import { motion, Variants } from "framer-motion";
 
 export default function SkillsSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useGSAP(
-    () => {
-      gsap.from(".skills-heading", {
-        opacity: 0,
-        duration: 0.7,
-        scrollTrigger: {
-          trigger: ".skill-cards-container",
-          start: "top 90%",
-        },
-      });
-
-      gsap.from(".skill-card-wrapper", {
-        stagger: 0.3,
-        opacity: 0,
-        y: 150,
-        duration: 0.5,
-        ease: "back.out",
-        scrollTrigger: {
-          trigger: ".skill-cards-container",
-          start: "top 80%",
-        },
-      });
+  // Animation variants for the grid container to orchestrate the stagger
+  const containerVariants: Variants = {
+    hidden: {},
+    animate: {
+      transition: {
+        staggerChildren: 0.15,
+      },
     },
-    { scope: sectionRef },
-  );
+  };
+
+  const cardVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      y: 150,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "backOut",
+      },
+    },
+  };
 
   return (
     <section
       className="relative flex min-h-dvh flex-col items-center justify-evenly gap-24 py-16"
       id="skills"
-      ref={sectionRef}
     >
       <div
         className="absolute inset-0 -z-10 opacity-[0.15]"
@@ -58,19 +49,32 @@ export default function SkillsSection() {
         }}
       />
 
-      <h1
-        className="skills-heading text-primary text-6xl font-bold tracking-wide"
+      <motion.h1
+        className="text-primary text-6xl font-bold tracking-wide"
         style={{ textShadow: "0 0 5px" }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.7 }}
       >
         Skills
-      </h1>
+      </motion.h1>
 
-      <div className="skill-cards-container grid w-[90%] grid-cols-1 justify-items-center gap-x-10 gap-y-20 sm:w-[90%] sm:grid-cols-2 md:grid-cols-3">
+      <motion.div
+        className="grid w-[90%] grid-cols-1 justify-items-center gap-x-10 gap-y-20 sm:w-[90%] sm:grid-cols-2 md:grid-cols-3"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.1 }}
+      >
         {technologies.map((technology) => (
-          <div className="skill-card-wrapper max-w-94" key={technology.name}>
+          <motion.div
+            className="h-full w-full max-w-94"
+            key={technology.name}
+            variants={cardVariants}
+          >
             <TechnologyCard className="h-full w-full text-pretty">
               <TechnologyCard.Figure className="space-y-3">
-                {/* This condition was added because the "N" in is transparent in the original svg */}
                 {technology.name === "Next.js" ? (
                   <div className="relative">
                     <div className="absolute top-0 left-0 size-full scale-90 rounded-full bg-white"></div>
@@ -102,9 +106,9 @@ export default function SkillsSection() {
                 {technology.description}
               </TechnologyCard.Description>
             </TechnologyCard>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
