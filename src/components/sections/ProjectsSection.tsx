@@ -56,13 +56,14 @@ export default function ProjectsSection() {
 
       <div className="project-cards-container grid w-[90%] grid-cols-1 justify-items-center gap-x-10 gap-y-20 sm:w-[90%] sm:grid-cols-2 md:grid-cols-3">
         {projects.map((project) => (
-          <div key={project.preview} className="project-card-wrapper max-w-94">
-            <div className="animate-spin-gradient absolute top-1/2 left-1/2 -z-1 size-[102%] -translate-1/2 rounded-lg bg-conic-[from_var(--conic-angle)_in_oklab,hsl(180,100%,50%)_0deg_10deg,var(--color-blue-500)_30deg_40deg,var(--color-purple-300)_50deg_60deg,transparent_70deg_180deg,hsl(180,100%,50%)_180deg_190deg,var(--color-blue-500)_210deg_220deg,var(--color-purple-300)_230deg_240deg,transparent_250deg]"></div>
+          <div
+            key={project.preview}
+            className="project-card-wrapper max-w-94 overflow-hidden p-[3px]"
+          >
+            {/* Sharp Spinning Border Texture */}
+            <div className="animate-gpu-spin absolute top-1/2 left-1/2 -z-1 aspect-square min-h-[170%] min-w-[170%] -translate-x-1/2 -translate-y-1/2 bg-conic-[from_0deg_in_oklab,hsl(180,100%,50%)_0deg_10deg,var(--color-blue-500)_30deg_40deg,var(--color-purple-300)_50deg_60deg,transparent_70deg_180deg,hsl(180,100%,50%)_180deg_190deg,var(--color-blue-500)_210deg_220deg,var(--color-purple-300)_230deg_240deg,transparent_250deg] blur-xl" />
 
-            {/* Blurred gradient */}
-            <div className="animate-spin-gradient absolute top-1/2 left-1/2 -z-1 size-[102%] -translate-1/2 rounded-lg bg-conic-[from_var(--conic-angle)_in_oklab,hsl(180,100%,50%)_0deg_10deg,var(--color-blue-500)_30deg_40deg,var(--color-purple-300)_50deg_60deg,transparent_70deg_180deg,hsl(180,100%,50%)_180deg_190deg,var(--color-blue-500)_210deg_220deg,var(--color-purple-300)_230deg_240deg,transparent_250deg] blur-lg"></div>
-
-            <div className="bg-muted relative z-1 h-full overflow-hidden rounded-md border">
+            <div className="bg-muted relative z-1 h-full overflow-hidden border">
               <Image src={project.img} alt={project.title} />
               <div className="p-3">
                 <div>
