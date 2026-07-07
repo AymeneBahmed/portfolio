@@ -16,7 +16,7 @@ export default function Navbar() {
     useState(false);
 
   return (
-    <nav className="border-primary bg-muted/40 shadow-primary fixed z-9998 flex h-18 w-full items-center justify-center border-b shadow-[0_0_15px_0px] backdrop-blur-lg">
+    <nav className="border-primary bg-muted/40 shadow-primary fixed z-20 flex h-18 w-full items-center justify-center border-b shadow-[0_0_15px_0px] backdrop-blur-lg">
       <button
         className="invisible absolute left-10 space-y-1.5 max-[830px]:visible"
         onClick={() => setShouldShowVerticalNavbar(true)}
