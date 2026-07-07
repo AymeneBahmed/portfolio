@@ -59,7 +59,10 @@ export default function HeroSection() {
                   <motion.span
                     key={i}
                     className={cn(char !== " " && "inline-block")}
-                    initial={{ y: Math.random() * 400 - 200, opacity: 0 }}
+                    initial={{
+                      y: ((i * 127) % 360) - 180,
+                      opacity: 0,
+                    }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: i * 0.05, duration: 0.7 }}
                   >
