@@ -1,30 +1,49 @@
 "use client";
 
+import { ShuffleIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
+import { useState, useEffect } from "react";
 
+const COLOR_THEMES = [
+  "cyan",
+  "sky",
+  "purple",
+  "neon-green",
+  "caffeine",
+  "blue",
+  "orange",
+  "yellow",
+  "tomato",
+  "fuchsia",
+  "indigo",
+  "green",
+  "teal",
+];
 export default function ColorCustomizationButton() {
-  const colorThemes = [
-    "cyan",
-    "sky",
-    "purple",
-    "neon-green",
-    "caffeine",
-    "blue",
-    "orange",
-    "yellow",
-    "tomato",
-    "fuchsia",
-    "indigo",
-    "green",
-    "teal",
-  ];
+  const [theme, setTheme] = useState<string>("");
+  const [isShuffling, setIsShuffling] = useState<boolean>(false);
 
-  function changeTheme(themeName: string) {
+  useEffect(() => {
     const htmlElement = document.documentElement;
+    htmlElement.className = theme;
+  }, [theme]);
 
-    htmlElement.className = "";
-    htmlElement.classList.add(themeName);
+  useEffect(() => {
+    if (!isShuffling) return;
+
+    const interval = setInterval(() => {
+      const randomTheme =
+        COLOR_THEMES[Math.floor(Math.random() * COLOR_THEMES.length)];
+      setTheme(randomTheme);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [isShuffling]);
+
+  function handleThemeSelect(themeName: string) {
+    setIsShuffling(false);
+    setTheme(themeName);
   }
 
   return (
@@ -32,7 +51,6 @@ export default function ColorCustomizationButton() {
       <PopoverTrigger asChild>
         <div className="relative size-8">
           <div className="bg-primary absolute inset-0 z-0 scale-110 rounded-full" />
-
           <Button
             size="icon"
             className="border-secondary relative z-10 size-full cursor-pointer rounded-full border-2"
@@ -44,18 +62,23 @@ export default function ColorCustomizationButton() {
         <div className="text-sm">Colors</div>
         <hr />
         <div className="mt-2 flex flex-wrap gap-1">
-          {colorThemes.map((theme) => (
-            <div key={theme}>
-              <Button
-                size="icon"
-                className={`border-secondary ${theme} relative z-10 size-10 cursor-pointer rounded-full border-2`}
-                onClick={() => {
-                  changeTheme(theme);
-                }}
-                aria-label={theme}
-              />
-            </div>
+          {COLOR_THEMES.map((themeName) => (
+            <Button
+              key={themeName}
+              size="icon"
+              className={`border-secondary ${themeName} relative size-10 cursor-pointer rounded-full border-2`}
+              onClick={() => handleThemeSelect(themeName)}
+              aria-label={themeName}
+            />
           ))}
+          <Button
+            size="icon"
+            className="border-secondary hover:bg-muted bg-muted relative flex size-10 cursor-pointer items-center justify-center rounded-full border-2 text-white"
+            onClick={() => setIsShuffling((prev) => !prev)} // Toggles shuffling on/off cleanly
+            aria-label="Mix"
+          >
+            <ShuffleIcon className="stroke-muted-foreground" size={20} />
+          </Button>
         </div>
       </PopoverContent>
     </Popover>
