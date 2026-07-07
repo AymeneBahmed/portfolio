@@ -2,63 +2,65 @@
 
 import { projects, technologies } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef } from "react";
+import { motion, Variants } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
 
-gsap.registerPlugin(useGSAP);
-
 export default function ProjectsSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useGSAP(
-    () => {
-      gsap.from(".projects-heading", {
-        opacity: 0,
-        duration: 0.7,
-        scrollTrigger: {
-          trigger: ".project-cards-container",
-          start: "top 90%",
-        },
-      });
-
-      gsap.from(".project-card-wrapper", {
-        stagger: 0.3,
-        opacity: 0,
-        scale: 0,
-        duration: 0.5,
-        ease: "back.out",
-        scrollTrigger: {
-          trigger: ".project-cards-container",
-          start: "top 80%",
-        },
-      });
+  const containerVariants: Variants = {
+    hidden: {},
+    animate: {
+      transition: {
+        staggerChildren: 0.2,
+      },
     },
-    { scope: sectionRef },
-  );
+  };
+
+  const cardVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      scale: 0,
+    },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "backOut",
+      },
+    },
+  };
 
   return (
     <section
       className="bg-muted/40 relative flex min-h-dvh flex-col items-center justify-evenly gap-24 py-16"
       id="projects"
-      ref={sectionRef}
     >
-      <h1
-        className="projects-heading text-primary text-6xl font-bold tracking-wide"
+      <motion.h1
+        className="text-primary text-6xl font-bold tracking-wide"
         style={{ textShadow: "0 0 5px" }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.7 }}
       >
         Projects
-      </h1>
+      </motion.h1>
 
-      <div className="project-cards-container grid w-[90%] grid-cols-1 justify-items-center gap-x-10 gap-y-20 sm:w-[90%] sm:grid-cols-2 md:grid-cols-3">
+      <motion.div
+        className="grid w-[90%] grid-cols-1 justify-items-center gap-x-10 gap-y-20 sm:w-[90%] sm:grid-cols-2 md:grid-cols-3"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.1 }}
+      >
         {projects.map((project) => (
-          <div
+          <motion.div
             key={project.preview}
-            className="project-card-wrapper max-w-94 overflow-hidden p-[3px]"
+            className="relative max-w-94 overflow-hidden p-[3px]"
+            variants={cardVariants}
           >
             {/* Sharp Spinning Border Texture */}
             <div className="animate-gpu-spin absolute top-1/2 left-1/2 -z-1 aspect-square min-h-[170%] min-w-[170%] -translate-x-1/2 -translate-y-1/2 bg-conic-[from_0deg_in_oklab,hsl(180,100%,50%)_0deg_10deg,var(--color-blue-500)_30deg_40deg,var(--color-purple-300)_50deg_60deg,transparent_70deg_180deg,hsl(180,100%,50%)_180deg_190deg,var(--color-blue-500)_210deg_220deg,var(--color-purple-300)_230deg_240deg,transparent_250deg] blur-xl" />
@@ -131,9 +133,9 @@ export default function ProjectsSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
