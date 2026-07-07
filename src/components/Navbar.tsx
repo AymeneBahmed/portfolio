@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import ThemeTogglerButton from "./ThemeTogglerButton";
 import { Url } from "next/dist/shared/lib/router/router";
 import { cn } from "@/lib/utils";
 import { createPortal } from "react-dom";
@@ -47,8 +46,6 @@ export default function Navbar() {
       </div>
 
       <div className="absolute right-10 flex items-center gap-2">
-        <ThemeTogglerButton variant="ghost" className="rounded-full" />
-
         <Button
           size="icon"
           variant="ghost"
