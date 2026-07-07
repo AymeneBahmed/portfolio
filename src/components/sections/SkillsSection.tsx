@@ -46,6 +46,18 @@ export default function SkillsSection() {
       id="skills"
       ref={sectionRef}
     >
+      <div
+        className="absolute inset-0 -z-10 opacity-20 dark:opacity-[0.15]"
+        style={{
+          backgroundImage: `
+          radial-gradient(circle at 10px 10px, currentColor 1px, transparent 0),
+          radial-gradient(circle at 30px 30px, currentColor 1px, transparent 0)
+        `,
+          backgroundSize: "40px 40px",
+          backgroundPosition: "0 0, 20px 20px",
+        }}
+      />
+
       <h1
         className="skills-heading text-primary text-6xl font-bold tracking-wide"
         style={{ textShadow: "0 0 5px" }}
