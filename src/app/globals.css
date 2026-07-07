@@ -10,10 +10,7 @@
 }
 
 @theme inline {
-  /* 1. Register the custom animation utility */
   --animate-spin-gradient: spin-gradient 10s linear infinite;
-
-  /* 2. Move your keyframes inside the theme block */
   @keyframes spin-gradient {
     0% {
       --conic-angle: 0deg;
