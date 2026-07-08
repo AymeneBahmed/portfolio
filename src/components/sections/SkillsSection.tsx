@@ -5,6 +5,7 @@ import TechnologyCard from "../TechnologyCard";
 import { cn } from "@/lib/utils";
 import { technologies } from "@/lib/constants";
 import { motion, Variants } from "framer-motion";
+import { InteractiveGrid } from "../InteractiveGrid";
 
 export default function SkillsSection() {
   // Animation variants for the grid container to orchestrate the stagger
@@ -37,18 +38,7 @@ export default function SkillsSection() {
       className="relative flex min-h-dvh flex-col items-center justify-evenly gap-24 py-16"
       id="skills"
     >
-      <div
-        className="absolute inset-0 -z-10 opacity-[0.15]"
-        style={{
-          backgroundImage: `
-          radial-gradient(circle at 10px 10px, currentColor 1px, transparent 0),
-          radial-gradient(circle at 30px 30px, currentColor 1px, transparent 0)
-        `,
-          backgroundSize: "40px 40px",
-          backgroundPosition: "0 0, 20px 20px",
-        }}
-      />
-
+      <InteractiveGrid />
       <motion.h1
         className="text-primary text-6xl font-bold tracking-wide"
         style={{ textShadow: "0 0 5px" }}

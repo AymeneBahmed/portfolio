@@ -12,6 +12,7 @@ import {
   FolderCodeIcon,
   MailIcon,
 } from "lucide-react";
+import { InteractiveGrid } from "../InteractiveGrid";
 
 export default function HeroSection() {
   const socials = [
@@ -31,19 +32,7 @@ export default function HeroSection() {
 
   return (
     <section className="relative flex min-h-dvh items-center justify-center gap-8">
-      {/* Background grid pattern */}
-      <div
-        className="absolute inset-0 -z-10 opacity-[0.15]"
-        style={{
-          backgroundImage: `
-          radial-gradient(circle at 10px 10px, currentColor 1px, transparent 0),
-          radial-gradient(circle at 30px 30px, currentColor 1px, transparent 0)
-        `,
-          backgroundSize: "40px 40px",
-          backgroundPosition: "0 0, 20px 20px",
-        }}
-      />
-
+      <InteractiveGrid />
       <div className="mx-auto flex w-[90%] flex-col-reverse items-center justify-center gap-8 py-12 min-[1550px]:justify-between sm:px-8 md:py-0 lg:w-[70%] lg:flex-row">
         <div className="mt-0 md:mt-2">
           <div className="flex w-fit items-center gap-2 rounded-full border border-green-800 bg-green-900/30 px-4 py-1 font-semibold text-green-300">
