@@ -21,13 +21,29 @@ const COLOR_THEMES = [
   "green",
   "teal",
 ];
+
 export default function ColorCustomizationButton() {
   const [theme, setTheme] = useState<string>("");
   const [isShuffling, setIsShuffling] = useState<boolean>(false);
 
   useEffect(() => {
+    const shouldShuffle = localStorage.getItem("shuffle");
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme && COLOR_THEMES.includes(savedTheme)) {
+      setTheme(savedTheme);
+    }
+
+    if (shouldShuffle) {
+      setIsShuffling(true);
+    }
+  }, []);
+
+  useEffect(() => {
     const htmlElement = document.documentElement;
+
     htmlElement.className = theme;
+    localStorage.setItem("theme", theme);
   }, [theme]);
 
   useEffect(() => {
@@ -39,10 +55,13 @@ export default function ColorCustomizationButton() {
       setTheme(randomTheme);
     }, 2000);
 
+    localStorage.setItem("shuffle", "true");
+
     return () => clearInterval(interval);
   }, [isShuffling]);
 
   function handleThemeSelect(themeName: string) {
+    localStorage.removeItem("shuffle");
     setIsShuffling(false);
     setTheme(themeName);
   }
