@@ -35,9 +35,18 @@ export default function ProjectsSection() {
 
   return (
     <section
-      className="bg-muted/40 relative flex min-h-dvh flex-col items-center justify-evenly gap-24 py-16"
+      className="bg-muted/20 relative flex min-h-dvh flex-col items-center justify-evenly gap-24 overflow-hidden py-16"
       id="projects"
     >
+      {/* Ambient Aurora Glows - 100% static, zero performance cost */}
+      <div className="pointer-events-none absolute inset-0 -z-10 select-none">
+        {/* Soft Indigo/Primary glow drifting from the top left behind the card */}
+        <div className="bg-primary/5 absolute -top-20 -left-20 size-125 rounded-full blur-[130px]" />
+
+        {/* Soft Cyan glow escaping out of the bottom right */}
+        <div className="bg-primary/5 absolute -right-20 -bottom-32 size-150 rounded-full blur-[130px]" />
+      </div>
+
       <motion.h1
         className="text-primary text-6xl font-bold tracking-wide"
         style={{ textShadow: "0 0 5px" }}
@@ -59,14 +68,26 @@ export default function ProjectsSection() {
         {projects.map((project) => (
           <motion.div
             key={project.preview}
-            className="relative max-w-94 overflow-hidden p-[3px]"
+            className="relative max-w-94 overflow-hidden p-0.75"
             variants={cardVariants}
           >
             {/* Sharp Spinning Border Texture */}
             <div className="animate-gpu-spin absolute top-1/2 left-1/2 -z-1 aspect-square min-h-[170%] min-w-[170%] -translate-x-1/2 -translate-y-1/2 bg-conic-[from_0deg_in_oklab,hsl(180,100%,50%)_0deg_10deg,var(--color-blue-500)_30deg_40deg,var(--color-purple-300)_50deg_60deg,transparent_70deg_180deg,hsl(180,100%,50%)_180deg_190deg,var(--color-blue-500)_210deg_220deg,var(--color-purple-300)_230deg_240deg,transparent_250deg] blur-xl" />
 
-            <div className="bg-muted relative z-1 h-full overflow-hidden border">
-              <Image src={project.img} alt={project.title} />
+            {/* Project Card Container */}
+            <div className="bg-background relative z-1 h-full overflow-hidden border">
+              {/* The Tint Layer: Replicates the semi-transparent look over the solid base */}
+              <div className="bg-muted/20 absolute inset-0 -z-10" />
+
+              {/* Your Card Content */}
+              <Image
+                src={project.img}
+                alt={project.title}
+                width={400}
+                height={250}
+                className="w-full object-cover"
+              />
+
               <div className="p-3">
                 <div>
                   <div>
@@ -93,8 +114,9 @@ export default function ProjectsSection() {
                         )}
                       </div>
                     </div>
+
                     {/* Technologies */}
-                    <div className="flex gap-1">
+                    <div className="mt-2 flex gap-1">
                       {project.technologies.map((technoName, i) =>
                         technoName === "Next.js" ? (
                           <div className="relative" key={i}>

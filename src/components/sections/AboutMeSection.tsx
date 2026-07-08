@@ -1,20 +1,32 @@
 export default function AboutMeSection() {
   return (
     <section
-      className="bg-muted/40 relative flex min-h-dvh items-center justify-center"
+      className="bg-muted/20 relative flex min-h-dvh items-center justify-center overflow-hidden"
       id="about-me"
     >
-      <div className="border-primary shadow-primary bg-muted w-[min(41rem,90vw)] rounded-md border p-14 shadow-[0_0_15px_0px]">
+      {/* Ambient Aurora Glows - 100% static, zero performance cost */}
+      <div className="pointer-events-none absolute inset-0 -z-10 select-none">
+        {/* Soft Indigo/Primary glow drifting from the top left behind the card */}
+        <div className="bg-primary/5 absolute -top-20 -left-20 size-125 rounded-full blur-[130px]" />
+
+        {/* Soft Cyan glow escaping out of the bottom right */}
+        <div className="bg-primary/5 absolute -right-20 -bottom-32 size-150 rounded-full blur-[130px]" />
+      </div>
+
+      {/* Central Content Card */}
+      <div className="border-primary shadow-primary bg-muted/60 w-[min(41rem,90vw)] rounded-md border p-14 shadow-[0_0_15px_0px] backdrop-blur-sm">
         <h2 className="text-center text-5xl font-extrabold">About me</h2>
 
         <div className="text-muted-foreground mt-9 space-y-5 text-lg tracking-wider">
           <p>
             I am Aymene Bahmed,{" "}
-            <strong className="text-primary">a computer nerd</strong> who&apos;s
-            passionate and always{" "}
-            <strong className="text-primary">ready to learn anything</strong>{" "}
+            <strong className="text-primary">a computer nerd</strong> {""}
+            who&apos;s passionate and always{" "}
+            <strong className="text-primary">
+              ready to learn anything
+            </strong>{" "}
             related to technology and computers. I also love math as well as
-            studying how things works under the hood 👨‍💻.
+            studying how things work under the hood 👨‍💻.
           </p>
 
           <p>
@@ -37,10 +49,6 @@ export default function AboutMeSection() {
             <strong className="text-primary">
               Data Science and Data Engineering
             </strong>
-            . My favorite topics are AI especially robotics, embedded
-            programming, and web development. I am planning to take an AI degree
-            and focus on robotics in the future since I love creating real world
-            stuff!
           </p>
 
           <p>

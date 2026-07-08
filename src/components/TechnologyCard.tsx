@@ -15,7 +15,7 @@ export default function TechnologyCard({
         {/* Masked Border Wrapper */}
         <div
           className={cn(
-            "relative isolate size-full overflow-hidden p-[3px]",
+            "relative isolate size-full overflow-hidden p-0.75",
             className,
           )}
         >
