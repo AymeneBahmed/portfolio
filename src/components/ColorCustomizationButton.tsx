@@ -4,6 +4,7 @@ import { ShuffleIcon } from "lucide-react";
 import { Button } from "./ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { useState, useEffect } from "react";
+import { cn } from "@/lib/utils";
 
 const COLOR_THEMES = [
   "cyan",
@@ -55,7 +56,15 @@ export default function ColorCustomizationButton() {
             size="icon"
             className="border-secondary relative z-10 size-full cursor-pointer rounded-full border-2"
             aria-label="change color"
-          />
+          >
+            <ShuffleIcon
+              size={15}
+              className={cn(
+                "opacity-0 transition-opacity",
+                isShuffling && "opacity-100",
+              )}
+            />
+          </Button>
         </div>
       </PopoverTrigger>
       <PopoverContent>
@@ -73,11 +82,11 @@ export default function ColorCustomizationButton() {
           ))}
           <Button
             size="icon"
-            className="border-secondary hover:bg-muted bg-muted relative flex size-10 cursor-pointer items-center justify-center rounded-full border-2 text-white"
-            onClick={() => setIsShuffling((prev) => !prev)} // Toggles shuffling on/off cleanly
+            className="border-secondary hover:bg-muted bg-muted relative size-10 cursor-pointer rounded-full border-2"
+            onClick={() => setIsShuffling((prev) => !prev)}
             aria-label="Mix"
           >
-            <ShuffleIcon className="stroke-muted-foreground" size={20} />
+            <ShuffleIcon className="stroke-muted-foreground" size={15} />
           </Button>
         </div>
       </PopoverContent>
