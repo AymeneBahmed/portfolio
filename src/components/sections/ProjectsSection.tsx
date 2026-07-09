@@ -86,6 +86,7 @@ export default function ProjectsSection() {
                 width={400}
                 height={250}
                 className="w-full object-cover"
+                loading="eager"
               />
 
               <div className="p-3">
