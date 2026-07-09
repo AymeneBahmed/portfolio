@@ -20,6 +20,7 @@ import rockPaperScissorsImg from "@/assets/projects imgs/rock paper scissors.png
 import ticTacToeImg from "@/assets/projects imgs/tic tac toe.png";
 import todoImg from "@/assets/projects imgs/todo.png";
 import studyScheduleImg from "@/assets/projects imgs/study schedule.png";
+import portfolioImg from "@/assets/projects imgs/portfolio.png";
 import { Project, Technology } from "@/types";
 
 export const technologies: Technology[] = [
@@ -103,6 +104,15 @@ export const technologies: Technology[] = [
 ];
 
 export const projects: Project[] = [
+  {
+    title: "portfolio",
+    gitLink: "https://github.com/AymeneBahmed/portfolio",
+    preview: "https://portfolio-iota-five-7oaswokhva.vercel.app/",
+    description:
+      "My portfolio website showcasing my skills and projects with a beautiful, accessible, and modern UI.",
+    img: portfolioImg,
+    technologies: ["HTML", "CSS", "TypeScript", "TailwindCSS", "Next.js"],
+  },
   {
     title: "study schedule",
     gitLink: "https://github.com/AymeneBahmed/study-schedule",
