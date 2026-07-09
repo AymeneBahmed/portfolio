@@ -1,4 +1,4 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { StaticImageData } from "next/image";
 
 export type TechnologyName =
   | "HTML"
@@ -16,7 +16,7 @@ export type TechnologyName =
   | "Vitest";
 
 export interface Technology {
-  logo: StaticImport | string;
+  logo: StaticImageData | string;
   name: TechnologyName;
   description: string;
 }
@@ -25,7 +25,7 @@ export interface Project {
   title: string;
   gitLink: string | null;
   preview: string;
-  img: StaticImport | string;
+  img: StaticImageData | string;
   description: string;
   technologies: Exclude<TechnologyName, "Git">[];
 }
