@@ -7,6 +7,15 @@ import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
+import { ZoomInIcon } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "../ui/dialog";
 
 export default function ProjectsSection() {
   const containerVariants: Variants = {
@@ -79,15 +88,49 @@ export default function ProjectsSection() {
               {/* The Tint Layer: Replicates the semi-transparent look over the solid base */}
               <div className="bg-muted/20 absolute inset-0 -z-10" />
 
-              {/* Your Card Content */}
-              <Image
-                src={project.img}
-                alt={project.title}
-                width={400}
-                height={250}
-                className="w-full object-cover"
-                loading="eager"
-              />
+              <div className="relative">
+                <Image
+                  src={project.img}
+                  alt={project.title}
+                  width={400}
+                  height={250}
+                  className="w-full object-cover"
+                  loading="eager"
+                />
+
+                <Dialog>
+                  <DialogTrigger asChild>
+                    {/* Dark Overlay */}
+                    <button
+                      className="absolute inset-0 grid size-full cursor-pointer place-content-center bg-black/50 opacity-0 transition-opacity hover:opacity-100"
+                      aria-label={`Zoom in on ${project.title} image`}
+                    >
+                      <div className="border-primary text-primary rounded-full border-2 p-2">
+                        <ZoomInIcon size={25} />
+                      </div>
+                    </button>
+                  </DialogTrigger>
+
+                  <DialogContent className="max-w-4xl overflow-hidden [&>button]:text-white">
+                    <DialogHeader>
+                      <DialogTitle className="capitalize">
+                        {project.title}
+                      </DialogTitle>
+                      <DialogDescription>
+                        {project.description}
+                      </DialogDescription>
+                    </DialogHeader>
+
+                    <div className="flex items-center justify-center">
+                      <Image
+                        src={project.img}
+                        alt={`${project.title} picture`}
+                        className="h-auto max-h-[85vh] w-auto rounded-md shadow-2xl"
+                      />
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </div>
 
               <div className="p-3">
                 <div>
