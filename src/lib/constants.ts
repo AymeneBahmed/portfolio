@@ -195,3 +195,19 @@ export const projects: Project[] = [
     technologies: ["HTML", "CSS", "JavaScript"],
   },
 ];
+
+export const COLOR_THEMES = [
+  "cyan",
+  "sky",
+  "purple",
+  "neon-green",
+  "caffeine",
+  "blue",
+  "orange",
+  "yellow",
+  "tomato",
+  "fuchsia",
+  "indigo",
+  "green",
+  "teal",
+];

@@ -1,3 +1,4 @@
+import { COLOR_THEMES } from "@/lib/constants";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
@@ -5,21 +6,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     <NextThemesProvider
       attribute="class"
       defaultTheme="neon-green"
-      themes={[
-        "neon-green",
-        "cyan",
-        "sky",
-        "blue",
-        "purple",
-        "caffeine",
-        "orange",
-        "yellow",
-        "tomato",
-        "fuchsia",
-        "indigo",
-        "green",
-        "teal",
-      ]}
+      themes={COLOR_THEMES}
     >
       {children}
     </NextThemesProvider>

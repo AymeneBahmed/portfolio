@@ -6,22 +6,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
-
-const COLOR_THEMES = [
-  "cyan",
-  "sky",
-  "purple",
-  "neon-green",
-  "caffeine",
-  "blue",
-  "orange",
-  "yellow",
-  "tomato",
-  "fuchsia",
-  "indigo",
-  "green",
-  "teal",
-];
+import { COLOR_THEMES } from "@/lib/constants";
 
 export default function ColorCustomizationButton() {
   const { theme, setTheme } = useTheme();
