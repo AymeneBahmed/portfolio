@@ -5,6 +5,7 @@ import { Button } from "./ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { useTheme } from "next-themes";
 
 const COLOR_THEMES = [
   "cyan",
@@ -23,31 +24,24 @@ const COLOR_THEMES = [
 ];
 
 export default function ColorCustomizationButton() {
-  const [theme, setTheme] = useState<string>("");
+  const { theme, setTheme } = useTheme();
   const [isShuffling, setIsShuffling] = useState<boolean>(false);
 
   useEffect(() => {
     const shouldShuffle = localStorage.getItem("shuffle");
-    const savedTheme = localStorage.getItem("theme");
 
-    if (savedTheme && COLOR_THEMES.includes(savedTheme)) {
-      setTheme(savedTheme);
-    }
-
-    if (shouldShuffle) {
+    if (shouldShuffle === "true") {
       setIsShuffling(true);
     }
   }, []);
 
   useEffect(() => {
-    const htmlElement = document.documentElement;
+    if (!isShuffling) {
+      localStorage.removeItem("shuffle");
+      return;
+    }
 
-    htmlElement.className = theme;
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  useEffect(() => {
-    if (!isShuffling) return;
+    localStorage.setItem("shuffle", "true");
 
     const interval = setInterval(() => {
       const randomTheme =
@@ -55,13 +49,10 @@ export default function ColorCustomizationButton() {
       setTheme(randomTheme);
     }, 2000);
 
-    localStorage.setItem("shuffle", "true");
-
     return () => clearInterval(interval);
-  }, [isShuffling]);
+  }, [isShuffling, setTheme]);
 
   function handleThemeSelect(themeName: string) {
-    localStorage.removeItem("shuffle");
     setIsShuffling(false);
     setTheme(themeName);
   }
@@ -88,20 +79,28 @@ export default function ColorCustomizationButton() {
       </PopoverTrigger>
       <PopoverContent>
         <div className="text-sm">Colors</div>
-        <hr />
-        <div className="mt-2 flex flex-wrap gap-1">
+        <hr className="border-border my-2" />
+        <div className="flex flex-wrap gap-1.5">
           {COLOR_THEMES.map((themeName) => (
             <Button
               key={themeName}
               size="icon"
-              className={`border-secondary ${themeName} relative size-10 cursor-pointer rounded-full border-2`}
+              className={cn(
+                `border-secondary ${themeName} relative size-10 cursor-pointer rounded-full border-2`,
+                !isShuffling &&
+                  theme === themeName &&
+                  "ring-ring ring-2 ring-offset-2",
+              )}
               onClick={() => handleThemeSelect(themeName)}
               aria-label={themeName}
             />
           ))}
           <Button
             size="icon"
-            className="border-secondary hover:bg-muted bg-muted relative size-10 cursor-pointer rounded-full border-2"
+            className={cn(
+              "border-secondary hover:bg-muted bg-muted relative size-10 cursor-pointer rounded-full border-2",
+              isShuffling && "ring-ring ring-2 ring-offset-2",
+            )}
             onClick={() => setIsShuffling((prev) => !prev)}
             aria-label="Mix"
           >
