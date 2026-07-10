@@ -16,6 +16,17 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "../ui/dialog";
+import {
+  Carousel,
+  CarouselApi,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../ui/carousel";
+import { useEffect, useState } from "react";
+import { Project } from "@/types";
+import { ProjectCarousel } from "../ProjectCarousel";
 
 export default function ProjectsSection() {
   const containerVariants: Variants = {
@@ -111,7 +122,7 @@ export default function ProjectsSection() {
                     </button>
                   </DialogTrigger>
 
-                  <DialogContent className="max-w-4xl overflow-hidden [&>button]:text-white">
+                  <DialogContent className="max-w-5xl overflow-hidden [&>button]:text-white">
                     <DialogHeader>
                       <DialogTitle className="capitalize">
                         {project.title}
@@ -121,13 +132,7 @@ export default function ProjectsSection() {
                       </DialogDescription>
                     </DialogHeader>
 
-                    <div className="flex items-center justify-center">
-                      <Image
-                        src={project.img}
-                        alt={`${project.title} picture`}
-                        className="h-auto max-h-[85vh] w-auto rounded-md shadow-2xl"
-                      />
-                    </div>
+                    <ProjectCarousel project={project} />
                   </DialogContent>
                 </Dialog>
               </div>
