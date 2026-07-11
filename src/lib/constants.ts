@@ -60,6 +60,7 @@ import portfolioImg2 from "@/assets/project carousels/portfolio/2.png";
 import portfolioImg3 from "@/assets/project carousels/portfolio/3.png";
 import portfolioImg4 from "@/assets/project carousels/portfolio/4.png";
 import portfolioImg5 from "@/assets/project carousels/portfolio/5.png";
+import portfolioImg6 from "@/assets/project carousels/portfolio/6.png";
 import { Project, Technology } from "@/types";
 
 export const technologies: Technology[] = [
@@ -156,6 +157,7 @@ export const projects: Project[] = [
       portfolioImg3,
       portfolioImg4,
       portfolioImg5,
+      portfolioImg6,
     ],
     technologies: ["HTML", "CSS", "TypeScript", "TailwindCSS", "Next.js"],
   },
