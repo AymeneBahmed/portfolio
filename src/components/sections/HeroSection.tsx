@@ -162,7 +162,10 @@ export default function HeroSection() {
           className="cursor-pointer rounded-full"
           asChild
         >
-          <Link href="#about-me">
+          <Link
+            href="#about-me"
+            aria-label="See more information about Aymene Bahmed"
+          >
             <ChevronDownIcon />
           </Link>
         </Button>
