@@ -1,6 +1,6 @@
 "use client";
 
-import { projects, technologies } from "@/lib/constants";
+import { projects, TECHNOLOGIES } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -164,7 +164,7 @@ export default function ProjectsSection() {
                             <div className="absolute top-0 left-0 size-full scale-90 rounded-full bg-white"></div>
                             <Image
                               src={
-                                technologies.filter(
+                                TECHNOLOGIES.filter(
                                   (techno) => techno.name === "Next.js",
                                 )[0].logo
                               }
@@ -176,7 +176,7 @@ export default function ProjectsSection() {
                           <Image
                             key={i}
                             src={
-                              technologies.filter(
+                              TECHNOLOGIES.filter(
                                 (techno) => techno.name === technoName,
                               )[0].logo
                             }

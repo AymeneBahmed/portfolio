@@ -3,7 +3,7 @@
 import nextjsLogo from "@/assets/logos/nextjs.svg";
 import TechnologyCard from "../TechnologyCard";
 import { cn } from "@/lib/utils";
-import { technologies } from "@/lib/constants";
+import { TECHNOLOGIES } from "@/lib/constants";
 import { motion, Variants } from "framer-motion";
 import { InteractiveGrid } from "../InteractiveGrid";
 
@@ -57,7 +57,7 @@ export default function SkillsSection() {
         whileInView="animate"
         viewport={{ once: true, amount: 0.1 }}
       >
-        {technologies.map((technology) => (
+        {TECHNOLOGIES.map((technology) => (
           <motion.div
             className="h-full w-full max-w-94"
             key={technology.name}

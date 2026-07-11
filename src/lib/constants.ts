@@ -63,7 +63,7 @@ import portfolioImg5 from "@/assets/project carousels/portfolio/5.png";
 import portfolioImg6 from "@/assets/project carousels/portfolio/6.png";
 import { Project, Technology } from "@/types";
 
-export const technologies: Technology[] = [
+export const TECHNOLOGIES: Technology[] = [
   {
     logo: htmlLogo,
     name: "HTML",
