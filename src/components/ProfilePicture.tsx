@@ -18,9 +18,10 @@ export default function ProfilePicture({ className }: ProfilePictureProps) {
       <Image
         src={profilePicture}
         alt="profile picture"
-        fill
         className="scale-[1.2] rounded-full object-cover object-[110%_-30px]"
         loading="eager"
+        priority
+        fill
       />
     </Tilt>
   );
