@@ -19,6 +19,7 @@ export default function Navbar() {
       <button
         className="invisible absolute left-10 space-y-1.5 max-[830px]:visible"
         onClick={() => setShouldShowVerticalNavbar(true)}
+        aria-label="Open vertical navbar"
       >
         {[...Array(3)].map((_, i) => (
           <div key={i} className="bg-primary h-1 w-8 rounded-full"></div>
