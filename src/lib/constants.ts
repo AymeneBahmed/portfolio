@@ -12,15 +12,54 @@ import laravelLogo from "@/assets/logos/laravel.svg";
 import playwrightLogo from "@/assets/logos/playwright.svg";
 import vitestLogo from "@/assets/logos/vitest.svg";
 import calculatorImg from "@/assets/projects imgs/calculator.png";
+import calculatorImg1 from "@/assets/project carousels/calculator/1.png";
+import calculatorImg2 from "@/assets/project carousels/calculator/2.png";
+import calculatorImg3 from "@/assets/project carousels/calculator/3.png";
 import etchASketchImg from "@/assets/projects imgs/etch a sketch.png";
+import etchASketchImg1 from "@/assets/project carousels/etch a sketch/1.png";
+import etchASketchImg2 from "@/assets/project carousels/etch a sketch/2.png";
+import etchASketchImg3 from "@/assets/project carousels/etch a sketch/3.png";
+import etchASketchImg4 from "@/assets/project carousels/etch a sketch/4.png";
 import formPageImg from "@/assets/projects imgs/form page.png";
-import gitLearnImg from "@/assets/projects imgs/git learn.png";
+import formPageImg1 from "@/assets/project carousels/form page/1.png";
+import formPageImg2 from "@/assets/project carousels/form page/2.png";
+import formPageImg3 from "@/assets/project carousels/form page/3.png";
+import gitTutorialImg from "@/assets/projects imgs/git tutorial.png";
+import gitTutorialImg1 from "@/assets/project carousels/git tutorial/1.png";
+import gitTutorialImg2 from "@/assets/project carousels/git tutorial/2.png";
+import gitTutorialImg3 from "@/assets/project carousels/git tutorial/3.png";
 import libraryImg from "@/assets/projects imgs/library.png";
+import libraryImg1 from "@/assets/project carousels/library/1.png";
+import libraryImg2 from "@/assets/project carousels/library/2.png";
+import libraryImg3 from "@/assets/project carousels/library/3.png";
+import libraryImg4 from "@/assets/project carousels/library/4.png";
+import libraryImg5 from "@/assets/project carousels/library/5.png";
 import rockPaperScissorsImg from "@/assets/projects imgs/rock paper scissors.png";
+import rockPaperScissorsImg1 from "@/assets/project carousels/rock paper scissors/1.png";
+import rockPaperScissorsImg2 from "@/assets/project carousels/rock paper scissors/2.png";
 import ticTacToeImg from "@/assets/projects imgs/tic tac toe.png";
+import ticTacToeImg1 from "@/assets/project carousels/tic tac toe/1.png";
+import ticTacToeImg2 from "@/assets/project carousels/tic tac toe/2.png";
 import todoImg from "@/assets/projects imgs/todo.png";
+import todoImg1 from "@/assets/project carousels/todo app/1.png";
+import todoImg2 from "@/assets/project carousels/todo app/2.png";
+import todoImg3 from "@/assets/project carousels/todo app/3.png";
+import todoImg4 from "@/assets/project carousels/todo app/4.png";
+import todoImg5 from "@/assets/project carousels/todo app/5.png";
 import studyScheduleImg from "@/assets/projects imgs/study schedule.png";
+import studyScheduleImg1 from "@/assets/project carousels/study schedule/1.png";
+import studyScheduleImg2 from "@/assets/project carousels/study schedule/2.png";
+import studyScheduleImg3 from "@/assets/project carousels/study schedule/3.png";
+import studyScheduleImg4 from "@/assets/project carousels/study schedule/4.png";
+import studyScheduleImg5 from "@/assets/project carousels/study schedule/5.png";
+import studyScheduleImg6 from "@/assets/project carousels/study schedule/6.png";
+import studyScheduleImg7 from "@/assets/project carousels/study schedule/7.png";
 import portfolioImg from "@/assets/projects imgs/portfolio.png";
+import portfolioImg1 from "@/assets/project carousels/portfolio/1.png";
+import portfolioImg2 from "@/assets/project carousels/portfolio/2.png";
+import portfolioImg3 from "@/assets/project carousels/portfolio/3.png";
+import portfolioImg4 from "@/assets/project carousels/portfolio/4.png";
+import portfolioImg5 from "@/assets/project carousels/portfolio/5.png";
 import { Project, Technology } from "@/types";
 
 export const technologies: Technology[] = [
@@ -111,6 +150,13 @@ export const projects: Project[] = [
     description:
       "My portfolio website showcasing my skills and projects with a beautiful, accessible, and modern UI.",
     img: portfolioImg,
+    carousel: [
+      portfolioImg1,
+      portfolioImg2,
+      portfolioImg3,
+      portfolioImg4,
+      portfolioImg5,
+    ],
     technologies: ["HTML", "CSS", "TypeScript", "TailwindCSS", "Next.js"],
   },
   {
@@ -120,6 +166,15 @@ export const projects: Project[] = [
     description:
       "A tasking app made with login functionality that supports both users with and without accounts using IndexedDB and Dexie.js.",
     img: studyScheduleImg,
+    carousel: [
+      studyScheduleImg1,
+      studyScheduleImg2,
+      studyScheduleImg3,
+      studyScheduleImg4,
+      studyScheduleImg5,
+      studyScheduleImg6,
+      studyScheduleImg7,
+    ],
     technologies: [
       "HTML",
       "CSS",
@@ -136,6 +191,7 @@ export const projects: Project[] = [
     description:
       "A simple todo app made with login functionality that stores your todos in a postgreSQL database.",
     img: todoImg,
+    carousel: [todoImg1, todoImg2, todoImg3, todoImg4, todoImg5],
     technologies: [
       "HTML",
       "CSS",
@@ -152,6 +208,12 @@ export const projects: Project[] = [
     description:
       "Draw and let your imagination comes to life with this beautiful app!",
     img: etchASketchImg,
+    carousel: [
+      etchASketchImg1,
+      etchASketchImg2,
+      etchASketchImg3,
+      etchASketchImg4,
+    ],
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
@@ -161,6 +223,7 @@ export const projects: Project[] = [
     description:
       "A tic tac toe game where you can play against AI or a human player.",
     img: ticTacToeImg,
+    carousel: [ticTacToeImg1, ticTacToeImg2],
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
@@ -169,6 +232,7 @@ export const projects: Project[] = [
     preview: "https://aymenebahmed.github.io/rock-paper-scissors-game/",
     description: "A simple rock paper scissors game.",
     img: rockPaperScissorsImg,
+    carousel: [rockPaperScissorsImg1, rockPaperScissorsImg2],
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
@@ -177,6 +241,7 @@ export const projects: Project[] = [
     preview: "https://aymenebahmed.github.io/calculator/",
     description: "A calculator with basic functionalities.",
     img: calculatorImg,
+    carousel: [calculatorImg1, calculatorImg2, calculatorImg3],
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
@@ -185,6 +250,7 @@ export const projects: Project[] = [
     preview: "https://aymenebahmed.github.io/form-page/",
     description: "A beautiful form page with client-side validation.",
     img: formPageImg,
+    carousel: [formPageImg1, formPageImg2, formPageImg3],
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
@@ -193,6 +259,7 @@ export const projects: Project[] = [
     preview: "https://aymenebahmed.github.io/library/",
     description: "A library where you can save your favorite books.",
     img: libraryImg,
+    carousel: [libraryImg1, libraryImg2, libraryImg3, libraryImg4, libraryImg5],
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
@@ -201,7 +268,8 @@ export const projects: Project[] = [
     preview: "https://aymenebahmed.github.io/GitForSchool/",
     description:
       "A webpage that teaches Git with a beginner-friendly approach.",
-    img: gitLearnImg,
+    img: gitTutorialImg,
+    carousel: [gitTutorialImg1, gitTutorialImg2, gitTutorialImg3],
     technologies: ["HTML", "CSS", "JavaScript"],
   },
 ];
