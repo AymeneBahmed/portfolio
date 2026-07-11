@@ -46,7 +46,6 @@ export function ProjectCarousel({ project }: ProjectCarouselProps) {
               src={image}
               alt={`${project.title} picture ${i + 1}`}
               className="object-contain"
-              fill
               priority={i === 0} // Optional: Loads the first image instantly
             />
           </CarouselItem>
