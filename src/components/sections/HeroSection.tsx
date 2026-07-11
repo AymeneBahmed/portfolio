@@ -19,14 +19,17 @@ export default function HeroSection() {
     {
       Icon: MailIcon,
       href: "mailto:aymene.bahmed.dz@gmail.com",
+      ariaLabel: "Send email to Aymene Bahmed",
     },
     {
       Icon: FaLinkedin,
       href: "https://www.linkedin.com/in/aymene-abderrahmene-bahmed-87154635a",
+      ariaLabel: "Open Aymene Bahmed LinkedIn",
     },
     {
       Icon: FaGithub,
       href: "https://github.com/AymeneBahmed",
+      ariaLabel: "Open Aymene Bahmed GitHub",
     },
   ];
 
@@ -85,11 +88,13 @@ export default function HeroSection() {
             </motion.span>
 
             <div className="flex gap-5">
-              {socials.map(({ Icon, href }, i) => (
+              {socials.map(({ Icon, href, ariaLabel }, i) => (
                 <motion.a
                   key={i}
                   href={href}
                   target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={ariaLabel}
                   className="hover:bg-primary group rounded-full border border-white p-1.5 transition-colors hover:border-black"
                   initial={{ y: 150, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
