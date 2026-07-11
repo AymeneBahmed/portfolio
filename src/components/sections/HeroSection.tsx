@@ -34,7 +34,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative flex min-h-dvh items-center justify-center gap-8">
+    <section className="relative flex min-h-235 items-center justify-center gap-8 lg:min-h-dvh">
       <InteractiveGrid />
       <div className="mx-auto flex w-[90%] flex-col-reverse items-center justify-center gap-8 py-12 min-[1550px]:justify-between sm:px-8 md:py-0 lg:w-[70%] lg:flex-row">
         <div className="mt-0 md:mt-2">
@@ -71,8 +71,9 @@ export default function HeroSection() {
             </div>
 
             <div className="text-muted-foreground text-base text-wrap sm:text-lg">
-              I create modern, responsive web applications using React, Next.js,
-              and Node.js. Interested in learning how things work in depth.
+              I am a software engineer, specializing in building accessible web
+              applications using various technologies including TypeScript,
+              React, Next.js, and Node.js.
             </div>
           </div>
 
