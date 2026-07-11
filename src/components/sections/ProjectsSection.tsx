@@ -139,6 +139,7 @@ export default function ProjectsSection() {
                           href={project.preview}
                           target="_blank"
                           title="Preview"
+                          aria-label={`Preview ${project.title}`}
                         >
                           <FiExternalLink size={22} />
                         </Link>
@@ -147,6 +148,7 @@ export default function ProjectsSection() {
                             href={project.gitLink}
                             target="_blank"
                             title="Github repo"
+                            aria-label={`Go to ${project.title} GitHub`}
                           >
                             <FaGithub size={22} />
                           </Link>
