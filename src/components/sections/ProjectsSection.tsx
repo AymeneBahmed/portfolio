@@ -1,6 +1,6 @@
 "use client";
 
-import { projects, TECHNOLOGIES } from "@/lib/constants";
+import { PROJECTS, TECHNOLOGIES } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
@@ -75,7 +75,7 @@ export default function ProjectsSection() {
         whileInView="animate"
         viewport={{ once: true, amount: 0.1 }}
       >
-        {projects.map((project) => (
+        {PROJECTS.map((project) => (
           <motion.div
             key={project.preview}
             className="relative max-w-94 overflow-hidden p-0.75"

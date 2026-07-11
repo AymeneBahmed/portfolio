@@ -143,7 +143,7 @@ export const TECHNOLOGIES: Technology[] = [
   },
 ];
 
-export const projects: Project[] = [
+export const PROJECTS: Project[] = [
   {
     title: "portfolio",
     gitLink: "https://github.com/AymeneBahmed/portfolio",
