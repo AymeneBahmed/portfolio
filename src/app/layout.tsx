@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={`${inter.className} min-h-dvh antialiased`}>
         <ThemeProvider>
           <Navbar />
-          {children}
+          <main>{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
