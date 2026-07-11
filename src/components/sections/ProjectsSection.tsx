@@ -16,16 +16,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "../ui/dialog";
-import {
-  Carousel,
-  CarouselApi,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "../ui/carousel";
-import { useEffect, useState } from "react";
-import { Project } from "@/types";
 import { ProjectCarousel } from "../ProjectCarousel";
 
 export default function ProjectsSection() {
