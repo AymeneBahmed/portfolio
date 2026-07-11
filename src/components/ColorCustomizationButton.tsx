@@ -43,14 +43,15 @@ export default function ColorCustomizationButton() {
   }
 
   return (
-    <Popover>
-      <PopoverTrigger asChild>
-        <div className="relative size-8">
-          <div className="bg-primary absolute inset-0 z-0 scale-110 rounded-full" />
+    <div className="relative size-8">
+      <div className="bg-primary pointer-events-none absolute inset-0 z-0 scale-110 rounded-full" />
+
+      <Popover>
+        <PopoverTrigger asChild>
           <Button
             size="icon"
             className="border-secondary relative z-10 size-full cursor-pointer rounded-full border-2"
-            aria-label="change color"
+            aria-label="Change website theme"
           >
             <ShuffleIcon
               size={15}
@@ -60,39 +61,39 @@ export default function ColorCustomizationButton() {
               )}
             />
           </Button>
-        </div>
-      </PopoverTrigger>
-      <PopoverContent>
-        <div className="text-sm">Colors</div>
-        <hr className="border-border my-2" />
-        <div className="flex flex-wrap gap-1.5">
-          {COLOR_THEMES.map((themeName) => (
+        </PopoverTrigger>
+        <PopoverContent>
+          <div className="text-sm">Colors</div>
+          <hr className="border-border my-2" />
+          <div className="flex flex-wrap gap-1.5">
+            {COLOR_THEMES.map((themeName) => (
+              <Button
+                key={themeName}
+                size="icon"
+                className={cn(
+                  `border-secondary ${themeName} relative size-10 cursor-pointer rounded-full border-2`,
+                  !isShuffling &&
+                    theme === themeName &&
+                    "ring-ring ring-2 ring-offset-2",
+                )}
+                onClick={() => handleThemeSelect(themeName)}
+                aria-label={`Use a ${themeName} theme`}
+              />
+            ))}
             <Button
-              key={themeName}
               size="icon"
               className={cn(
-                `border-secondary ${themeName} relative size-10 cursor-pointer rounded-full border-2`,
-                !isShuffling &&
-                  theme === themeName &&
-                  "ring-ring ring-2 ring-offset-2",
+                "border-secondary hover:bg-muted bg-muted relative size-10 cursor-pointer rounded-full border-2",
+                isShuffling && "ring-ring ring-2 ring-offset-2",
               )}
-              onClick={() => handleThemeSelect(themeName)}
-              aria-label={themeName}
-            />
-          ))}
-          <Button
-            size="icon"
-            className={cn(
-              "border-secondary hover:bg-muted bg-muted relative size-10 cursor-pointer rounded-full border-2",
-              isShuffling && "ring-ring ring-2 ring-offset-2",
-            )}
-            onClick={() => setIsShuffling((prev) => !prev)}
-            aria-label="Mix"
-          >
-            <ShuffleIcon className="stroke-muted-foreground" size={15} />
-          </Button>
-        </div>
-      </PopoverContent>
-    </Popover>
+              onClick={() => setIsShuffling((prev) => !prev)}
+              aria-label="Shuffle themes"
+            >
+              <ShuffleIcon className="stroke-muted-foreground" size={15} />
+            </Button>
+          </div>
+        </PopoverContent>
+      </Popover>
+    </div>
   );
 }
