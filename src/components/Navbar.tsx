@@ -81,6 +81,7 @@ function VerticalNavbar({
       <button
         className="hover:text-primary absolute top-4 right-4 transition-colors duration-300"
         onClick={() => setShouldShowVerticalNavbar(false)}
+        aria-label="Close vertical navbar"
       >
         <X size={50} />
       </button>
