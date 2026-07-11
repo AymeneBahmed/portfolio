@@ -1,16 +1,99 @@
+"use client";
+
+import { cn } from "@/lib/utils";
+import { Card, CardContent, CardHeader } from "../ui/card";
+import { motion } from "motion/react";
+
+const cardsText = [
+  {
+    header: "Prioritize accessibility",
+    content: [
+      "When I build user interfaces, I ensure they are fully accessible by",
+      "implementing robust semantic HTML, comprehensive ARIA attributes for",
+      "screen readers, and maintaining high-contrast color palettes.",
+    ].join(" "),
+  },
+  {
+    header: "Evaluate trade-offs",
+    content: [
+      "Before adopting any tool or architecture, I evaluate it objectively by",
+      "analyzing its advantages and inherent drawbacks. No engineering tool is",
+      "perfect, and making informed compromises is key.",
+    ].join(" "),
+  },
+  {
+    header: "Optimize performance",
+    content: [
+      "I monitor runtime metrics like memory consumption and CPU utilization.",
+      "By leveraging browser developer tools, I catch bottlenecks early to",
+      "guarantee a fluid and responsive user experience.",
+    ].join(" "),
+  },
+  {
+    header: "Enforce security & integrity",
+    content: [
+      "Security isn't an afterthought when I write code. I focus on building",
+      "baseline defenses directly into the application, ensuring proper input",
+      "handling to block XSS and SQL injections, and correctly configuring CORS",
+      "policies to keep data secure.",
+    ].join(" "),
+  },
+  {
+    header: "Design for extensibility & scalability",
+    content: [
+      "I build software with team collaboration in mind. I prioritize clean,",
+      "self-documenting code and architectural simplicity so that scaling up",
+      "systems and introducing new features remains straightforward.",
+    ].join(" "),
+  },
+];
+
 export default function AboutMeSection() {
   return (
     <section
-      className="bg-muted/20 relative flex min-h-dvh items-center justify-center overflow-hidden"
+      className="bg-muted/20 text-foreground relative flex min-h-dvh flex-col items-center justify-evenly overflow-hidden p-8 sm:py-16 md:px-16"
       id="about-me"
     >
       {/* Ambient Aurora Glows - 100% static, zero performance cost */}
-      <div className="pointer-events-none absolute -z-10 bg-red-200 select-none">
+      <div className="pointer-events-none absolute inset-0 -z-10 select-none">
         {/* Soft Indigo/Primary glow drifting from the top left behind the card */}
         <div className="bg-primary/5 absolute -top-20 -left-20 size-125 rounded-full blur-[130px]" />
 
-        {/* Soft Cyan glow escaping out of the bottom right */}
+        {/* Soft Cyan/Secondary glow escaping out of the bottom right */}
         <div className="bg-primary/5 absolute -right-20 -bottom-32 size-150 rounded-full blur-[130px]" />
+      </div>
+
+      <motion.h1
+        className="text-primary text-shadow-primary mb-12 text-center text-6xl font-bold tracking-wide text-shadow-[0_0_5px]"
+        initial={{ opacity: 0, y: -10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.1 }}
+        transition={{ duration: 0.7 }}
+      >
+        As a Software Engineer, I...
+      </motion.h1>
+
+      {/* Grid Layout: Responsibly handles 5 cards across all screen sizes without overflow */}
+      <div className="auto-rows-stretch grid w-full max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {cardsText.map((text, i) => (
+          <Card
+            key={i}
+            className={cn(
+              "hover:border-primary/50 flex flex-col border transition-all duration-300",
+              i === cardsText.length - 1 && "sm:col-span-2",
+            )}
+          >
+            <CardHeader className="text-muted-foreground block font-mono text-lg font-semibold tracking-tight">
+              {">"}{" "}
+              <span className="text-primary decoration-primary/40 mt-1 underline underline-offset-8 sm:mt-0 sm:inline">
+                {text.header}
+              </span>
+            </CardHeader>
+            <CardContent className="text-muted-foreground/90 grow text-sm leading-relaxed">
+              {text.content}
+            </CardContent>
+          </Card>
+        ))}
       </div>
     </section>
   );
