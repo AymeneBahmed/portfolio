@@ -41,7 +41,7 @@ export function ProjectCarousel({ project }: ProjectCarouselProps) {
     <Carousel setApi={setCarouselApi} className="relative select-none">
       <CarouselContent>
         {project.carousel.map((image, i) => (
-          <CarouselItem key={i} className="relative h-137.5">
+          <CarouselItem key={i}>
             <Image
               src={image}
               alt={`${project.title} picture ${i + 1}`}
