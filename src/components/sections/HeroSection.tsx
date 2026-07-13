@@ -147,6 +147,10 @@ export default function HeroSection() {
           initial={{ x: 1000, rotate: -360, scale: 0, opacity: 0 }}
           animate={{ x: 0, rotate: 0, scale: 1, opacity: 1 }}
           transition={{ duration: 1.7, ease: "backOut" }}
+          whileTap={{
+            scale: 0.5,
+            transition: { duration: 0.2, type: "spring", damping: 5 },
+          }}
         >
           <ProfilePicture className="size-80 md:size-88 lg:size-[clamp(310px,24vw,28rem)]" />
         </motion.div>
