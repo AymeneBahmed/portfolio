@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { TECHNOLOGIES } from "@/lib/constants";
 import { motion, Variants } from "framer-motion";
 import { InteractiveGrid } from "../InteractiveGrid";
+import { DotGridPattern } from "../DotGridPattern";
 
 export default function SkillsSection() {
   // Animation variants for the grid container to orchestrate the stagger
@@ -38,7 +39,13 @@ export default function SkillsSection() {
       className="relative flex min-h-dvh flex-col items-center justify-evenly gap-24 py-16"
       id="skills"
     >
-      <InteractiveGrid />
+      <DotGridPattern />
+
+      {/* Hide for small screens as an optimization */}
+      <div className="absolute inset-0 -z-10 hidden sm:block pointer-fine:block">
+        <InteractiveGrid />
+      </div>
+
       <motion.h1
         className="text-primary text-6xl font-bold tracking-wide"
         style={{ textShadow: "0 0 5px" }}

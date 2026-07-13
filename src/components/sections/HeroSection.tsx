@@ -5,7 +5,7 @@ import ProfilePicture from "../ProfilePicture";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
 import { cn } from "@/lib/utils";
 import { Button } from "../ui/button";
-import { motion } from "framer-motion"; // or "motion/react"
+import { motion } from "motion/react";
 import {
   ChevronDownIcon,
   DownloadIcon,
@@ -13,6 +13,7 @@ import {
   MailIcon,
 } from "lucide-react";
 import { InteractiveGrid } from "../InteractiveGrid";
+import { DotGridPattern } from "../DotGridPattern";
 
 export default function HeroSection() {
   const socials = [
@@ -35,7 +36,13 @@ export default function HeroSection() {
 
   return (
     <section className="relative flex min-h-235 items-center justify-center gap-8 lg:min-h-dvh">
-      <InteractiveGrid />
+      <DotGridPattern />
+
+      {/* Hide for small screens as an optimization */}
+      <div className="absolute inset-0 -z-10 hidden sm:block pointer-fine:block">
+        <InteractiveGrid />
+      </div>
+
       <div className="mx-auto flex w-[90%] flex-col-reverse items-center justify-center gap-8 py-12 min-[1550px]:justify-between sm:px-8 md:py-0 lg:w-[70%] lg:flex-row">
         <div className="mt-0 md:mt-2">
           <div className="flex w-fit items-center gap-2 rounded-full border border-green-800 bg-green-900/30 px-4 py-1 font-semibold text-green-300">
