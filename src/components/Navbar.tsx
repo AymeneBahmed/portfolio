@@ -15,7 +15,7 @@ export default function Navbar() {
     useState(false);
 
   return (
-    <nav className="border-primary bg-muted/40 shadow-primary fixed z-20 flex h-18 w-full items-center justify-center border-b shadow-[0_0_15px_0px] backdrop-blur-lg">
+    <nav className="border-primary bg-muted/40 shadow-primary fixed z-20 flex h-18 w-full items-center justify-center border-b shadow-[0_0_15px_0px] backdrop-blur-lg max-[396px]:h-25">
       <button
         className="invisible absolute left-10 space-y-1.5 max-[830px]:visible"
         onClick={() => setShouldShowVerticalNavbar(true)}
@@ -31,7 +31,7 @@ export default function Navbar() {
         setShouldShowVerticalNavbar={setShouldShowVerticalNavbar}
       />
 
-      <div className="text-primary absolute left-8 text-[clamp(1.5rem,2vw,1.775rem)] font-bold text-nowrap underline underline-offset-8 max-[830px]:left-1/2 max-[830px]:-translate-x-1/2">
+      <div className="text-primary absolute left-8 text-center text-[clamp(1.5rem,2vw,1.775rem)] font-bold text-wrap underline underline-offset-8 max-[830px]:left-1/2 max-[830px]:-translate-x-1/2">
         Aymene Bahmed
       </div>
 
