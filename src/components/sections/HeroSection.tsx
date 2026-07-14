@@ -156,7 +156,7 @@ export default function HeroSection() {
             transition: { duration: 0.2, type: "spring", damping: 5 },
           }}
         >
-          <ProfilePicture className="size-80 max-[23.438rem]:size-70 lg:size-[clamp(310px,24vw,28rem)]" />
+          <ProfilePicture className="size-80 max-[23.438rem]:size-[80vw] lg:size-[clamp(19.375rem,24vw,28rem)]" />
         </motion.div>
       </div>
 
