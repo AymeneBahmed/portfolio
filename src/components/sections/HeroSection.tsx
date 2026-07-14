@@ -35,7 +35,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative flex min-h-235 items-center justify-center gap-8 lg:min-h-dvh">
+    <section className="relative flex min-h-235 items-center justify-center gap-8 max-[396px]:min-h-250 max-[365px]:min-h-260 lg:min-h-dvh">
       <DotGridPattern />
 
       {/* Hide for small screens as an optimization */}
@@ -57,7 +57,9 @@ export default function HeroSection() {
                 {"Aymene Bahmed".split("").map((char, i) => (
                   <motion.span
                     key={i}
-                    className={cn(char !== " " && "inline-block")}
+                    // This 370px breakpoint is used because characters wrap on their own when the screen is small for the second name to fit
+                    // The animation in screens <370px will be just "opacity" instead of "y"
+                    className={cn(char !== " " && "min-[370px]:inline-block")}
                     initial={{
                       y: ((i * 127) % 360) - 180,
                       opacity: 0,
@@ -152,7 +154,7 @@ export default function HeroSection() {
             transition: { duration: 0.2, type: "spring", damping: 5 },
           }}
         >
-          <ProfilePicture className="size-80 md:size-88 lg:size-[clamp(310px,24vw,28rem)]" />
+          <ProfilePicture className="size-80 max-[375px]:size-70 lg:size-[clamp(310px,24vw,28rem)]" />
         </motion.div>
       </div>
 
