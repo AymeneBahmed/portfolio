@@ -8,7 +8,7 @@ import { X } from "lucide-react";
 import { useEffect, useState } from "react";
 import CustomizationButton from "./ColorCustomizationButton";
 
-const navLinks = ["about me", "skills", "projects"];
+const navLinks = ["about me", "tools", "projects"];
 
 export default function Navbar() {
   const [shouldShowVerticalNavbar, setShouldShowVerticalNavbar] =

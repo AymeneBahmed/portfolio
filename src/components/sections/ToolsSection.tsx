@@ -8,7 +8,7 @@ import { motion, stagger, Variants } from "motion/react";
 import { InteractiveGrid } from "../InteractiveGrid";
 import { DotGridPattern } from "../DotGridPattern";
 
-export default function SkillsSection() {
+export default function ToolsSection() {
   const containerVariants: Variants = {
     hidden: {},
     animate: {
@@ -36,7 +36,7 @@ export default function SkillsSection() {
   return (
     <section
       className="relative flex min-h-dvh flex-col items-center justify-evenly gap-24 py-8 sm:py-16"
-      id="skills"
+      id="tools"
     >
       <DotGridPattern />
 
@@ -53,7 +53,7 @@ export default function SkillsSection() {
         viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.7 }}
       >
-        Skills
+        Tools
       </motion.h1>
 
       {/* Optmize for mobile */}
