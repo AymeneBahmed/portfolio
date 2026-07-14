@@ -35,7 +35,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative flex min-h-235 items-center justify-center gap-8 max-[396px]:min-h-250 max-[365px]:min-h-260 lg:min-h-dvh">
+    <section className="relative flex min-h-235 items-center justify-center gap-8 max-[24.75rem]:min-h-250 max-[22.813rem]:min-h-260 lg:min-h-dvh">
       <DotGridPattern />
 
       {/* Hide for small screens as an optimization */}
@@ -43,7 +43,7 @@ export default function HeroSection() {
         <InteractiveGrid />
       </div>
 
-      <div className="mx-auto flex w-[90%] flex-col-reverse items-center justify-center gap-8 py-12 min-[1550px]:justify-between sm:px-8 md:py-0 lg:w-[70%] lg:flex-row">
+      <div className="mx-auto flex w-[90%] flex-col-reverse items-center justify-center gap-8 py-12 sm:px-8 md:py-0 lg:w-[70%] lg:flex-row min-[96.875rem]:justify-between">
         <div className="mt-0 md:mt-2">
           <div className="flex w-fit items-center gap-2 rounded-full border border-green-800 bg-green-900/30 px-4 py-1 font-semibold text-green-300">
             <div className="h-2 w-2 animate-pulse rounded-full bg-green-500 font-thin"></div>
@@ -59,7 +59,9 @@ export default function HeroSection() {
                     key={i}
                     // This 370px breakpoint is used because characters wrap on their own when the screen is small for the second name to fit
                     // The animation in screens <370px will be just "opacity" instead of "y"
-                    className={cn(char !== " " && "min-[370px]:inline-block")}
+                    className={cn(
+                      char !== " " && "min-[23.125rem]:inline-block",
+                    )}
                     initial={{
                       y: ((i * 127) % 360) - 180,
                       opacity: 0,
@@ -154,7 +156,7 @@ export default function HeroSection() {
             transition: { duration: 0.2, type: "spring", damping: 5 },
           }}
         >
-          <ProfilePicture className="size-80 max-[375px]:size-70 lg:size-[clamp(310px,24vw,28rem)]" />
+          <ProfilePicture className="size-80 max-[23.438rem]:size-70 lg:size-[clamp(310px,24vw,28rem)]" />
         </motion.div>
       </div>
 
