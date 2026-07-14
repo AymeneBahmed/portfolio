@@ -2,7 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { Card, CardContent, CardHeader } from "../ui/card";
-import { motion } from "motion/react";
+import { motion, stagger, Variants } from "motion/react";
 
 const cardsText = [
   {
@@ -49,6 +49,27 @@ const cardsText = [
 ];
 
 export default function AboutMeSection() {
+  const gridContainerVariants: Variants = {
+    hidden: {},
+    animate: {
+      transition: { delayChildren: stagger(0.15) },
+    },
+  };
+  const cardVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      y: 150,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "backOut",
+      },
+    },
+  };
+
   return (
     <section
       className="bg-muted/20 text-foreground relative flex min-h-dvh flex-col items-center justify-evenly overflow-hidden p-8 sm:py-16 md:px-16"
@@ -74,27 +95,36 @@ export default function AboutMeSection() {
       </motion.h1>
 
       {/* Grid Layout: Responsibly handles 5 cards across all screen sizes without overflow */}
-      <div className="auto-rows-stretch grid w-full max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <motion.div
+        className="grid w-full max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        variants={gridContainerVariants}
+        initial="hidden"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.1 }}
+      >
         {cardsText.map((text, i) => (
-          <Card
+          <motion.div
             key={i}
             className={cn(
-              "hover:border-primary/50 flex flex-col border transition-all duration-300",
+              "hover:border-primary/50 flex-col border transition-colors duration-300",
               i === cardsText.length - 1 && "sm:col-span-2",
             )}
+            variants={cardVariants}
           >
-            <CardHeader className="text-muted-foreground block font-mono text-lg font-semibold tracking-tight">
-              {">"}{" "}
-              <span className="text-primary decoration-primary/40 mt-1 underline underline-offset-8 sm:mt-0 sm:inline">
-                {text.header}
-              </span>
-            </CardHeader>
-            <CardContent className="text-muted-foreground/90 grow text-sm leading-relaxed">
-              {text.content}
-            </CardContent>
-          </Card>
+            <Card className="h-full border-none">
+              <CardHeader className="text-muted-foreground block font-mono text-lg font-semibold tracking-tight">
+                {">"}{" "}
+                <span className="text-primary decoration-primary/40 mt-1 underline underline-offset-8 sm:mt-0 sm:inline">
+                  {text.header}
+                </span>
+              </CardHeader>
+              <CardContent className="text-muted-foreground/90 grow text-sm leading-relaxed">
+                {text.content}
+              </CardContent>
+            </Card>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
