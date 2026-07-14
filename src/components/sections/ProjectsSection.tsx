@@ -45,7 +45,7 @@ export default function ProjectsSection() {
 
   return (
     <section
-      className="bg-muted/20 relative flex min-h-dvh flex-col items-center justify-evenly gap-24 overflow-hidden py-16"
+      className="bg-muted/20 relative flex min-h-dvh flex-col items-center justify-evenly gap-24 overflow-hidden py-8 sm:py-16"
       id="projects"
     >
       {/* Ambient Aurora Glows - 100% static, zero performance cost */}
@@ -69,7 +69,7 @@ export default function ProjectsSection() {
       </motion.h1>
 
       <motion.div
-        className="grid w-[90%] grid-cols-1 justify-items-center gap-x-10 gap-y-20 sm:w-[90%] sm:grid-cols-2 md:grid-cols-3"
+        className="-mt-10 grid w-[90%] grid-cols-1 justify-items-center gap-x-10 gap-y-20 sm:w-[90%] sm:grid-cols-2 md:grid-cols-3"
         variants={containerVariants}
         initial="hidden"
         whileInView="animate"
