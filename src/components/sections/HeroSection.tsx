@@ -89,7 +89,7 @@ export default function HeroSection() {
           </div>
 
           {/* Get In Touch & Socials section */}
-          <div className="mt-6 flex gap-3 sm:flex-row sm:items-center sm:gap-4">
+          <div className="mt-6 flex flex-wrap gap-3 max-[23.125rem]:justify-center max-[23.125rem]:mb-6 sm:flex-row sm:items-center sm:gap-4">
             <motion.span
               className="text-lg tracking-wide underline decoration-dashed underline-offset-[6px]"
               initial={{ opacity: 0 }}
