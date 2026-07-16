@@ -43,7 +43,8 @@ export default function HeroSection() {
         <InteractiveGrid />
       </div>
 
-      <div className="mx-auto flex w-[90%] flex-col-reverse items-center justify-center gap-8 py-12 sm:px-8 md:py-0 lg:w-[70%] lg:flex-row min-[96.875rem]:justify-between">
+      <div className="max-w-8xl mx-auto flex w-[90%] flex-col-reverse items-center justify-center gap-8 py-12 sm:px-8 md:py-0 lg:w-[70%] lg:flex-row min-[96.875rem]:justify-between">
+        {/* Text side (left side of hero section) */}
         <div className="mt-0 md:mt-2">
           <div className="flex w-fit items-center gap-2 rounded-full border border-green-800 bg-green-900/30 px-4 py-1 font-semibold text-green-300">
             <div className="h-2 w-2 animate-pulse rounded-full bg-green-500 font-thin"></div>
@@ -89,7 +90,7 @@ export default function HeroSection() {
           </div>
 
           {/* Get In Touch & Socials section */}
-          <div className="mt-6 flex flex-wrap gap-3 max-[23.125rem]:justify-center max-[23.125rem]:mb-6 sm:flex-row sm:items-center sm:gap-4">
+          <div className="mt-6 flex flex-wrap gap-3 max-[23.125rem]:mb-6 max-[23.125rem]:justify-center sm:flex-row sm:items-center sm:gap-4">
             <motion.span
               className="text-lg tracking-wide underline decoration-dashed underline-offset-[6px]"
               initial={{ opacity: 0 }}
