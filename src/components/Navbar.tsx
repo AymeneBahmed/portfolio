@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { Url } from "next/dist/shared/lib/router/router";
 import { cn } from "@/lib/utils";
 import { createPortal } from "react-dom";
 import { X } from "lucide-react";
@@ -15,39 +14,47 @@ export default function Navbar() {
     useState(false);
 
   return (
-    <nav className="border-primary bg-muted/40 shadow-primary fixed z-20 flex h-18 w-full items-center justify-center border-b shadow-[0_0_15px_0px] backdrop-blur-lg max-[24.75rem]:h-25">
-      <button
-        className="invisible absolute left-10 space-y-1.5 max-[51.875rem]:visible"
-        onClick={() => setShouldShowVerticalNavbar(true)}
-        aria-label="Open vertical navbar"
-      >
-        {[...Array(3)].map((_, i) => (
-          <div key={i} className="bg-primary h-1 w-8 rounded-full"></div>
-        ))}
-      </button>
+    <nav className="border-primary bg-muted/40 shadow-primary fixed z-20 h-18 w-full border-b shadow-[0_0_15px_0px] backdrop-blur-lg max-[24.75rem]:h-25">
+      <div className="max-w-8xl mx-auto flex h-full items-center px-8">
+        <div className="flex flex-1 justify-start min-[62.5rem]:hidden">
+          <button
+            className="space-y-1.5"
+            onClick={() => setShouldShowVerticalNavbar(true)}
+            aria-label="Open vertical navbar"
+          >
+            {[...Array(3)].map((_, i) => (
+              <div key={i} className="bg-primary h-0.75 w-8 rounded-full"></div>
+            ))}
+          </button>
+        </div>
+
+        <div className="flex flex-1 justify-center min-[62.5rem]:justify-start">
+          <div className="text-primary left-8 text-center text-[clamp(1.5rem,2vw,1.775rem)] font-bold text-nowrap underline underline-offset-8 max-[24.75rem]:text-wrap">
+            Aymene Bahmed
+          </div>
+        </div>
+
+        <div className="flex w-[30%] cursor-pointer flex-nowrap justify-between max-[62.5rem]:hidden">
+          {navLinks.map((link) => (
+            <NavLink
+              key={link}
+              href={`#${link.length > 1 ? link.split(" ").join("-") : link}`}
+              text={link}
+            />
+          ))}
+        </div>
+
+        <div className="flex flex-1 justify-end">
+          <div className="flex items-center gap-2 min-[62.5rem]:pr-[clamp(1rem,5vw,10rem)]">
+            <CustomizationButton />
+          </div>
+        </div>
+      </div>
 
       <VerticalNavbar
         shouldShowVerticalNavbar={shouldShowVerticalNavbar}
         setShouldShowVerticalNavbar={setShouldShowVerticalNavbar}
       />
-
-      <div className="text-primary absolute left-8 text-center text-[clamp(1.5rem,2vw,1.775rem)] font-bold text-wrap underline underline-offset-8 max-[51.875rem]:left-1/2 max-[51.875rem]:-translate-x-1/2">
-        Aymene Bahmed
-      </div>
-
-      <div className="flex w-[30%] cursor-pointer flex-nowrap justify-between max-[51.875rem]:hidden">
-        {navLinks.map((link) => (
-          <NavLink
-            key={link}
-            href={`#${link.length > 1 ? link.split(" ").join("-") : link}`}
-            text={link}
-          />
-        ))}
-      </div>
-
-      <div className="absolute right-10 flex items-center gap-2">
-        <CustomizationButton />
-      </div>
     </nav>
   );
 }
@@ -111,7 +118,7 @@ function NavLink({
   className,
 }: {
   text: string;
-  href: Url;
+  href: React.ComponentProps<typeof Link>["href"];
   className?: string;
 }) {
   return (
