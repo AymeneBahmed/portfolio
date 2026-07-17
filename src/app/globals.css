@@ -236,3 +236,17 @@
 @utility text-balance {
   text-wrap: balance;
 }
+
+@utility bg-glow {
+  background-image: conic-gradient(
+    from 0deg in oklab,
+    hsl(180, 100%, 50%) 0deg 10deg,
+    var(--color-blue-500) 30deg 40deg,
+    var(--color-purple-300) 50deg 60deg,
+    transparent 70deg 180deg,
+    hsl(180, 100%, 50%) 180deg 190deg,
+    var(--color-blue-500) 210deg 220deg,
+    var(--color-purple-300) 230deg 240deg,
+    transparent 250deg
+  );
+}

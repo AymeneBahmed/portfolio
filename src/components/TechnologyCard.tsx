@@ -20,7 +20,7 @@ export default function TechnologyCard({
           )}
         >
           {/* Sharp Spinning Border Texture */}
-          <div className="animate-gpu-spin absolute top-1/2 left-1/2 -z-1 aspect-square min-h-[170%] min-w-[170%] -translate-x-1/2 -translate-y-1/2 bg-conic-[from_0deg_in_oklab,hsl(180,100%,50%)_0deg_10deg,var(--color-blue-500)_30deg_40deg,var(--color-purple-300)_50deg_60deg,transparent_70deg_180deg,hsl(180,100%,50%)_180deg_190deg,var(--color-blue-500)_210deg_220deg,var(--color-purple-300)_230deg_240deg,transparent_250deg] blur-xl" />
+          <div className="animate-gpu-spin bg-glow absolute top-1/2 left-1/2 -z-1 aspect-square min-h-[170%] min-w-[170%] -translate-x-1/2 -translate-y-1/2 blur-xl" />
 
           {/* Content Card (Masks the center of the spinning circle, leaving a 2px border) */}
           <div className="bg-technology-card-background size-full p-6">
