@@ -121,7 +121,7 @@ export default function ToolsSection() {
 
       {/* For mid-to-large screens */}
       <motion.div
-        className="hidden w-[90%] grid-cols-1 justify-items-center gap-x-10 gap-y-20 sm:grid sm:w-[90%] sm:grid-cols-2 md:grid-cols-3"
+        className="hidden w-[90%] max-w-7xl grid-cols-1 justify-items-center gap-x-10 gap-y-15 sm:grid sm:grid-cols-2 min-[60.625rem]:grid-cols-3 min-[120.5rem]:grid-cols-4"
         variants={containerVariants}
         initial="hidden"
         whileInView="animate"
