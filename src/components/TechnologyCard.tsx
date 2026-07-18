@@ -20,7 +20,7 @@ export default function TechnologyCard({
           )}
         >
           {/* Sharp Spinning Border Texture */}
-          <div className="animate-gpu-spin bg-glow absolute top-1/2 left-1/2 -z-1 aspect-square min-h-[170%] min-w-[170%] -translate-x-1/2 -translate-y-1/2 blur-xl" />
+          <div className="sm:pointer-fine:animate-gpu-spin bg-glow absolute top-1/2 left-1/2 -z-1 aspect-square min-h-[170%] min-w-[170%] -translate-x-1/2 -translate-y-1/2 blur-xl" />
 
           {/* Content Card (Masks the center of the spinning circle, leaving a 2px border) */}
           <div className="bg-technology-card-background size-full p-6">
