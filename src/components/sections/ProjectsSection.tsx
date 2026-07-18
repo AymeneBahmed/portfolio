@@ -82,7 +82,7 @@ export default function ProjectsSection() {
             variants={cardVariants}
           >
             {/* Sharp Spinning Border Texture */}
-            <div className="sm:pointer-fine:animate-gpu-spin bg-glow sm:bg-glow any absolute top-1/2 left-1/2 -z-1 aspect-square min-h-[170%] min-w-[170%] -translate-x-1/2 -translate-y-1/2 blur-xl" />
+            <div className="sm:pointer-fine:animate-gpu-spin md:animate-gpu-spin bg-glow sm:bg-glow any absolute top-1/2 left-1/2 -z-1 aspect-square min-h-[170%] min-w-[170%] -translate-x-1/2 -translate-y-1/2 blur-xl" />
 
             {/* Project Card Container */}
             <div className="bg-background relative z-1 h-full overflow-hidden border">
