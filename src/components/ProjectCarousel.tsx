@@ -38,7 +38,15 @@ export function ProjectCarousel({ project }: ProjectCarouselProps) {
   }, [carouselApi]);
 
   return (
-    <Carousel setApi={setCarouselApi} className="relative select-none">
+    <Carousel
+      setApi={setCarouselApi}
+      opts={{
+        breakpoints: {
+          "(prefers-reduced-motion: reduce)": { duration: 0 },
+        },
+      }}
+      className="relative select-none"
+    >
       <CarouselContent>
         {project.carousel.map((image, i) => (
           <CarouselItem key={i}>
@@ -46,7 +54,7 @@ export function ProjectCarousel({ project }: ProjectCarouselProps) {
               src={image}
               alt={`${project.title} picture ${i + 1}`}
               className="object-contain"
-              priority={i === 0} // Optional: Loads the first image instantly
+              priority={i === 0}
             />
           </CarouselItem>
         ))}
