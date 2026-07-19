@@ -72,7 +72,7 @@ export default function AboutMeSection() {
 
   return (
     <section
-      className="bg-muted/20 text-foreground relative flex min-h-dvh flex-col items-center justify-evenly overflow-hidden p-12 sm:py-16 md:px-16 [@media(min-height:62.5rem)_and_(min-width:31.25rem)]:h-auto [@media(min-height:62.5rem)_and_(min-width:31.25rem)]:min-h-230"
+      className="bg-muted/20 text-foreground relative flex min-h-[84dvh] flex-col items-center justify-center gap-13 overflow-hidden p-12 md:px-16 [@media(min-height:62.5rem)_and_(min-width:31.25rem)]:h-auto [@media(min-height:62.5rem)_and_(min-width:31.25rem)]:min-h-200"
       id="about-me"
     >
       {/* Ambient Aurora Glows - 100% static, zero performance cost */}
@@ -85,7 +85,7 @@ export default function AboutMeSection() {
       </div>
 
       <motion.h1
-        className="text-primary text-shadow-primary mb-12 text-center text-6xl font-bold tracking-wide text-shadow-[0_0_5px]"
+        className="text-primary text-shadow-primary text-center text-6xl font-bold tracking-wide text-shadow-[0_0_5px]"
         initial={{ opacity: 0, y: -10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.1 }}
@@ -94,9 +94,9 @@ export default function AboutMeSection() {
         As a Software Engineer, I...
       </motion.h1>
 
-      {/* Grid Layout: Responsibly handles 5 cards across all screen sizes without overflow */}
+      {/* Grid Layout: Optimized 2-column layout for an odd number of items (5) */}
       <motion.div
-        className="grid w-full max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        className="grid w-full max-w-5xl grid-cols-1 gap-6 md:grid-cols-2"
         variants={gridContainerVariants}
         initial="hidden"
         whileInView="animate"
@@ -107,7 +107,7 @@ export default function AboutMeSection() {
             key={i}
             className={cn(
               "hover:border-primary/50 flex-col border transition-colors duration-300",
-              i === cardsText.length - 1 && "sm:col-span-2",
+              i === cardsText.length - 1 && "md:col-span-2",
             )}
             variants={cardVariants}
           >
