@@ -80,7 +80,7 @@ function VerticalNavbar({
   return createPortal(
     <div
       className={cn(
-        "fixed top-0 left-0 z-9999 grid size-full place-content-center bg-black/50 opacity-0 backdrop-blur-sm transition-all duration-500 min-[51.875rem]:hidden",
+        "fixed top-0 left-0 z-9999 grid size-full place-content-center bg-black/50 opacity-0 backdrop-blur-sm transition-all duration-500 min-[62.5rem]:hidden",
         !shouldShowVerticalNavbar && "pointer-events-none",
         shouldShowVerticalNavbar && "opacity-100",
       )}
