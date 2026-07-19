@@ -35,7 +35,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative flex min-h-260 items-center justify-center gap-8 min-[22.813rem]:min-h-250 min-[24.75rem]:min-h-235 lg:min-h-dvh">
+    <section className="relative flex min-h-260 items-center justify-center gap-8 min-[24.75rem]:min-h-235 lg:min-h-dvh">
       <DotGridPattern />
 
       {/* Hide for small screens as an optimization */}
@@ -60,9 +60,7 @@ export default function HeroSection() {
                     key={i}
                     // This 370px breakpoint is used because characters wrap on their own when the screen is small for the second name to fit
                     // The animation in screens <370px will be just "opacity" instead of "y"
-                    className={cn(
-                      char !== " " && "min-[23.125rem]:inline-block",
-                    )}
+                    className={cn(char !== " " && "min-[23.5rem]:inline-block")}
                     initial={{
                       y: ((i * 127) % 360) - 180,
                       opacity: 0,
