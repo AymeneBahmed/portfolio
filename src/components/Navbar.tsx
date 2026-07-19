@@ -29,9 +29,12 @@ export default function Navbar() {
         </div>
 
         <div className="flex flex-1 justify-center min-[62.5rem]:justify-start">
-          <div className="text-primary left-8 text-center text-[clamp(1.5rem,2vw,1.775rem)] font-bold underline underline-offset-8 min-[24.75rem]:text-nowrap">
+          <a
+            href="#hero"
+            className="text-primary left-8 text-center text-[clamp(1.5rem,2vw,1.775rem)] font-bold underline underline-offset-8 min-[24.75rem]:text-nowrap"
+          >
             Aymene Bahmed
-          </div>
+          </a>
         </div>
 
         <div className="hidden w-[30%] cursor-pointer flex-nowrap justify-between min-[62.5rem]:flex">

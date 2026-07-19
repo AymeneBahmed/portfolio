@@ -35,7 +35,10 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative flex min-h-260 items-center justify-center gap-8 min-[24.75rem]:min-h-235 md:max-h-270 lg:h-dvh">
+    <section
+      className="relative flex min-h-260 items-center justify-center gap-8 min-[24.75rem]:min-h-235 md:max-h-270 lg:h-dvh"
+      id="hero"
+    >
       <DotGridPattern />
 
       {/* Hide for small screens as an optimization */}
