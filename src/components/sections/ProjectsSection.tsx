@@ -78,14 +78,11 @@ export default function ProjectsSection() {
         {PROJECTS.map((project) => (
           <motion.div
             key={project.preview}
-            className="relative max-w-94 overflow-hidden p-0.75"
+            className="max-w-94 p-0.75"
             variants={cardVariants}
           >
-            {/* Sharp Spinning Border Texture */}
-            <div className="sm:pointer-fine:animate-gpu-spin md:animate-gpu-spin bg-glow sm:bg-glow any absolute top-1/2 left-1/2 -z-1 aspect-square min-h-[170%] min-w-[170%] -translate-x-1/2 -translate-y-1/2 blur-xl" />
-
             {/* Project Card Container */}
-            <div className="bg-background relative z-1 h-full overflow-hidden border">
+            <div className="bg-background border-primary shadow-primary relative z-1 h-full overflow-hidden border shadow-[0_0_8px]">
               {/* The Tint Layer: Replicates the semi-transparent look over the solid base */}
               <div className="bg-muted/20 absolute inset-0 -z-10" />
 
