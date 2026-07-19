@@ -59,8 +59,18 @@ export function ProjectCarousel({ project }: ProjectCarouselProps) {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className="border-primary text-primary absolute left-5 rounded-none" />
-      <CarouselNext className="border-primary text-primary absolute right-5 rounded-none" />
+      <CarouselPrevious
+        className={cn(
+          "border-primary text-primary absolute left-5 cursor-pointer rounded-none",
+          "forced-colors:border-[ButtonBorder] forced-colors:text-[ButtonText] forced-colors:hover:bg-[LinkText] forced-colors:hover:text-[Canvas]",
+        )}
+      />
+      <CarouselNext
+        className={cn(
+          "border-primary text-primary absolute right-5 cursor-pointer rounded-none",
+          "forced-colors:border-[ButtonBorder] forced-colors:text-[ButtonText] forced-colors:hover:bg-[LinkText] forced-colors:hover:text-[Canvas]",
+        )}
+      />
 
       {/* carousel indicator */}
       <div className="bg-secondary absolute bottom-2 left-1/2 flex -translate-x-1/2 gap-2 p-2">
@@ -68,8 +78,8 @@ export function ProjectCarousel({ project }: ProjectCarouselProps) {
           <button
             key={i}
             className={cn(
-              "bg-muted-foreground size-2 transition-colors",
-              currentImg === i && "bg-primary",
+              "bg-muted-foreground size-2 not-forced-colors:transition-colors forced-colors:bg-[ButtonText]",
+              currentImg === i && "bg-primary forced-colors:bg-[LinkText]",
             )}
             onClick={() => {
               setCurrentImg(i);
