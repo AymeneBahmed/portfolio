@@ -41,7 +41,7 @@ export default function ToolsSection() {
       <DotGridPattern />
 
       {/* Hide for small screens as an optimization */}
-      <div className="absolute inset-0 -z-10 hidden sm:block pointer-fine:block">
+      <div className="absolute inset-0 -z-10 hidden not-forced-colors:sm:block not-forced-colors:pointer-fine:block">
         <InteractiveGrid />
       </div>
 

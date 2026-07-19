@@ -42,7 +42,7 @@ export default function HeroSection() {
       <DotGridPattern />
 
       {/* Hide for small screens as an optimization */}
-      <div className="absolute inset-0 -z-10 hidden sm:block pointer-fine:block">
+      <div className="absolute inset-0 -z-10 hidden not-forced-colors:sm:block not-forced-colors:pointer-fine:block">
         <InteractiveGrid />
       </div>
 
@@ -50,7 +50,7 @@ export default function HeroSection() {
         {/* Text side (left side of hero section) */}
         <div className="mt-0 md:mt-2">
           <div className="flex w-fit items-center gap-2 rounded-full border border-green-800 bg-green-900/30 px-4 py-1 font-semibold text-green-300">
-            <div className="h-2 w-2 animate-pulse rounded-full bg-green-500 font-thin"></div>
+            <div className="h-2 w-2 animate-pulse rounded-full bg-green-500 font-thin forced-colors:bg-[CanvasText]"></div>
             <span>Available for work</span>
           </div>
 
@@ -109,7 +109,7 @@ export default function HeroSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={ariaLabel}
-                  className="hover:bg-primary group rounded-full border border-white p-1.5 transition-colors hover:border-black"
+                  className="hover:bg-primary group rounded-full border border-white p-1.5 transition-colors hover:border-black forced-colors:hover:bg-[CanvasText] forced-colors:hover:text-[Canvas]"
                   initial={{ y: 150, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{
@@ -122,8 +122,8 @@ export default function HeroSection() {
                     className={cn(
                       "size-5 transition-colors",
                       socials[0].Icon === Icon
-                        ? "group-hover:stroke-primary-foreground"
-                        : "group-hover:fill-primary-foreground",
+                        ? "not-forced-colors:group-hover:stroke-primary-foreground"
+                        : "not-forced-colors:group-hover:fill-primary-foreground",
                     )}
                   />
                 </motion.a>
@@ -132,14 +132,21 @@ export default function HeroSection() {
           </div>
 
           <div className="mt-5 flex flex-wrap gap-4">
-            <Button className="shadow-primary gap-2 shadow-[0_0_10px]" asChild>
+            <Button
+              className="shadow-primary gap-2 shadow-[0_0_10px] forced-colors:border"
+              asChild
+            >
               <a href="/Aymene_Bahmed_Resume.pdf" target="_blank">
                 <DownloadIcon size={20} />
                 <span>Download Resume</span>
               </a>
             </Button>
 
-            <Button className="gap-2" variant="secondary" asChild>
+            <Button
+              className="gap-2 forced-colors:border forced-colors:border-[ButtonText]"
+              variant="secondary"
+              asChild
+            >
               <a href="#projects">
                 <FolderCodeIcon size={20} />
                 <span>View projects</span>
