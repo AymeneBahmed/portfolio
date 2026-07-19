@@ -42,7 +42,7 @@ export default function HeroSection() {
       <DotGridPattern />
 
       {/* Hide for small screens as an optimization */}
-      <div className="absolute inset-0 -z-10 hidden not-forced-colors:sm:block not-forced-colors:pointer-fine:block">
+      <div className="absolute inset-0 -z-10 hidden motion-safe:not-forced-colors:sm:block motion-safe:not-forced-colors:pointer-fine:block">
         <InteractiveGrid />
       </div>
 
@@ -184,7 +184,7 @@ export default function HeroSection() {
         <Button
           size="icon"
           variant="secondary"
-          className="cursor-pointer rounded-full"
+          className="cursor-pointer rounded-full forced-colors:border"
           asChild
         >
           <Link
