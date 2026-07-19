@@ -35,7 +35,7 @@ export default function ToolsSection() {
 
   return (
     <section
-      className="relative flex min-h-dvh flex-col items-center justify-evenly gap-24 py-8 sm:py-16"
+      className="relative flex min-h-dvh flex-col items-center justify-evenly gap-24 py-8 sm:py-16 lg:min-h-auto"
       id="tools"
     >
       <DotGridPattern />
