@@ -72,7 +72,7 @@ export default function AboutMeSection() {
 
   return (
     <section
-      className="bg-muted/20 text-foreground relative flex min-h-[84dvh] flex-col items-center justify-center gap-13 overflow-hidden p-12 md:px-16 [@media(min-height:62.5rem)_and_(min-width:31.25rem)]:h-auto [@media(min-height:62.5rem)_and_(min-width:31.25rem)]:min-h-200"
+      className="bg-muted/20 text-foreground relative flex min-h-[82dvh] flex-col items-center justify-center gap-8 overflow-hidden p-12 md:px-16 [@media(min-height:62.5rem)_and_(min-width:31.25rem)]:h-auto [@media(min-height:62.5rem)_and_(min-width:31.25rem)]:min-h-190"
       id="about-me"
     >
       {/* Ambient Aurora Glows - 100% static, zero performance cost */}
