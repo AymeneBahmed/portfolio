@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { createPortal } from "react-dom";
 import { X } from "lucide-react";
@@ -15,20 +14,23 @@ export default function Navbar() {
 
   return (
     <nav className="border-primary bg-muted/40 shadow-primary fixed z-20 h-25 w-full border-b shadow-[0_0_15px_0px] backdrop-blur-lg min-[24.75rem]:h-18">
-      <div className="max-w-8xl mx-auto flex h-full items-center px-8">
-        <div className="flex flex-1 justify-start min-[62.5rem]:hidden">
+      <div className="max-w-8xl mx-auto flex h-full items-center px-8 forced-colors:max-w-7xl">
+        <div className="flex flex-1 justify-start min-[62.5rem]:hidden min-[51.25rem]:forced-colors:hidden">
           <button
             className="space-y-1.5"
             onClick={() => setShouldShowVerticalNavbar(true)}
             aria-label="Open vertical navbar"
           >
             {[...Array(3)].map((_, i) => (
-              <div key={i} className="bg-primary h-0.75 w-8 rounded-full"></div>
+              <div
+                key={i}
+                className="bg-primary h-0.75 w-8 rounded-full forced-colors:bg-[LinkText]"
+              ></div>
             ))}
           </button>
         </div>
 
-        <div className="flex flex-1 justify-center min-[62.5rem]:justify-start">
+        <div className="flex flex-1 justify-center min-[62.5rem]:justify-start forced-colors:justify-end forced-colors:min-[51.25rem]:justify-start">
           <a
             href="#hero"
             className="text-primary left-8 text-center text-[clamp(1.5rem,2vw,1.775rem)] font-bold underline underline-offset-8 min-[24.75rem]:text-nowrap"
@@ -37,7 +39,12 @@ export default function Navbar() {
           </a>
         </div>
 
-        <div className="hidden w-[30%] cursor-pointer flex-nowrap justify-between min-[62.5rem]:flex">
+        <div
+          className={cn(
+            "hidden w-[30%] cursor-pointer flex-nowrap justify-between min-[62.5rem]:flex",
+            "forced-colors:min-w-92 forced-colors:gap-15 forced-colors:text-[LinkText] min-[51.25rem]:forced-colors:flex",
+          )}
+        >
           {navLinks.map((link) => (
             <NavLink
               key={link}
@@ -47,7 +54,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="flex flex-1 justify-end">
+        <div className="flex flex-1 justify-end forced-colors:hidden">
           <div className="flex items-center gap-2 min-[62.5rem]:pr-[clamp(1rem,5vw,10rem)]">
             <CustomizationButton />
           </div>
@@ -132,7 +139,7 @@ function NavLink({
       )}
       href={href}
     >
-      <div className="bg-primary absolute -bottom-0.75 left-0 h-0.5 w-0 rounded-full transition-[width] group-hover:w-full"></div>
+      <div className="bg-primary absolute -bottom-0.75 left-0 h-0.5 w-0 rounded-full transition-[width] group-hover:w-full forced-colors:bg-[LinkText]"></div>
       {text}
     </a>
   );
