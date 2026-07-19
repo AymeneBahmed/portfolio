@@ -72,7 +72,7 @@ export default function AboutMeSection() {
 
   return (
     <section
-      className="bg-muted/20 text-foreground relative flex min-h-dvh flex-col items-center justify-evenly overflow-hidden p-8 sm:py-16 md:min-h-auto md:px-16 lg:h-dvh lg:max-h-270"
+      className="bg-muted/20 text-foreground relative flex min-h-dvh flex-col items-center justify-evenly overflow-hidden p-12 sm:py-16 md:px-16 [@media(min-height:62.5rem)_and_(min-width:31.25rem)]:h-auto [@media(min-height:62.5rem)_and_(min-width:31.25rem)]:min-h-230"
       id="about-me"
     >
       {/* Ambient Aurora Glows - 100% static, zero performance cost */}
