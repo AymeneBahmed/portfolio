@@ -105,10 +105,7 @@ export default function AboutMeSection() {
         {cardsText.map((text, i) => (
           <motion.div
             key={i}
-            className={cn(
-              "hover:border-primary/50 flex-col border transition-colors duration-300",
-              i === cardsText.length - 1 && "md:col-span-2",
-            )}
+            className="hover:border-primary/50 flex-col border transition-colors duration-300"
             variants={cardVariants}
           >
             <Card className="h-full border-none">
