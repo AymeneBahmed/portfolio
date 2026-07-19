@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/providers/ThemeProvider";
+import { MotionConfig } from "motion/react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,9 +25,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} min-h-dvh antialiased`}>
         <ThemeProvider>
-          <Navbar />
-          <main>{children}</main>
-          <Footer />
+          <MotionConfig reducedMotion="user">
+            <Navbar />
+            <main>{children}</main>
+            <Footer />
+          </MotionConfig>
         </ThemeProvider>
       </body>
     </html>
