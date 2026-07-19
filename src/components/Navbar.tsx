@@ -14,7 +14,7 @@ export default function Navbar() {
     useState(false);
 
   return (
-    <nav className="border-primary bg-muted/40 shadow-primary fixed z-20 h-18 w-full border-b shadow-[0_0_15px_0px] backdrop-blur-lg max-[24.75rem]:h-25">
+    <nav className="border-primary bg-muted/40 shadow-primary fixed z-20 h-25 w-full border-b shadow-[0_0_15px_0px] backdrop-blur-lg min-[24.75rem]:h-18">
       <div className="max-w-8xl mx-auto flex h-full items-center px-8">
         <div className="flex flex-1 justify-start min-[62.5rem]:hidden">
           <button
@@ -29,12 +29,12 @@ export default function Navbar() {
         </div>
 
         <div className="flex flex-1 justify-center min-[62.5rem]:justify-start">
-          <div className="text-primary left-8 text-center text-[clamp(1.5rem,2vw,1.775rem)] font-bold text-nowrap underline underline-offset-8 max-[24.75rem]:text-wrap">
+          <div className="text-primary left-8 text-center text-[clamp(1.5rem,2vw,1.775rem)] font-bold underline underline-offset-8 min-[24.75rem]:text-nowrap">
             Aymene Bahmed
           </div>
         </div>
 
-        <div className="flex w-[30%] cursor-pointer flex-nowrap justify-between max-[62.5rem]:hidden">
+        <div className="hidden w-[30%] cursor-pointer flex-nowrap justify-between min-[62.5rem]:flex">
           {navLinks.map((link) => (
             <NavLink
               key={link}
