@@ -207,7 +207,7 @@
     @apply bg-background text-foreground overflow-x-hidden;
   }
   html {
-    @apply font-sans;
+    @apply scroll-p-8 font-sans;
   }
   ::-webkit-scrollbar {
     background: var(--secondary);
