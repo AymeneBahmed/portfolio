@@ -35,7 +35,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="relative flex min-h-235 items-center justify-center gap-8 max-[24.75rem]:min-h-250 max-[22.813rem]:min-h-260 lg:min-h-dvh">
+    <section className="relative flex min-h-260 items-center justify-center gap-8 min-[22.813rem]:min-h-250 min-[24.75rem]:min-h-235 lg:min-h-dvh">
       <DotGridPattern />
 
       {/* Hide for small screens as an optimization */}
@@ -90,7 +90,7 @@ export default function HeroSection() {
           </div>
 
           {/* Get In Touch & Socials section */}
-          <div className="mt-6 flex flex-wrap gap-3 max-[23.125rem]:mb-6 max-[23.125rem]:justify-center sm:flex-row sm:items-center sm:gap-4">
+          <div className="mt-6 mb-6 flex flex-wrap justify-center gap-3 min-[23.125rem]:mb-0 min-[23.125rem]:justify-normal sm:flex-row sm:items-center sm:gap-4">
             <motion.span
               className="text-lg tracking-wide underline decoration-dashed underline-offset-[6px]"
               initial={{ opacity: 0 }}
@@ -157,7 +157,7 @@ export default function HeroSection() {
             transition: { duration: 0.2, type: "spring", damping: 5 },
           }}
         >
-          <ProfilePicture className="size-80 max-[23.438rem]:size-[80vw] lg:size-[clamp(19.375rem,24vw,28rem)]" />
+          <ProfilePicture className="size-[80vw] min-[23.438rem]:size-80 lg:size-[clamp(19.375rem,24vw,28rem)]" />
         </motion.div>
       </div>
 
