@@ -118,11 +118,11 @@ function NavLink({
   className,
 }: {
   text: string;
-  href: React.ComponentProps<typeof Link>["href"];
+  href: React.ComponentProps<"a">["href"];
   className?: string;
 }) {
   return (
-    <Link
+    <a
       className={cn(
         "group hover:text-primary relative font-semibold capitalize underline-offset-8 transition-colors duration-300",
         className,
@@ -131,6 +131,6 @@ function NavLink({
     >
       <div className="bg-primary absolute -bottom-0.75 left-0 h-0.5 w-0 rounded-full transition-[width] group-hover:w-full"></div>
       {text}
-    </Link>
+    </a>
   );
 }
