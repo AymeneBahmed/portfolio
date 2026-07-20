@@ -13,7 +13,12 @@ export default function Navbar() {
     useState(false);
 
   return (
-    <nav className="border-primary bg-muted/40 shadow-primary fixed z-20 h-25 w-full border-b shadow-[0_0_15px_0px] backdrop-blur-lg min-[24.75rem]:h-18">
+    <nav
+      className={cn(
+        "border-primary bg-muted/40 shadow-primary fixed z-20 h-25 w-full border-b shadow-[0_0_15px_0px] backdrop-blur-lg min-[24.75rem]:h-18",
+        "[@media(prefers-reduced-transparency)]:bg-[#03050B] [@media(prefers-reduced-transparency)]:backdrop-blur-none",
+      )}
+    >
       <div className="max-w-8xl mx-auto flex h-full items-center px-8 forced-colors:max-w-7xl">
         <div className="flex flex-1 justify-start min-[62.5rem]:hidden min-[51.25rem]:forced-colors:hidden">
           <button
