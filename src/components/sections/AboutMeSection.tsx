@@ -115,7 +115,7 @@ export default function AboutMeSection() {
                   {text.header}
                 </span>
               </CardHeader>
-              <CardContent className="text-muted-foreground/90 grow text-sm leading-relaxed">
+              <CardContent className="text-muted-foreground grow text-sm leading-relaxed">
                 {text.content}
               </CardContent>
             </Card>
