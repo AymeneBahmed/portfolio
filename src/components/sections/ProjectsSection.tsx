@@ -45,11 +45,11 @@ export default function ProjectsSection() {
 
   return (
     <section
-      className="bg-muted/20 relative flex min-h-dvh flex-col items-center justify-evenly gap-24 overflow-hidden py-8 sm:py-16 lg:min-h-auto"
+      className="bg-muted/20 relative flex min-h-dvh flex-col items-center justify-evenly gap-24 overflow-hidden py-8 sm:py-16 lg:min-h-auto [@media(prefers-reduced-transparency)]:bg-[#03050B]"
       id="projects"
     >
       {/* Ambient Aurora Glows - 100% static, zero performance cost */}
-      <div className="pointer-events-none absolute inset-0 -z-10 select-none">
+      <div className="pointer-events-none absolute inset-0 -z-10 select-none [@media(prefers-reduced-transparency)]:hidden">
         {/* Soft Indigo/Primary glow drifting from the top left behind the card */}
         <div className="bg-primary/5 absolute -top-20 -left-20 size-125 rounded-full blur-[130px]" />
 
