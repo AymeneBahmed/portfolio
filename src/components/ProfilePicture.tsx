@@ -11,7 +11,7 @@ export default function ProfilePicture({ className }: ProfilePictureProps) {
   return (
     <Tilt
       className={cn(
-        "border-primary shadow-primary relative size-100 overflow-hidden rounded-full border-[6px] shadow-[0_0_15px_0px]",
+        "border-primary dark:shadow-primary relative size-100 overflow-hidden rounded-full border-[6px] shadow-[0px_8px_16px_rgba(0,50,200,0.15)] dark:shadow-[0_0_15px_0px]",
         className,
       )}
     >
