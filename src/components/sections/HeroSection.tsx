@@ -49,8 +49,8 @@ export default function HeroSection() {
       <div className="max-w-8xl mx-auto flex w-[90%] flex-col-reverse items-center justify-center gap-8 py-12 sm:px-8 md:py-0 lg:w-[70%] lg:flex-row min-[96.875rem]:justify-between">
         {/* Text side (left side of hero section) */}
         <div className="mt-0 md:mt-2">
-          <div className="flex w-fit items-center gap-2 rounded-full border border-green-800 bg-green-900/30 px-4 py-1 font-semibold text-green-300">
-            <div className="h-2 w-2 animate-pulse rounded-full bg-green-500 font-thin forced-colors:bg-[CanvasText]"></div>
+          <div className="flex w-fit items-center gap-2 rounded-full border border-green-200 bg-green-50 px-4 py-1 text-sm font-semibold text-green-700 dark:border-green-800 dark:bg-green-900/30 dark:text-green-300">
+            <div className="h-2 w-2 animate-pulse rounded-full bg-green-500 forced-colors:bg-[CanvasText]"></div>
             <span>Available for work</span>
           </div>
 
@@ -109,7 +109,11 @@ export default function HeroSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={ariaLabel}
-                  className="hover:bg-primary group rounded-full border border-white p-1.5 transition-colors hover:border-black forced-colors:hover:bg-[CanvasText] forced-colors:hover:text-[Canvas]"
+                  className={cn(
+                    "border-primary hover:bg-primary group rounded-full border-2 bg-white p-1.5 transition-colors",
+                    "dark:hover:bg-primary dark:border-white dark:bg-transparent dark:hover:border-black",
+                    "forced-colors:hover:bg-[CanvasText] forced-colors:hover:text-[Canvas]",
+                  )}
                   initial={{ y: 150, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{
@@ -122,8 +126,8 @@ export default function HeroSection() {
                     className={cn(
                       "size-5 transition-colors",
                       socials[0].Icon === Icon
-                        ? "not-forced-colors:group-hover:stroke-primary-foreground"
-                        : "not-forced-colors:group-hover:fill-primary-foreground",
+                        ? "not-forced-colors:dark:group-hover:stroke-primary-foreground not-forced-colors:group-hover:stroke-white"
+                        : "not-forced-colors:dark:group-hover:fill-primary-foreground not-forced-colors:group-hover:fill-white",
                     )}
                   />
                 </motion.a>
@@ -133,7 +137,7 @@ export default function HeroSection() {
 
           <div className="mt-5 flex flex-wrap gap-4">
             <Button
-              className="shadow-primary gap-2 shadow-[0_0_10px] forced-colors:border"
+              className="dark:shadow-primary gap-2 dark:shadow-[0_0_10px] forced-colors:border"
               asChild
             >
               <a href="/Aymene_Bahmed_Resume.pdf" target="_blank">
