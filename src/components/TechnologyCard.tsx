@@ -13,7 +13,7 @@ export default function TechnologyCard({
     <Tilt className="size-full">
       <div
         className={cn(
-          "bg-technology-card-background border-primary shadow-primary border p-6 shadow-[0_0_10px]",
+          "border-primary dark:shadow-primary shadow-primary relative border-2 bg-white p-6 shadow-[-8px_8px_0px] dark:bg-slate-950 dark:shadow-[0_0_10px]",
           className,
         )}
       >

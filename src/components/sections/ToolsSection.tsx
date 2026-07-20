@@ -35,7 +35,7 @@ export default function ToolsSection() {
 
   return (
     <section
-      className="relative flex min-h-dvh flex-col items-center justify-evenly gap-24 py-8 sm:py-16 lg:min-h-auto"
+      className="relative flex min-h-dvh flex-col items-center justify-evenly gap-20 py-8 sm:py-12 lg:min-h-auto"
       id="tools"
     >
       <DotGridPattern />
@@ -46,8 +46,7 @@ export default function ToolsSection() {
       </div>
 
       <motion.h1
-        className="text-primary text-6xl font-bold tracking-wide"
-        style={{ textShadow: "0 0 5px" }}
+        className="text-primary text-6xl font-bold tracking-wide dark:text-shadow-[0_0_5px]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.1 }}

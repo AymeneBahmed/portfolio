@@ -65,7 +65,6 @@
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.92 0.004 286.32);
   --input: oklch(0.92 0.004 286.32);
-  --technology-card-background: var(--color-slate-950);
 }
 
 .blue {
@@ -163,7 +162,6 @@
   --destructive-foreground: oklch(0.984 0.004 248.165);
   --border: oklch(0.28 0.037 259.98);
   --input: oklch(0.28 0.037 259.98);
-  --technology-card-background: var(--color-slate-950);
 }
 
 .dark-neon-green {

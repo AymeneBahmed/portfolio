@@ -82,7 +82,7 @@ export default function ProjectsSection() {
             variants={cardVariants}
           >
             {/* Project Card Container */}
-            <div className="bg-background border-primary shadow-primary relative z-1 h-full overflow-hidden border shadow-[0_0_8px]">
+            <div className="bg-background border-primary dark:shadow-primary relative z-1 h-full overflow-hidden border-2 dark:shadow-[0_0_8px]">
               {/* The Tint Layer: Replicates the semi-transparent look over the solid base */}
               <div className="bg-muted/20 absolute inset-0 -z-10" />
 
