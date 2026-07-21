@@ -116,10 +116,10 @@
   --ring: oklch(96.085% 0.21319 112.376);
 }
 
-.tomato {
-  --primary: oklch(68.499% 0.1967 23.875);
-  --primary-foreground: oklch(0.2029 0.024 200.1962);
-  --ring: oklch(68.499% 0.1967 23.875);
+.red {
+  --primary: oklch(58.079% 0.23834 29.223);
+  --primary-foreground: oklch(100% 0.00011 271.152);
+  --ring: oklch(58.079% 0.23834 29.223);
 }
 
 .fuchsia {

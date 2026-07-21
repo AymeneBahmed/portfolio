@@ -287,7 +287,7 @@ export const COLOR_THEMES = [
   "blue",
   "orange",
   "yellow",
-  "tomato",
+  "red",
   "fuchsia",
   "indigo",
   "green",
