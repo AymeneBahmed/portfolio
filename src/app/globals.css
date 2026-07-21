@@ -109,6 +109,11 @@
   --primary-foreground: oklch(0.98 0.016 73.684);
 }
 
+.pink {
+  --primary: oklch(0.525 0.223 3.958);
+  --primary-foreground: oklch(0.971 0.014 343.198);
+}
+
 .sky {
   --primary: oklch(76.807% 0.14923 229.39);
   --primary-foreground: oklch(0.208 0.04 265.731);
