@@ -281,6 +281,7 @@ export const PROJECTS: Project[] = [
 export const COLOR_THEMES = [
   "cyan",
   "sky",
+  "amber",
   "purple",
   "neon-green",
   "caffeine",
