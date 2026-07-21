@@ -24,7 +24,6 @@ import etchASketchImg4 from "@/assets/project carousels/etch a sketch/4.png";
 import formPageImg from "@/assets/projects imgs/form page.png";
 import formPageImg1 from "@/assets/project carousels/form page/1.png";
 import formPageImg2 from "@/assets/project carousels/form page/2.png";
-import formPageImg3 from "@/assets/project carousels/form page/3.png";
 import gitTutorialImg from "@/assets/projects imgs/git tutorial.png";
 import gitTutorialImg1 from "@/assets/project carousels/git tutorial/1.png";
 import gitTutorialImg2 from "@/assets/project carousels/git tutorial/2.png";
@@ -254,7 +253,7 @@ export const PROJECTS: Project[] = [
     preview: "https://aymenebahmed.github.io/form-page/",
     description: "A beautiful form page with client-side validation.",
     img: formPageImg,
-    carousel: [formPageImg1, formPageImg2, formPageImg3],
+    carousel: [formPageImg1, formPageImg2],
     technologies: ["HTML", "CSS", "JavaScript"],
   },
   {
