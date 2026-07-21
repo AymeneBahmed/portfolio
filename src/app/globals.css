@@ -245,7 +245,6 @@
   }
   ::-webkit-scrollbar-thumb {
     background: var(--color-primary);
-    border-radius: theme(borderRadius.full);
   }
 }
 
