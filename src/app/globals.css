@@ -99,6 +99,11 @@
   --primary-foreground: oklch(0.982 0.018 155.826);
 }
 
+.indigo {
+  --primary: oklch(0.457 0.24 277.023);
+  --primary-foreground: oklch(0.962 0.018 272.314);
+}
+
 .sky {
   --primary: oklch(76.807% 0.14923 229.39);
   --primary-foreground: oklch(0.208 0.04 265.731);
@@ -127,11 +132,6 @@
 .red {
   --primary: oklch(58.079% 0.23834 29.223);
   --primary-foreground: oklch(100% 0.00011 271.152);
-}
-
-.indigo {
-  --primary: oklch(67.3% 0.182 276.935);
-  --primary-foreground: oklch(0.2029 0.024 200.1962);
 }
 
 .teal {
