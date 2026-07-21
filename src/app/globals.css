@@ -89,6 +89,11 @@
   --primary-foreground: oklch(0.984 0.019 200.873);
 }
 
+.fuchsia {
+  --primary: oklch(0.518 0.253 323.949);
+  --primary-foreground: oklch(0.977 0.017 320.058);
+}
+
 .neon-green {
   --primary: oklch(76.462% 0.25186 142.301);
   --primary-foreground: oklch(0.208 0.04 265.731);
@@ -122,11 +127,6 @@
 .red {
   --primary: oklch(58.079% 0.23834 29.223);
   --primary-foreground: oklch(100% 0.00011 271.152);
-}
-
-.fuchsia {
-  --primary: oklch(74% 0.238 322.16);
-  --primary-foreground: oklch(0.2029 0.024 200.1962);
 }
 
 .indigo {
