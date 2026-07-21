@@ -65,7 +65,9 @@ export default function ColorCustomizationButton() {
 
     const interval = setInterval(() => {
       const randomTheme =
-        COLOR_THEMES[Math.floor(Math.random() * COLOR_THEMES.length)];
+        currentColorSchemeColors[
+          Math.floor(Math.random() * currentColorSchemeColors.length)
+        ];
       setTheme(randomTheme);
     }, 2000);
 
