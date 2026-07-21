@@ -114,13 +114,13 @@
   --primary-foreground: oklch(0.971 0.014 343.198);
 }
 
-.sky {
-  --primary: oklch(76.807% 0.14923 229.39);
-  --primary-foreground: oklch(0.208 0.04 265.731);
+.purple {
+  --primary: oklch(0.496 0.265 301.924);
+  --primary-foreground: oklch(0.977 0.014 308.299);
 }
 
-.purple {
-  --primary: oklch(70.254% 0.17479 301.269);
+.sky {
+  --primary: oklch(76.807% 0.14923 229.39);
   --primary-foreground: oklch(0.208 0.04 265.731);
 }
 
