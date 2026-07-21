@@ -69,7 +69,7 @@ export default function ToolsSection() {
             <motion.div
               key={technology.name}
               className={cn(
-                "relative border-2 bg-white py-5 shadow-[-8px_8px_0px] dark:bg-slate-950 dark:shadow-none",
+                "relative border-2 bg-white py-5 shadow-[-8px_8px_0px] dark:bg-slate-950 dark:shadow-[0_0_10px]",
                 technology.name === "HTML" &&
                   "border-[#E44F25] shadow-[#E44F25]",
                 technology.name === "CSS" &&
@@ -83,7 +83,7 @@ export default function ToolsSection() {
                 technology.name === "React.js" &&
                   "border-[#00D8FF] shadow-[#00D8FF]",
                 technology.name === "Next.js" &&
-                  "border-black shadow-black dark:border-white",
+                  "border-black shadow-black dark:border-white dark:shadow-white",
                 technology.name === "Prisma ORM" &&
                   "border-[#39A6E5] shadow-[#39A6E5]",
                 technology.name === "PHP" &&
