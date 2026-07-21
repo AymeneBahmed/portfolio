@@ -17,6 +17,7 @@ export type TechnologyName =
 
 export interface Technology {
   logo: StaticImageData | string;
+  darkModeLogo?: StaticImageData | string;
   name: TechnologyName;
   description: string;
 }
