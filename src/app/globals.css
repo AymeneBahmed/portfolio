@@ -79,13 +79,18 @@
   --primary-foreground: oklch(0.987 0.022 95.277);
 }
 
-.neon-green {
-  --primary: oklch(76.462% 0.25186 142.301);
-  --primary-foreground: oklch(0.208 0.04 265.731);
+.emerald {
+  --primary: oklch(0.508 0.118 165.612);
+  --primary-foreground: oklch(0.979 0.021 166.113);
 }
 
 .cyan {
-  --primary: oklch(78.9% 0.154 211.53);
+  --primary: oklch(0.52 0.105 223.128);
+  --primary-foreground: oklch(0.984 0.019 200.873);
+}
+
+.neon-green {
+  --primary: oklch(76.462% 0.25186 142.301);
   --primary-foreground: oklch(0.208 0.04 265.731);
 }
 
