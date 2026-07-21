@@ -72,11 +72,11 @@ export default function AboutMeSection() {
 
   return (
     <section
-      className="bg-muted/20 text-foreground relative flex min-h-[82dvh] flex-col items-center justify-center gap-8 overflow-hidden p-12 md:px-16 [@media(min-height:62.5rem)_and_(min-width:31.25rem)]:h-auto [@media(min-height:62.5rem)_and_(min-width:31.25rem)]:min-h-190 [@media(prefers-reduced-transparency)]:bg-[#03050B]"
+      className="bg-muted/20 text-foreground transparency-reduce:bg-[#03050B] relative flex min-h-[82dvh] flex-col items-center justify-center gap-8 overflow-hidden p-12 md:px-16 [@media(min-height:62.5rem)_and_(min-width:31.25rem)]:h-auto [@media(min-height:62.5rem)_and_(min-width:31.25rem)]:min-h-190"
       id="about-me"
     >
       {/* Ambient Aurora Glows - 100% static, zero performance cost */}
-      <div className="pointer-events-none absolute inset-0 -z-10 select-none [@media(prefers-reduced-transparency)]:hidden">
+      <div className="transparency-reduce:hidden pointer-events-none absolute inset-0 -z-10 select-none">
         {/* Soft Indigo/Primary glow drifting from the top left behind the card */}
         <div className="bg-primary/5 absolute -top-20 -left-20 size-125 rounded-full blur-[130px]" />
 

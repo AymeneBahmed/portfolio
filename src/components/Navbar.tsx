@@ -16,7 +16,7 @@ export default function Navbar() {
     <nav
       className={cn(
         "border-primary dark:bg-muted/40 dark:shadow-primary fixed z-20 h-25 w-full border-b-2 bg-white/70 backdrop-blur-lg min-[24.75rem]:h-18 dark:shadow-[0_0_15px_0px]",
-        "[@media(prefers-reduced-transparency)]:bg-white [@media(prefers-reduced-transparency)]:backdrop-blur-none [@media(prefers-reduced-transparency)]:dark:bg-[#03050B]",
+        "transparency-reduce:bg-white transparency-reduce:backdrop-blur-none transparency-reduce:dark:bg-[#03050B]",
       )}
     >
       <div className="max-w-8xl mx-auto flex h-full items-center px-8 forced-colors:max-w-7xl">

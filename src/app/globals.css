@@ -3,6 +3,7 @@
 @import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
+@custom-variant transparency-reduce (@media (prefers-reduced-transparency));
 
 @theme inline {
   --font-heading: var(--font-sans);
