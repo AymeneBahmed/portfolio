@@ -134,6 +134,11 @@
   --primary-foreground: oklch(0.984 0.014 180.72);
 }
 
+.violet {
+  --primary: oklch(0.491 0.27 292.581);
+  --primary-foreground: oklch(0.969 0.016 293.756);
+}
+
 .dark {
   --background: oklch(0.084 0.012 255.894);
   --foreground: oklch(0.984 0.004 248.165);

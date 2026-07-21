@@ -292,6 +292,7 @@ export const COLOR_THEMES = [
   "sky",
   "red",
   "teal",
+  "violet",
   "dark-cyan",
   "dark-sky",
   "dark-purple",
