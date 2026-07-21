@@ -289,6 +289,7 @@ export const COLOR_THEMES = [
   "orange",
   "pink",
   "purple",
+  "sky",
   "caffeine",
   "yellow",
   "red",
