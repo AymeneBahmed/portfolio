@@ -45,7 +45,7 @@ export default function ProjectsSection() {
 
   return (
     <section
-      className="bg-muted/20 relative flex min-h-dvh flex-col items-center justify-evenly gap-24 overflow-hidden py-8 sm:py-16 lg:min-h-auto [@media(prefers-reduced-transparency)]:bg-[#03050B]"
+      className="bg-muted/20 relative flex min-h-dvh flex-col items-center justify-evenly gap-24 overflow-hidden py-8 sm:py-12 lg:min-h-auto [@media(prefers-reduced-transparency)]:bg-[#03050B]"
       id="projects"
     >
       {/* Ambient Aurora Glows - 100% static, zero performance cost */}
@@ -58,8 +58,7 @@ export default function ProjectsSection() {
       </div>
 
       <motion.h1
-        className="text-primary text-6xl font-bold tracking-wide"
-        style={{ textShadow: "0 0 5px" }}
+        className="text-primary text-6xl font-bold tracking-wide dark:text-shadow-[0_0_5px]"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.1 }}
@@ -82,17 +81,15 @@ export default function ProjectsSection() {
             variants={cardVariants}
           >
             {/* Project Card Container */}
-            <div className="bg-background border-primary dark:shadow-primary relative z-1 h-full overflow-hidden border-2 dark:shadow-[0_0_8px]">
+            <div className="bg-background border-primary dark:shadow-primary shadow-primary relative z-1 h-full overflow-hidden border-2 shadow-[-8px_8px_0px] dark:shadow-[0_0_8px]">
               {/* The Tint Layer: Replicates the semi-transparent look over the solid base */}
               <div className="bg-muted/20 absolute inset-0 -z-10" />
 
-              <div className="relative">
+              <div className="relative h-52">
                 <Image
                   src={project.img}
                   alt={project.title}
-                  width={400}
-                  height={250}
-                  className="w-full object-cover"
+                  className="size-full object-cover"
                   loading="eager"
                 />
 
@@ -154,37 +151,39 @@ export default function ProjectsSection() {
                     </div>
 
                     {/* Technologies */}
-                    <div className="mt-2 flex gap-1">
-                      {project.technologies.map((technoName, i) =>
-                        technoName === "Next.js" ? (
-                          <div className="relative" key={i}>
-                            <div className="absolute top-0 left-0 size-full scale-90 rounded-full bg-white"></div>
+                    <div className="flex gap-1 dark:mt-1">
+                      {project.technologies.map((technoName, i) => (
+                        <div className="relative" key={i}>
+                          {technoName === "Next.js" ? (
+                            <>
+                              <div className="absolute top-0 left-0 size-full scale-90 rounded-full bg-white"></div>
+                              <Image
+                                src={
+                                  TECHNOLOGIES.filter(
+                                    (techno) => techno.name === "Next.js",
+                                  )[0].logo
+                                }
+                                alt={technoName}
+                                className="relative size-5"
+                              />
+                            </>
+                          ) : (
                             <Image
+                              key={i}
                               src={
-                                TECHNOLOGIES.filter(
-                                  (techno) => techno.name === "Next.js",
-                                )[0].logo
+                                TECHNOLOGIES.find(
+                                  (techno) => techno.name === technoName,
+                                )!.logo
                               }
                               alt={technoName}
-                              className="relative size-5"
+                              className={cn(
+                                "size-5",
+                                technoName === "Prisma ORM" && "brightness-[3]",
+                              )}
                             />
-                          </div>
-                        ) : (
-                          <Image
-                            key={i}
-                            src={
-                              TECHNOLOGIES.filter(
-                                (techno) => techno.name === technoName,
-                              )[0].logo
-                            }
-                            alt={technoName}
-                            className={cn(
-                              "size-5",
-                              technoName === "Prisma ORM" && "brightness-[3]",
-                            )}
-                          />
-                        ),
-                      )}
+                          )}
+                        </div>
+                      ))}
                     </div>
                   </div>
                   <p className="text-muted-foreground mt-4">
