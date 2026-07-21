@@ -290,8 +290,6 @@ export const COLOR_THEMES = [
   "pink",
   "purple",
   "sky",
-  "caffeine",
-  "yellow",
   "red",
   "teal",
   "dark-cyan",

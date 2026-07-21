@@ -124,19 +124,9 @@
   --primary-foreground: oklch(0.977 0.013 236.62);
 }
 
-.caffeine {
-  --primary: oklch(0.9247 0.0524 66.1732);
-  --primary-foreground: oklch(0.2029 0.024 200.1962);
-}
-
-.yellow {
-  --primary: oklch(96.085% 0.21319 112.376);
-  --primary-foreground: oklch(0.2029 0.024 200.1962);
-}
-
 .red {
-  --primary: oklch(58.079% 0.23834 29.223);
-  --primary-foreground: oklch(100% 0.00011 271.152);
+  --primary: oklch(0.505 0.213 27.518);
+  --primary-foreground: oklch(0.971 0.013 17.38);
 }
 
 .teal {
