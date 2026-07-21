@@ -11,6 +11,7 @@ import phpLogo from "@/assets/logos/php.svg";
 import laravelLogo from "@/assets/logos/laravel.svg";
 import playwrightLogo from "@/assets/logos/playwright.svg";
 import vitestLogo from "@/assets/logos/vitest.svg";
+import vitestDarkModeLogo from "@/assets/logos/vitest_dark_mode.svg";
 import calculatorImg from "@/assets/projects imgs/calculator.png";
 import calculatorImg1 from "@/assets/project carousels/calculator/1.png";
 import calculatorImg2 from "@/assets/project carousels/calculator/2.png";
@@ -137,6 +138,7 @@ export const TECHNOLOGIES: Technology[] = [
   },
   {
     logo: vitestLogo,
+    darkModeLogo: vitestDarkModeLogo,
     name: "Vitest",
     description:
       "A blazingly fast testing framework that makes it easy to write unit and integration tests with a straightforward API.",
