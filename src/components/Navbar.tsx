@@ -95,13 +95,13 @@ function VerticalNavbar({
   return createPortal(
     <div
       className={cn(
-        "fixed top-0 left-0 z-9999 grid size-full place-content-center bg-black/50 opacity-0 backdrop-blur-sm transition-all duration-500 min-[62.5rem]:hidden",
+        "fixed top-0 left-0 z-9999 grid size-full place-content-center bg-white/70 opacity-0 backdrop-blur-sm transition-all duration-500 min-[62.5rem]:hidden dark:bg-black/50",
         !shouldShowVerticalNavbar && "pointer-events-none",
         shouldShowVerticalNavbar && "opacity-100",
       )}
     >
       <button
-        className="hover:text-primary absolute top-4 right-4 transition-colors duration-300"
+        className="hover:text-primary absolute top-4 right-4 cursor-pointer transition-colors duration-300"
         onClick={() => setShouldShowVerticalNavbar(false)}
         aria-label="Close vertical navbar"
       >
