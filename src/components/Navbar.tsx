@@ -22,14 +22,14 @@ export default function Navbar() {
       <div className="max-w-8xl mx-auto flex h-full items-center px-8 forced-colors:max-w-7xl">
         <div className="flex flex-1 justify-start min-[62.5rem]:hidden min-[51.25rem]:forced-colors:hidden">
           <button
-            className="space-y-1.5"
+            className="cursor-pointer space-y-1.5"
             onClick={() => setShouldShowVerticalNavbar(true)}
             aria-label="Open vertical navbar"
           >
             {[...Array(3)].map((_, i) => (
               <div
                 key={i}
-                className="bg-primary h-0.75 w-8 rounded-full forced-colors:bg-[LinkText]"
+                className="bg-primary h-1 w-8 rounded-full forced-colors:bg-[LinkText]"
               ></div>
             ))}
           </button>
