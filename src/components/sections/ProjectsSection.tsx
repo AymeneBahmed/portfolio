@@ -95,9 +95,9 @@ export default function ProjectsSection() {
 
                 <Dialog>
                   <DialogTrigger asChild>
-                    {/* Dark Overlay */}
+                    {/* Overlay */}
                     <button
-                      className="absolute inset-0 grid size-full cursor-pointer place-content-center bg-black/50 opacity-0 transition-opacity hover:opacity-100"
+                      className="absolute inset-0 grid size-full cursor-pointer place-content-center bg-white/70 opacity-0 transition-opacity hover:opacity-100 dark:bg-black/50"
                       aria-label={`Zoom in on ${project.title} image`}
                     >
                       <div className="border-primary text-primary rounded-full border-2 p-2">
