@@ -1,4 +1,4 @@
-import profilePicture from "@/assets/profile picture.jpg";
+import profilePicture from "@/assets/profile-picture.jpg";
 import { cn } from "@/lib/utils";
 import ExportedImage from "next-image-export-optimizer";
 import Tilt from "react-parallax-tilt";
