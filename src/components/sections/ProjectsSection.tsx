@@ -46,7 +46,7 @@ export default function ProjectsSection() {
 
   return (
     <section
-      className="bg-muted/20 transparency-reduce:bg-[#03050B] relative flex min-h-dvh flex-col items-center justify-evenly gap-24 overflow-hidden py-8 sm:py-12 lg:min-h-auto"
+      className="bg-muted/20 transparency-reduce:dark:bg-[#03050B] transparency-reduce:bg-white relative flex min-h-dvh flex-col items-center justify-evenly gap-24 overflow-hidden py-8 sm:py-12 lg:min-h-auto"
       id="projects"
     >
       {/* Ambient Aurora Glows - 100% static, zero performance cost */}
