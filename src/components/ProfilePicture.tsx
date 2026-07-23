@@ -1,6 +1,6 @@
 import profilePicture from "@/assets/profile picture.jpg";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import Tilt from "react-parallax-tilt";
 
 interface ProfilePictureProps {
@@ -15,11 +15,12 @@ export default function ProfilePicture({ className }: ProfilePictureProps) {
         className,
       )}
     >
-      <Image
+      <ExportedImage
         src={profilePicture}
         alt="profile picture"
         className="size-full scale-[1.2] rounded-full object-cover object-[110%_-20px]"
         loading="eager"
+        placeholder="blur"
         preload
       />
     </Tilt>

@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
-import Image, { ImageProps } from "next/image";
+import ExportedImage from "next-image-export-optimizer";
+import { ImageProps } from "next/image";
 import Tilt from "react-parallax-tilt";
 
 export default function TechnologyCard({
@@ -42,8 +43,12 @@ function TechnologyCardFigure({
   );
 }
 
-function TechnologyCardImage(props: ImageProps) {
-  return <Image width={150} height={150} {...props} alt={props.alt || ""} />;
+function TechnologyCardImage(
+  props: React.ComponentProps<typeof ExportedImage>,
+) {
+  return (
+    <ExportedImage width={150} height={150} {...props} alt={props.alt || ""} />
+  );
 }
 
 function TechnologyCardCaption({

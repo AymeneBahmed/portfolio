@@ -17,6 +17,7 @@ import {
   DialogTrigger,
 } from "../ui/dialog";
 import { ProjectCarousel } from "../ProjectCarousel";
+import ExportedImage from "next-image-export-optimizer";
 
 export default function ProjectsSection() {
   const containerVariants: Variants = {
@@ -86,11 +87,11 @@ export default function ProjectsSection() {
               <div className="bg-muted/20 absolute inset-0 -z-10" />
 
               <div className="relative h-52">
-                <Image
+                <ExportedImage
                   src={project.img}
                   alt={project.title}
                   className="size-full object-cover"
-                  loading="eager"
+                  placeholder="blur"
                 />
 
                 <Dialog>
@@ -157,7 +158,7 @@ export default function ProjectsSection() {
                           {technoName === "Next.js" ? (
                             <>
                               <div className="absolute top-0 left-0 size-full scale-90 rounded-full bg-white"></div>
-                              <Image
+                              <ExportedImage
                                 src={
                                   TECHNOLOGIES.filter(
                                     (techno) => techno.name === "Next.js",
@@ -168,7 +169,7 @@ export default function ProjectsSection() {
                               />
                             </>
                           ) : (
-                            <Image
+                            <ExportedImage
                               key={i}
                               src={
                                 TECHNOLOGIES.find(

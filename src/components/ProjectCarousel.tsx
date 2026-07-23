@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import {
   Carousel,
   CarouselApi,
@@ -12,6 +11,7 @@ import {
 import { Project } from "@/types";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import ExportedImage from "next-image-export-optimizer";
 
 interface ProjectCarouselProps {
   project: Project;
@@ -50,10 +50,11 @@ export function ProjectCarousel({ project }: ProjectCarouselProps) {
       <CarouselContent>
         {project.carousel.map((image, i) => (
           <CarouselItem key={i}>
-            <Image
+            <ExportedImage
               src={image}
               alt={`${project.title} picture ${i + 1}`}
               className="object-contain"
+              placeholder="blur"
               preload={i === 0}
             />
           </CarouselItem>
