@@ -54,7 +54,7 @@ export function ProjectCarousel({ project }: ProjectCarouselProps) {
               src={image}
               alt={`${project.title} picture ${i + 1}`}
               className="object-contain"
-              priority={i === 0}
+              preload={i === 0}
             />
           </CarouselItem>
         ))}
