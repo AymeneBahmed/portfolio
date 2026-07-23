@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/portfolio",
   images: {
     loader: "custom",
     // 128px for avatars/cards, 640px for mobile, 1200px for desktop carousels
@@ -10,9 +9,12 @@ const nextConfig = {
   },
   transpilePackages: ["next-image-export-optimizer"],
   env: {
+    nextImageExportOptimizer_imageFolderPath: "public/images",
     nextImageExportOptimizer_exportFolderPath: "out",
     nextImageExportOptimizer_storePicturesInWEBP: "true",
-    nextImageExportOptimizer_generateAndUseBluraImages: "true",
+    nextImageExportOptimizer_exportFolderName: "nextImageExportOptimizer",
+    nextImageExportOptimizer_generateAndUseBlurImages: "true",
+    nextImageExportOptimizer_remoteImageCacheTTL: "0",
   },
 };
 
