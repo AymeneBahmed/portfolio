@@ -92,6 +92,7 @@ export default function ProjectsSection() {
                   alt={project.title}
                   className="size-full object-cover"
                   placeholder="blur"
+                  basePath="/portfolio"
                 />
 
                 <Dialog>
@@ -166,6 +167,7 @@ export default function ProjectsSection() {
                                 }
                                 alt={technoName}
                                 className="relative size-5"
+                                basePath="/portfolio"
                               />
                             </>
                           ) : (
@@ -181,6 +183,7 @@ export default function ProjectsSection() {
                                 "size-5",
                                 technoName === "Prisma ORM" && "brightness-[3]",
                               )}
+                              basePath="/portfolio"
                             />
                           )}
                         </div>

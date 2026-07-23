@@ -47,7 +47,13 @@ function TechnologyCardImage(
   props: React.ComponentProps<typeof ExportedImage>,
 ) {
   return (
-    <ExportedImage width={150} height={150} {...props} alt={props.alt || ""} />
+    <ExportedImage
+      width={150}
+      height={150}
+      {...props}
+      alt={props.alt || ""}
+      basePath="/portfolio"
+    />
   );
 }
 

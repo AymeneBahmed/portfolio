@@ -21,6 +21,7 @@ export default function ProfilePicture({ className }: ProfilePictureProps) {
         className="size-full scale-[1.2] rounded-full object-cover object-[110%_-20px]"
         loading="eager"
         placeholder="blur"
+        basePath="/portfolio"
         preload
       />
     </Tilt>

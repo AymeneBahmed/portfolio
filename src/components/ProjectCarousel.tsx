@@ -56,6 +56,7 @@ export function ProjectCarousel({ project }: ProjectCarouselProps) {
               className="object-contain"
               placeholder="blur"
               preload={i === 0}
+              basePath="/portfolio"
             />
           </CarouselItem>
         ))}
