@@ -106,7 +106,7 @@ export default function ToolsSection() {
                     <TechnologyCard.Image
                       src={nextjsLogo}
                       alt="next js"
-                      className="relative size-13"
+                      className="relative size-13 forced-colors:invert"
                     />
                   </div>
                 ) : (
@@ -119,7 +119,8 @@ export default function ToolsSection() {
                         className={cn(
                           "hidden size-13 dark:block",
                           technology.name === "Prisma ORM" && "brightness-[3]",
-                          technology.name === "Vitest" && "scale-150",
+                          technology.name === "Vitest" &&
+                            "scale-150 forced-colors:block",
                         )}
                       />
                     )}
@@ -132,7 +133,8 @@ export default function ToolsSection() {
                         "size-13",
                         technology.darkModeLogo && "dark:hidden",
                         technology.name === "Prisma ORM" && "brightness-[3]",
-                        technology.name === "Vitest" && "scale-150",
+                        technology.name === "Vitest" &&
+                          "scale-150 forced-colors:hidden",
                       )}
                     />
                   </>
@@ -173,7 +175,7 @@ export default function ToolsSection() {
                     <TechnologyCard.Image
                       src={nextjsLogo}
                       alt="next js"
-                      className="relative size-20"
+                      className="relative size-20 forced-colors:invert"
                     />
                   </div>
                 ) : (
@@ -186,7 +188,8 @@ export default function ToolsSection() {
                           "hidden size-20 dark:block",
                           technology.name === "PHP" && "scale-125",
                           technology.name === "Prisma ORM" && "brightness-[3]",
-                          technology.name === "Vitest" && "h-28 scale-175",
+                          technology.name === "Vitest" &&
+                            "h-28 scale-175 forced-colors:block",
                         )}
                       />
                     )}
@@ -198,7 +201,8 @@ export default function ToolsSection() {
                         technology.darkModeLogo && "dark:hidden",
                         technology.name === "PHP" && "scale-125",
                         technology.name === "Prisma ORM" && "brightness-[3]",
-                        technology.name === "Vitest" && "h-28 scale-175",
+                        technology.name === "Vitest" &&
+                          "h-28 scale-175 forced-colors:hidden",
                       )}
                     />
                   </>
