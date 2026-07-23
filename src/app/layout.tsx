@@ -65,7 +65,6 @@ export default function RootLayout({
                 }
 
                 // Store default theme for each inactive color scheme if it's not in local storage
-                console.log(true)
                 const storedLightTheme = localStorage.getItem("last-used-light-theme");
                 const storedDarkTheme = localStorage.getItem("last-used-dark-theme");
 
@@ -73,7 +72,6 @@ export default function RootLayout({
                   localStorage.setItem("last-used-light-theme", ${lightThemes}[0]);
                 } 
                 if (!storedDarkTheme) {
-                  console.log(true)
                   localStorage.setItem("last-used-dark-theme", ${darkThemes}[0]);
                 }
               } catch {}
