@@ -148,7 +148,7 @@ export const PROJECTS: Project[] = [
   {
     title: "portfolio",
     gitLink: "https://github.com/AymeneBahmed/portfolio",
-    preview: "https://portfolio-iota-five-7oaswokhva.vercel.app/",
+    preview: "https://aymene-bahmed.vercel.app",
     description:
       "My portfolio website showcasing my skills and projects with a beautiful, accessible, and modern UI.",
     img: portfolioImg,
