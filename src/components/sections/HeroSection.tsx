@@ -147,7 +147,7 @@ export default function HeroSection() {
             </Button>
 
             <Button
-              className="gap-2 forced-colors:border forced-colors:border-[ButtonText]"
+              className="gap-2 forced-colors:border"
               variant="secondary"
               asChild
             >
