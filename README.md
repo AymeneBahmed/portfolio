@@ -1,4 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
+
+> My portfolio website, built with love, not vibe-coding.
+
+[![Live Demo](https://img.shields.io/badge/Demo-Live_App-blue?style=for-the-badge)](https://portfolio-iota-five-7oaswokhva.vercel.app/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
+## Preview
+
+https://github.com/user-attachments/assets/fc968747-e9d1-4457-8906-f0f9a1baf55a
+
+## Features
+
+- **Accessibility**: The website respects Accessibility Guidelines including high-contrast, ARIA attributes, text size, theme preferences, forced colors, and reduced transparency.
+- **Responsive**: support for both small, medium, and large screens (such as 4K screens).
+- ***
 
 ## Getting Started
 
