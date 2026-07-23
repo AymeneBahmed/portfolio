@@ -130,23 +130,23 @@ export default function ProjectsSection() {
                         {project.title}
                       </h2>
                       <div className="text-primary flex gap-2 *:transition-transform *:hover:scale-125">
-                        <Link
+                        <a
                           href={project.preview}
                           target="_blank"
                           title="Preview"
                           aria-label={`Preview ${project.title}`}
                         >
                           <FiExternalLink size={22} />
-                        </Link>
+                        </a>
                         {project.gitLink && (
-                          <Link
+                          <a
                             href={project.gitLink}
                             target="_blank"
                             title="Github repo"
                             aria-label={`Go to ${project.title} GitHub`}
                           >
                             <FaGithub size={22} />
-                          </Link>
+                          </a>
                         )}
                       </div>
                     </div>
