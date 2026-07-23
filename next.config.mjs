@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
+  basePath: process.env.NODE_ENV === "production" ? "/portfolio" : "",
   images: {
     loader: "custom",
     // 128px for avatars/cards, 640px for mobile, 1200px for desktop carousels
