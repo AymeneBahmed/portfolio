@@ -11,47 +11,34 @@ import { COLOR_THEMES } from "@/lib/constants";
 export default function ColorCustomizationButton() {
   const { theme, setTheme } = useColor();
   const [isShuffling, setIsShuffling] = useState<boolean>(false);
-  const [currentColorScheme, setCurrentColorScheme] = useState<
-    "light" | "dark" | null
-  >();
+
+  const isDark = theme?.startsWith("dark");
+  const currentColorScheme = isDark ? "dark" : "light";
   const currentColorSchemeColors = COLOR_THEMES.filter((themeName) =>
-    currentColorScheme === "dark"
-      ? themeName.startsWith("dark")
-      : !themeName.startsWith("dark"),
+    isDark ? themeName.startsWith("dark") : !themeName.startsWith("dark"),
   );
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem("theme")?.startsWith("dark")
-      ? "dark"
-      : "light";
-
-    setCurrentColorScheme(storedTheme);
-  }, []);
 
   useEffect(() => {
     if (!theme) {
       return;
     }
 
-    // Store the current theme so that changing between color schemes uses the last used color scheme's theme
-    if (currentColorScheme === "light") {
-      localStorage.setItem("last-used-light-theme", theme);
-      document.documentElement.classList.remove("dark");
-
-      return;
-    }
-
-    if (currentColorScheme === "dark") {
+    // Remember last-used themes per scheme when theme changes
+    if (isDark) {
       localStorage.setItem("last-used-dark-theme", theme);
-      document.documentElement.classList.add("dark");
+    } else {
+      localStorage.setItem("last-used-light-theme", theme);
     }
-  }, [currentColorScheme, theme]);
+  }, [theme, isDark]);
 
   useEffect(() => {
     const shouldShuffle = localStorage.getItem("shuffle");
 
     if (shouldShuffle === "true") {
-      setIsShuffling(true);
+      // Schedule out of the current call stack avoids hydration error (and ESLint error)
+      queueMicrotask(() => {
+        setIsShuffling(true);
+      });
     }
   }, []);
 
@@ -72,7 +59,17 @@ export default function ColorCustomizationButton() {
     }, 2000);
 
     return () => clearInterval(interval);
-  }, [isShuffling, setTheme]);
+  }, [isShuffling, currentColorSchemeColors, setTheme]);
+
+  function handleSchemeChange(scheme: "light" | "dark") {
+    const key =
+      scheme === "dark" ? "last-used-dark-theme" : "last-used-light-theme";
+    const fallback = COLOR_THEMES.find((t) =>
+      scheme === "dark" ? t.startsWith("dark") : !t.startsWith("dark"),
+    );
+
+    setTheme(localStorage.getItem(key) ?? fallback ?? COLOR_THEMES[0]);
+  }
 
   function handleColorSelect(colorName: string) {
     setIsShuffling(false);
@@ -112,13 +109,7 @@ export default function ColorCustomizationButton() {
                     "ring-ring ring-2 ring-offset-2",
                 )}
                 onClick={() => {
-                  setCurrentColorScheme("light");
-
-                  const storedColor = localStorage.getItem(
-                    "last-used-light-theme",
-                  );
-
-                  setTheme(storedColor ?? currentColorSchemeColors[0]);
+                  handleSchemeChange("light");
                 }}
                 aria-label="Use light color scheme"
               />
@@ -130,13 +121,7 @@ export default function ColorCustomizationButton() {
                     "ring-ring ring-2 ring-offset-2",
                 )}
                 onClick={() => {
-                  setCurrentColorScheme("dark");
-
-                  const storedColor = localStorage.getItem(
-                    "last-used-dark-theme",
-                  );
-
-                  setTheme(storedColor ?? currentColorSchemeColors[0]);
+                  handleSchemeChange("dark");
                 }}
                 aria-label="Use dark color scheme"
               />
@@ -151,12 +136,13 @@ export default function ColorCustomizationButton() {
                   key={colorName}
                   size="icon"
                   className={cn(
-                    `border-secondary ${colorName} relative size-10 cursor-pointer rounded-full border-2`,
+                    `border-secondary relative size-10 cursor-pointer rounded-full border-2`,
                     !isShuffling &&
                       theme === colorName &&
                       "ring-ring ring-2 ring-offset-2",
                   )}
                   onClick={() => handleColorSelect(colorName)}
+                  data-theme={colorName}
                   aria-label={`Use a ${colorName} theme`}
                 />
               ))}
