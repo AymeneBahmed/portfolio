@@ -33,7 +33,7 @@ export default function ColorCustomizationButton() {
       return;
     }
 
-    // Store the color of current theme so changing between themes uses the old theme's color
+    // Store the current theme so that changing between color schemes uses the last used color scheme's theme
     if (currentColorScheme === "light") {
       localStorage.setItem("last-used-light-theme", theme);
       document.documentElement.classList.remove("dark");
