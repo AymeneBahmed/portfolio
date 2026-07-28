@@ -5,7 +5,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   return (
     <NextThemesProvider
       attribute="data-theme"
-      defaultTheme="neon-green"
+      disableTransitionOnChange
       themes={COLOR_THEMES}
     >
       {children}
