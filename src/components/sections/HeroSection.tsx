@@ -140,9 +140,9 @@ export default function HeroSection() {
               className="dark:shadow-primary gap-2 dark:shadow-[0_0_10px] forced-colors:border"
               asChild
             >
-              <a href="/Aymene_Bahmed_Resume.pdf" target="_blank">
+              <a href="/Aymene_Bahmed_CV.pdf" target="_blank">
                 <DownloadIcon size={20} />
-                <span>Download Resume</span>
+                <span>Download CV</span>
               </a>
             </Button>
 
