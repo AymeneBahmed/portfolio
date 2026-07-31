@@ -61,6 +61,27 @@ import portfolioImg3 from "@/assets/project-carousels/portfolio/3.png";
 import portfolioImg4 from "@/assets/project-carousels/portfolio/4.png";
 import portfolioImg5 from "@/assets/project-carousels/portfolio/5.png";
 import portfolioImg6 from "@/assets/project-carousels/portfolio/6.png";
+import researchLaboratoriesImg from "@/assets/project-thumbnails/research-laboratories.png";
+import researchLaboratoriesImg1 from "@/assets/project-carousels/research-laboratories/1.png";
+import researchLaboratoriesImg2 from "@/assets/project-carousels/research-laboratories/2.png";
+import researchLaboratoriesImg3 from "@/assets/project-carousels/research-laboratories/3.png";
+import researchLaboratoriesImg4 from "@/assets/project-carousels/research-laboratories/4.png";
+import researchLaboratoriesImg5 from "@/assets/project-carousels/research-laboratories/5.png";
+import researchLaboratoriesImg6 from "@/assets/project-carousels/research-laboratories/6.png";
+import researchLaboratoriesImg7 from "@/assets/project-carousels/research-laboratories/7.png";
+import researchLaboratoriesImg8 from "@/assets/project-carousels/research-laboratories/8.png";
+import researchLaboratoriesImg9 from "@/assets/project-carousels/research-laboratories/9.png";
+import researchLaboratoriesImg10 from "@/assets/project-carousels/research-laboratories/10.png";
+import researchLaboratoriesImg11 from "@/assets/project-carousels/research-laboratories/11.png";
+import researchLaboratoriesImg12 from "@/assets/project-carousels/research-laboratories/12.png";
+import researchLaboratoriesImg13 from "@/assets/project-carousels/research-laboratories/13.png";
+import researchLaboratoriesImg14 from "@/assets/project-carousels/research-laboratories/14.png";
+import researchLaboratoriesImg15 from "@/assets/project-carousels/research-laboratories/15.png";
+import researchLaboratoriesImg16 from "@/assets/project-carousels/research-laboratories/16.png";
+import researchLaboratoriesImg17 from "@/assets/project-carousels/research-laboratories/17.png";
+import researchLaboratoriesImg18 from "@/assets/project-carousels/research-laboratories/18.png";
+import researchLaboratoriesImg19 from "@/assets/project-carousels/research-laboratories/19.png";
+import researchLaboratoriesImg20 from "@/assets/project-carousels/research-laboratories/20.png";
 import { Project, Technology } from "@/types";
 
 export const TECHNOLOGIES: Technology[] = [
@@ -161,6 +182,44 @@ export const PROJECTS: Project[] = [
       portfolioImg6,
     ],
     technologies: ["HTML", "CSS", "TypeScript", "TailwindCSS", "Next.js"],
+  },
+  {
+    title: "research laboratories",
+    gitLink: "https://github.com/AymeneBahmed/research-laboratories",
+    preview: "https://research-laboratories.42web.io/",
+    description:
+      "My final year bachelor's project for computer science which helps the university to manage laboratories through a clean, modern interface.",
+    img: researchLaboratoriesImg,
+    carousel: [
+      researchLaboratoriesImg1,
+      researchLaboratoriesImg2,
+      researchLaboratoriesImg3,
+      researchLaboratoriesImg4,
+      researchLaboratoriesImg5,
+      researchLaboratoriesImg6,
+      researchLaboratoriesImg7,
+      researchLaboratoriesImg8,
+      researchLaboratoriesImg9,
+      researchLaboratoriesImg10,
+      researchLaboratoriesImg11,
+      researchLaboratoriesImg12,
+      researchLaboratoriesImg13,
+      researchLaboratoriesImg14,
+      researchLaboratoriesImg15,
+      researchLaboratoriesImg16,
+      researchLaboratoriesImg17,
+      researchLaboratoriesImg18,
+      researchLaboratoriesImg19,
+      researchLaboratoriesImg20,
+    ],
+    technologies: [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "TailwindCSS",
+      "React.js",
+      "Laravel",
+    ],
   },
   {
     title: "study schedule",
