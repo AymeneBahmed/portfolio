@@ -188,7 +188,7 @@ export const PROJECTS: Project[] = [
     gitLink: "https://github.com/AymeneBahmed/research-laboratories",
     preview: "https://research-laboratories.42web.io/",
     description:
-      "My final year bachelor's project for computer science which helps the university to manage laboratories through a clean, modern interface.",
+      "Computer Science Bachelor's capstone project which is a web app that helps the university to manage laboratories through a clean, modern interface.",
     img: researchLaboratoriesImg,
     carousel: [
       researchLaboratoriesImg1,
