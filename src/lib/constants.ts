@@ -46,14 +46,14 @@ import todoImg2 from "@/assets/project-carousels/todo-app/2.png";
 import todoImg3 from "@/assets/project-carousels/todo-app/3.png";
 import todoImg4 from "@/assets/project-carousels/todo-app/4.png";
 import todoImg5 from "@/assets/project-carousels/todo-app/5.png";
-import studyScheduleImg from "@/assets/project-thumbnails/study-schedule.png";
-import studyScheduleImg1 from "@/assets/project-carousels/study-schedule/1.png";
-import studyScheduleImg2 from "@/assets/project-carousels/study-schedule/2.png";
-import studyScheduleImg3 from "@/assets/project-carousels/study-schedule/3.png";
-import studyScheduleImg4 from "@/assets/project-carousels/study-schedule/4.png";
-import studyScheduleImg5 from "@/assets/project-carousels/study-schedule/5.png";
-import studyScheduleImg6 from "@/assets/project-carousels/study-schedule/6.png";
-import studyScheduleImg7 from "@/assets/project-carousels/study-schedule/7.png";
+import steduleImg from "@/assets/project-thumbnails/stedule.png";
+import steduleImg1 from "@/assets/project-carousels/stedule/1.png";
+import steduleImg2 from "@/assets/project-carousels/stedule/2.png";
+import steduleImg3 from "@/assets/project-carousels/stedule/3.png";
+import steduleImg4 from "@/assets/project-carousels/stedule/4.png";
+import steduleImg5 from "@/assets/project-carousels/stedule/5.png";
+import steduleImg6 from "@/assets/project-carousels/stedule/6.png";
+import steduleImg7 from "@/assets/project-carousels/stedule/7.png";
 import portfolioImg from "@/assets/project-thumbnails/portfolio.png";
 import portfolioImg1 from "@/assets/project-carousels/portfolio/1.png";
 import portfolioImg2 from "@/assets/project-carousels/portfolio/2.png";
@@ -222,20 +222,20 @@ export const PROJECTS: Project[] = [
     ],
   },
   {
-    title: "study schedule",
+    title: "stedule",
     gitLink: "https://github.com/AymeneBahmed/study-schedule",
     preview: "https://study-schedule-tau.vercel.app/",
     description:
       "A tasking app made with login functionality that supports both users with and without accounts using IndexedDB and Dexie.js.",
-    img: studyScheduleImg,
+    img: steduleImg,
     carousel: [
-      studyScheduleImg1,
-      studyScheduleImg2,
-      studyScheduleImg3,
-      studyScheduleImg4,
-      studyScheduleImg5,
-      studyScheduleImg6,
-      studyScheduleImg7,
+      steduleImg1,
+      steduleImg2,
+      steduleImg3,
+      steduleImg4,
+      steduleImg5,
+      steduleImg6,
+      steduleImg7,
     ],
     technologies: [
       "HTML",
