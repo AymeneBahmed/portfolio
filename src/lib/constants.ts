@@ -223,8 +223,8 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "stedule",
-    gitLink: "https://github.com/AymeneBahmed/study-schedule",
-    preview: "https://study-schedule-tau.vercel.app/",
+    gitLink: "https://github.com/AymeneBahmed/stedule",
+    preview: "https://stedule.vercel.app/",
     description:
       "A tasking app made with login functionality that supports both users with and without accounts using IndexedDB and Dexie.js.",
     img: steduleImg,
