@@ -2,8 +2,6 @@
 
 import { PROJECTS, TECHNOLOGIES } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
-import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
