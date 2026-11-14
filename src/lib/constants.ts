@@ -13,7 +13,6 @@ import playwrightLogo from "@/assets/logos/playwright.svg";
 import vitestLogo from "@/assets/logos/vitest.svg";
 import vitestDarkModeLogo from "@/assets/logos/vitest-dark-mode.svg";
 import todoImg from "@/assets/project-thumbnails/todo-app.png";
-import todoImg1 from "@/assets/project-carousels/todo-app/1.png";
 import todoImg2 from "@/assets/project-carousels/todo-app/2.png";
 import todoImg3 from "@/assets/project-carousels/todo-app/3.png";
 import todoImg4 from "@/assets/project-carousels/todo-app/4.png";
@@ -225,7 +224,7 @@ export const PROJECTS: Project[] = [
     description:
       "A simple todo app made with login functionality that stores your todos in a postgreSQL database.",
     img: todoImg,
-    carousel: [todoImg1, todoImg2, todoImg3, todoImg4, todoImg5],
+    carousel: [todoImg2, todoImg3, todoImg4, todoImg5],
     technologies: [
       "HTML",
       "CSS",
