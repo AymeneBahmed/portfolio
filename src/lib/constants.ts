@@ -221,7 +221,7 @@ export const PROJECTS: Project[] = [
   {
     title: "todo app",
     gitLink: "https://github.com/AymeneBahmed/next-todo",
-    preview: "https://next-todo-fawn-xi.vercel.app/",
+    preview: "https://next-todo-app-five-lac.vercel.app/",
     description:
       "A simple todo app made with login functionality that stores your todos in a postgreSQL database.",
     img: todoImg,
